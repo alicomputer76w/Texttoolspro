@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readability Score Calculator - Flesch Reading Ease & Grade Level | Free Online Tool</title>
+    <meta name="description" content="Calculate readability scores for your text using Flesch Reading Ease, grade level analysis, and comprehension metrics. Improve content accessibility and SEO with readability analysis.">
+    <meta name="keywords" content="readability score, flesch reading ease, grade level, text readability, content analysis, reading comprehension, SEO readability">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Readability Score Calculator - Analyze Text Readability Online">
+    <meta property="og:description" content="Calculate Flesch Reading Ease scores and grade levels to improve your content's readability and accessibility.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/readability-score">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Readability Score Calculator - Analyze Text Readability Online">
+    <meta name="twitter:description" content="Calculate readability scores and improve your content's accessibility.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/readability-score">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Readability Score Calculator",
+        "description": "Calculate text readability using multiple algorithms including Flesch-Kincaid and Gunning Fog",
+        "url": "https://texttoolspro.fun/readability-score",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Flesch-Kincaid Grade Level",
+            "Flesch Reading Ease",
+            "Gunning Fog Index",
+            "SMOG Index",
+            "Coleman-Liau Index",
+            "Automated Readability Index"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Text Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Readability Score Analyzer",
+                "item": "https://texttoolspro.fun/readability-score"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a readability score?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A readability score measures how easy or difficult a text is to read and understand. It typically considers factors like sentence length, word complexity, and syllable count to determine the reading level required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which readability formulas does the tool use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The tool calculates multiple readability scores including Flesch-Kincaid Grade Level, Flesch Reading Ease, Gunning Fog Index, SMOG Index, Coleman-Liau Index, and Automated Readability Index for comprehensive analysis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What do the different readability scores mean?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each score indicates the education level needed to understand the text. For example, a Flesch-Kincaid score of 8.0 means the text is suitable for an 8th-grade reading level. Lower scores indicate easier text."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I improve my text's readability?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To improve readability, use shorter sentences, choose simpler words, break up long paragraphs, use active voice, and avoid jargon. The tool provides specific suggestions based on your text analysis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a good readability score for web content?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For web content, aim for a Flesch Reading Ease score of 60-70 (8th-9th grade level) or higher. This ensures your content is accessible to the widest audience while remaining engaging and informative."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can readability scores help with SEO?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, readable content tends to have lower bounce rates, higher engagement, and better user experience signals, which can positively impact SEO rankings. Search engines favor content that users find easy to read and understand."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Readability Score Calculator</h1>
+                <p class="tool-description">Analyze your text's readability using proven metrics like Flesch Reading Ease and grade level calculations. Improve content accessibility and SEO performance.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter your text to analyze readability:</label>
+                    <textarea id="input-text" placeholder="Paste your content here to calculate readability scores and get improvement suggestions..."></textarea>
+                </div>
+
+                <div class="controls">
+                    <h3>Analysis Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="detailed-analysis" checked> Show detailed analysis</label>
+                        <label><input type="checkbox" id="improvement-tips" checked> Include improvement suggestions</label>
+                        <label><input type="checkbox" id="sentence-analysis"> Analyze sentence complexity</label>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Calculate Readability</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Readability analysis:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Results</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Readability Score Calculator</h2>
+                <ol>
+                    <li><strong>Input Content:</strong> Paste the text you want to analyze for readability</li>
+                    <li><strong>Choose Options:</strong> Select detailed analysis and improvement suggestions</li>
+                    <li><strong>Calculate:</strong> Click "Calculate Readability" to get comprehensive scores</li>
+                    <li><strong>Review Results:</strong> Analyze scores and implement suggested improvements</li>
+                </ol>
+
+                <h3>Readability Metrics Explained</h3>
+                <ul>
+                    <li><strong>Flesch Reading Ease:</strong> Scale of 0-100, higher scores mean easier reading</li>
+                    <li><strong>Grade Level:</strong> Educational level required to understand the text</li>
+                    <li><strong>Average Sentence Length:</strong> Number of words per sentence</li>
+                    <li><strong>Syllable Complexity:</strong> Average syllables per word</li>
+                </ul>
+
+                <h3>Flesch Reading Ease Scale</h3>
+                <div class="readability-scale">
+                    <ul>
+                        <li><strong>90-100:</strong> Very Easy (5th grade level)</li>
+                        <li><strong>80-89:</strong> Easy (6th grade level)</li>
+                        <li><strong>70-79:</strong> Fairly Easy (7th grade level)</li>
+                        <li><strong>60-69:</strong> Standard (8th-9th grade level)</li>
+                        <li><strong>50-59:</strong> Fairly Difficult (10th-12th grade level)</li>
+                        <li><strong>30-49:</strong> Difficult (College level)</li>
+                        <li><strong>0-29:</strong> Very Difficult (Graduate level)</li>
+                    </ul>
+                </div>
+
+                <h3>Why Readability Matters</h3>
+                <ul>
+                    <li><strong>SEO Benefits:</strong> Search engines favor readable content</li>
+                    <li><strong>User Experience:</strong> Easier content keeps readers engaged longer</li>
+                    <li><strong>Accessibility:</strong> Makes content available to wider audiences</li>
+                    <li><strong>Conversion Rates:</strong> Clear content leads to better conversions</li>
+                    <li><strong>Social Sharing:</strong> Readable content gets shared more often</li>
+                </ul>
+
+                <h3>Improvement Tips</h3>
+                <ul>
+                    <li>Use shorter sentences (aim for 15-20 words)</li>
+                    <li>Choose simpler words when possible</li>
+                    <li>Break up long paragraphs</li>
+                    <li>Use active voice instead of passive</li>
+                    <li>Add subheadings and bullet points</li>
+                </ul>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Tools</h3>
+                <div class="related-grid">
+                    <a href="text-statistics.html" class="related-tool">Text Statistics</a>
+                    <a href="grammar-helper.html" class="related-tool">Grammar Helper</a>
+                    <a href="word-frequency.html" class="related-tool">Word Frequency</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'readability';
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Minifier - Free Online CSS Compression Tool | Text Tools</title>
+    <meta name="description" content="Minify and compress CSS files online for free. Reduce file size, improve website performance, and optimize CSS code with our professional minification tool.">
+    <meta name="keywords" content="css minifier, css compressor, css optimization, minify css, compress css, web performance, css tools">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CSS Minifier - Professional CSS Compression Tool">
+    <meta property="og:description" content="Free online CSS minifier to compress and optimize CSS files for better web performance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/css-minifier">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CSS Minifier - Free CSS Compression">
+    <meta name="twitter:description" content="Professional CSS minification tool for web developers and performance optimization.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/css-minifier">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CSS Minifier",
+        "description": "Minify and optimize CSS files to reduce file size and improve website performance",
+        "url": "https://texttoolspro.fun/css-minifier",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "CSS minification",
+            "File compression",
+            "Performance optimization",
+            "Syntax validation",
+            "Before/after comparison",
+            "Download results"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "CSS Minifier & Compressor",
+                "item": "https://texttoolspro.fun/css-minifier"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the CSS Minifier & Compressor tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the CSS Minifier: 1) Paste your CSS code in the input area, 2) Click the 'Minify CSS' button, 3) The tool will remove whitespace, comments, and unnecessary characters, 4) Copy the minified CSS from the output area. The minified CSS will be significantly smaller while maintaining the same functionality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is CSS minification and why is it important?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CSS minification removes unnecessary characters like whitespace, comments, and redundant code from CSS files without changing functionality. This reduces file size by 20-40%, leading to faster page load times and improved website performance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does minification affect CSS functionality?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, CSS minification only removes unnecessary formatting and comments while preserving all functional code. Your styles will work exactly the same, but the file will be smaller and load faster for better user experience."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I minify CSS files with media queries and animations?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! The CSS Minifier handles all CSS features including media queries, keyframe animations, flexbox, grid, custom properties (CSS variables), and modern CSS syntax while preserving their functionality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the CSS minification tool free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the CSS Minifier & Compressor is completely free to use with no limitations on file size or number of uses. All processing happens in your browser for privacy and security."
+                }
+            }
+        ]
+    }
+    </script>
+                "name": "How much file size reduction can I expect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Typical CSS minification reduces file size by 20-40%, depending on your coding style and comment usage. Files with extensive comments and formatting see larger reductions, while already compact CSS sees smaller improvements."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use minified CSS in development?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, keep readable CSS during development for easier debugging and maintenance. Use minification as part of your build process for production deployment. Many build tools can automatically minify CSS when deploying to production."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>CSS Minifier</h1>
+                <p class="tool-description">Professional CSS minification tool to compress and optimize your CSS files. Reduce file size, improve website loading speed, and enhance web performance with advanced compression options.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter CSS code to minify:</label>
+                    <textarea id="input-text" placeholder="Paste your CSS code here...&#10;&#10;Example:&#10;/* Main styles */&#10;body {&#10;    margin: 0;&#10;    padding: 20px;&#10;    font-family: Arial, sans-serif;&#10;    background-color: #ffffff;&#10;}&#10;&#10;.container {&#10;    max-width: 1200px;&#10;    margin: 0 auto;&#10;}"></textarea>
+                    <div class="file-upload">
+                        <input type="file" id="css-file" accept=".css,.txt" style="display: none;">
+                        <button onclick="document.getElementById('css-file').click()" class="upload-btn">Upload CSS File</button>
+                        <span id="file-name"></span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <h3>Minification Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="remove-comments" checked> Remove comments</label>
+                        <label><input type="checkbox" id="remove-whitespace" checked> Remove unnecessary whitespace</label>
+                        <label><input type="checkbox" id="remove-empty-rules" checked> Remove empty CSS rules</label>
+                        <label><input type="checkbox" id="optimize-colors" checked> Optimize color values</label>
+                        <label><input type="checkbox" id="optimize-fonts" checked> Optimize font declarations</label>
+                        <label><input type="checkbox" id="merge-rules" checked> Merge duplicate rules</label>
+                    </div>
+                    
+                    <div class="advanced-options">
+                        <h4>Advanced Options:</h4>
+                        <label><input type="checkbox" id="remove-unused" checked> Remove unused CSS (experimental)</label>
+                        <label><input type="checkbox" id="optimize-shorthand" checked> Optimize shorthand properties</label>
+                        <label><input type="checkbox" id="remove-semicolons" checked> Remove unnecessary semicolons</label>
+                        <label><input type="checkbox" id="optimize-units" checked> Optimize units (0px → 0)</label>
+                        <label><input type="checkbox" id="sort-properties" checked> Sort CSS properties</label>
+                    </div>
+                    
+                    <div class="compression-level">
+                        <label for="compression-level">Compression Level:</label>
+                        <select id="compression-level">
+                            <option value="basic">Basic (Safe)</option>
+                            <option value="standard" selected>Standard (Recommended)</option>
+                            <option value="aggressive">Aggressive (Maximum)</option>
+                        </select>
+                    </div>
+                    
+                    <button onclick="processCurrentTool()" class="process-btn">Minify CSS</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Minified CSS output:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <div class="output-controls">
+                        <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy CSS</button>
+                        <button onclick="downloadResult()" class="download-btn">Download CSS</button>
+                        <button onclick="validateCSS()" class="validate-btn">Validate CSS</button>
+                        <button onclick="showComparison()" class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="stats-section" id="stats-section" style="display: none;">
+                    <h3>Compression Statistics</h3>
+                    <div id="compression-stats"></div>
+                </div>
+
+                <div class="comparison-section" id="comparison-section" style="display: none;">
+                    <h3>Before vs After Comparison</h3>
+                    <div class="comparison-grid">
+                        <div class="before-section">
+                            <h4>Before (Original)</h4>
+                            <pre id="before-code"></pre>
+                        </div>
+                        <div class="after-section">
+                            <h4>After (Minified)</h4>
+                            <pre id="after-code"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use CSS Minifier</h2>
+                <ol>
+                    <li><strong>Input CSS:</strong> Paste CSS code or upload a CSS file</li>
+                    <li><strong>Configure Options:</strong> Select minification preferences</li>
+                    <li><strong>Choose Compression:</strong> Set compression level</li>
+                    <li><strong>Minify:</strong> Click "Minify CSS" to compress</li>
+                    <li><strong>Review Results:</strong> Check compression statistics</li>
+                    <li><strong>Download/Copy:</strong> Save or copy the minified CSS</li>
+                </ol>
+
+                <h3>Understanding CSS Minification</h3>
+                <div class="minification-guide">
+                    <h4>🗜️ What is CSS Minification?</h4>
+                    <p>CSS minification is the process of removing unnecessary characters from CSS code without changing its functionality. This includes removing whitespace, comments, and optimizing various CSS properties to reduce file size.</p>
+                    
+                    <div class="minification-examples">
+                        <h5>Before and After Examples</h5>
+                        
+                        <div class="example-case">
+                            <h6>Basic Minification</h6>
+                            <div class="example-pair">
+                                <div class="before-example">
+                                    <strong>Before:</strong>
+                                    <pre><code>/* Header styles */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}</code></pre>
+                                </div>
+                                <div class="after-example">
+                                    <strong>After:</strong>
+                                    <pre><code>body{margin:0;padding:20px;font-family:Arial,sans-serif}.header{background-color:#fff;border:1px solid #ccc}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-case">
+                            <h6>Color Optimization</h6>
+                            <div class="example-pair">
+                                <div class="before-example">
+                                    <strong>Before:</strong>
+                                    <pre><code>.element {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #ff0000;
+}</code></pre>
+                                </div>
+                                <div class="after-example">
+                                    <strong>After:</strong>
+                                    <pre><code>.element{color:#fff;background-color:#000;border-color:red}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-case">
+                            <h6>Unit Optimization</h6>
+                            <div class="example-pair">
+                                <div class="before-example">
+                                    <strong>Before:</strong>
+                                    <pre><code>.box {
+    margin: 0px;
+    padding: 10px 0px 5px 0px;
+    width: 100.0%;
+}</code></pre>
+                                </div>
+                                <div class="after-example">
+                                    <strong>After:</strong>
+                                    <pre><code>.box{margin:0;padding:10px 0 5px 0;width:100%}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-case">
+                            <h6>Shorthand Optimization</h6>
+                            <div class="example-pair">
+                                <div class="before-example">
+                                    <strong>Before:</strong>
+                                    <pre><code>.element {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}</code></pre>
+                                </div>
+                                <div class="after-example">
+                                    <strong>After:</strong>
+                                    <pre><code>.element{margin:10px 15px}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Minification Techniques</h3>
+                <div class="techniques">
+                    <h4>🔧 Optimization Methods</h4>
+                    
+                    <div class="technique">
+                        <h5>Whitespace Removal</h5>
+                        <p><strong>What it does:</strong> Removes spaces, tabs, and line breaks</p>
+                        <p><strong>Benefit:</strong> Significant file size reduction</p>
+                        <p><strong>Example:</strong> <code>body { margin: 0; }</code> → <code>body{margin:0}</code></p>
+                    </div>
+
+                    <div class="technique">
+                        <h5>Comment Removal</h5>
+                        <p><strong>What it does:</strong> Removes CSS comments</p>
+                        <p><strong>Benefit:</strong> Eliminates non-functional content</p>
+                        <p><strong>Example:</strong> <code>/* Comment */</code> → (removed)</p>
+                    </div>
+
+                    <div class="technique">
+                        <h5>Color Optimization</h5>
+                        <p><strong>What it does:</strong> Shortens color values</p>
+                        <p><strong>Benefit:</strong> Reduces color declaration length</p>
+                        <p><strong>Example:</strong> <code>#ffffff</code> → <code>#fff</code></p>
+                    </div>
+
+                    <div class="technique">
+                        <h5>Unit Optimization</h5>
+                        <p><strong>What it does:</strong> Removes unnecessary units and decimals</p>
+                        <p><strong>Benefit:</strong> Cleaner, shorter values</p>
+                        <p><strong>Example:</strong> <code>0px</code> → <code>0</code>, <code>1.0em</code> → <code>1em</code></p>
+                    </div>
+
+                    <div class="technique">
+                        <h5>Shorthand Properties</h5>
+                        <p><strong>What it does:</strong> Combines related properties</p>
+                        <p><strong>Benefit:</strong> Fewer property declarations</p>
+                        <p><strong>Example:</strong> <code>margin-top:10px;margin-right:5px</code> → <code>margin:10px 5px 0 0</code></p>
+                    </div>
+
+                    <div class="technique">
+                        <h5>Duplicate Rule Merging</h5>
+                        <p><strong>What it does:</strong> Combines identical selectors</p>
+                        <p><strong>Benefit:</strong> Eliminates redundancy</p>
+                        <p><strong>Example:</strong> <code>.a{color:red}.a{font-size:12px}</code> → <code>.a{color:red;font-size:12px}</code></p>
+                    </div>
+                </div>
+
+                <h3>Compression Levels</h3>
+                <div class="compression-levels">
+                    <h4>📊 Different Compression Options</h4>
+                    
+                    <div class="level-detail">
+                        <h5>Basic (Safe)</h5>
+                        <p><strong>Optimizations:</strong></p>
+                        <ul>
+                            <li>Remove comments</li>
+                            <li>Remove unnecessary whitespace</li>
+                            <li>Basic color optimization</li>
+                            <li>Remove trailing semicolons</li>
+                        </ul>
+                        <p><strong>Use case:</strong> When you need guaranteed compatibility</p>
+                        <p><strong>File size reduction:</strong> 20-40%</p>
+                    </div>
+
+                    <div class="level-detail">
+                        <h5>Standard (Recommended)</h5>
+                        <p><strong>Optimizations:</strong></p>
+                        <ul>
+                            <li>All basic optimizations</li>
+                            <li>Unit optimization (0px → 0)</li>
+                            <li>Shorthand property optimization</li>
+                            <li>Remove empty rules</li>
+                            <li>Sort properties alphabetically</li>
+                        </ul>
+                        <p><strong>Use case:</strong> Best balance of compression and safety</p>
+                        <p><strong>File size reduction:</strong> 40-60%</p>
+                    </div>
+
+                    <div class="level-detail">
+                        <h5>Aggressive (Maximum)</h5>
+                        <p><strong>Optimizations:</strong></p>
+                        <ul>
+                            <li>All standard optimizations</li>
+                            <li>Merge duplicate rules</li>
+                            <li>Remove unused CSS (experimental)</li>
+                            <li>Advanced shorthand optimization</li>
+                            <li>Property value optimization</li>
+                        </ul>
+                        <p><strong>Use case:</strong> Maximum compression for production</p>
+                        <p><strong>File size reduction:</strong> 60-80%</p>
+                        <p><strong>Note:</strong> Test thoroughly before deployment</p>
+                    </div>
+                </div>
+
+                <h3>Performance Benefits</h3>
+                <div class="performance-benefits">
+                    <h4>🚀 Why Minify CSS?</h4>
+                    
+                    <div class="benefit">
+                        <h5>Faster Loading Times</h5>
+                        <p>Smaller CSS files download faster, improving page load speed</p>
+                        <ul>
+                            <li>Reduced bandwidth usage</li>
+                            <li>Faster initial page render</li>
+                            <li>Better user experience</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h5>Improved SEO</h5>
+                        <p>Page speed is a ranking factor for search engines</p>
+                        <ul>
+                            <li>Better Core Web Vitals scores</li>
+                            <li>Higher search rankings</li>
+                            <li>Improved mobile performance</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h5>Reduced Server Load</h5>
+                        <p>Smaller files mean less server bandwidth and storage</p>
+                        <ul>
+                            <li>Lower hosting costs</li>
+                            <li>Reduced CDN usage</li>
+                            <li>Better server performance</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit">
+                        <h5>Better Caching</h5>
+                        <p>Smaller files cache more efficiently</p>
+                        <ul>
+                            <li>Faster cache storage</li>
+                            <li>More efficient browser caching</li>
+                            <li>Reduced cache eviction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Best Practices</h3>
+                <div class="best-practices">
+                    <h4>✅ CSS Minification Guidelines</h4>
+                    
+                    <h5>Before Minification</h5>
+                    <ul>
+                        <li><strong>Backup original:</strong> Keep unminified version for development</li>
+                        <li><strong>Validate CSS:</strong> Ensure CSS is error-free</li>
+                        <li><strong>Organize code:</strong> Structure CSS logically</li>
+                        <li><strong>Remove unused:</strong> Clean up unused styles manually</li>
+                    </ul>
+
+                    <h5>During Minification</h5>
+                    <ul>
+                        <li><strong>Test settings:</strong> Try different compression levels</li>
+                        <li><strong>Check output:</strong> Verify minified CSS works correctly</li>
+                        <li><strong>Monitor size:</strong> Track compression ratios</li>
+                        <li><strong>Preserve functionality:</strong> Don't break CSS functionality</li>
+                    </ul>
+
+                    <h5>After Minification</h5>
+                    <ul>
+                        <li><strong>Test thoroughly:</strong> Check all pages and components</li>
+                        <li><strong>Validate output:</strong> Ensure CSS is still valid</li>
+                        <li><strong>Monitor performance:</strong> Measure loading improvements</li>
+                        <li><strong>Update build process:</strong> Integrate into deployment</li>
+                    </ul>
+                </div>
+
+                <h3>Common Issues and Solutions</h3>
+                <div class="troubleshooting">
+                    <h4>🔧 Troubleshooting Guide</h4>
+                    
+                    <div class="issue">
+                        <h5>Broken Styles After Minification</h5>
+                        <p><strong>Cause:</strong> Aggressive optimization breaking CSS rules</p>
+                        <p><strong>Solution:</strong> Use lower compression level or disable specific optimizations</p>
+                        <p><strong>Prevention:</strong> Test minified CSS thoroughly</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Invalid CSS Output</h5>
+                        <p><strong>Cause:</strong> Malformed input CSS or minification bugs</p>
+                        <p><strong>Solution:</strong> Validate input CSS first, use basic compression</p>
+                        <p><strong>Prevention:</strong> Always validate CSS before minification</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Minimal Size Reduction</h5>
+                        <p><strong>Cause:</strong> CSS already optimized or mostly compressed</p>
+                        <p><strong>Solution:</strong> Check for unused CSS, optimize manually first</p>
+                        <p><strong>Prevention:</strong> Regular CSS cleanup and optimization</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Browser Compatibility Issues</h5>
+                        <p><strong>Cause:</strong> Over-optimization removing necessary prefixes</p>
+                        <p><strong>Solution:</strong> Preserve vendor prefixes, use standard compression</p>
+                        <p><strong>Prevention:</strong> Test across different browsers</p>
+                    </div>
+                </div>
+
+                <h3>Integration with Build Tools</h3>
+                <div class="build-integration">
+                    <h4>🛠️ Automated Minification</h4>
+                    
+                    <div class="tool-integration">
+                        <h5>Webpack</h5>
+                        <p>Use css-minimizer-webpack-plugin for automatic minification</p>
+                        <pre><code>const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
+module.exports = {
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+  },
+};</code></pre>
+                    </div>
+
+                    <div class="tool-integration">
+                        <h5>Gulp</h5>
+                        <p>Use gulp-clean-css for CSS minification in Gulp tasks</p>
+                        <pre><code>const cleanCSS = require('gulp-clean-css');
+
+gulp.task('minify-css', () => {
+  return gulp.src('src/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
+});</code></pre>
+                    </div>
+
+                    <div class="tool-integration">
+                        <h5>PostCSS</h5>
+                        <p>Use cssnano plugin for PostCSS-based minification</p>
+                        <pre><code>const postcss = require('postcss');
+const cssnano = require('cssnano');
+
+postcss([cssnano])
+  .process(css, {from: undefined})
+  .then(result => {
+    console.log(result.css);
+  });</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Developer Tools</h3>
+                <div class="related-grid">
+                    <a href="js-beautifier.html" class="related-tool">JS Beautifier</a>
+                    <a href="html-minifier.html" class="related-tool">HTML Minifier</a>
+                    <a href="json-formatter.html" class="related-tool">JSON Formatter</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'cssminifier';
+        
+        // File upload handling
+        document.getElementById('css-file').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                document.getElementById('file-name').textContent = file.name;
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('input-text').value = e.target.result;
+                };
+                reader.readAsText(file);
+            }
+        });
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText.trim()) {
+                document.getElementById('output-text').value = 'Please enter CSS code to minify.';
+                return;
+            }
+            
+            // Collect minification options
+            window.cssMinifierOptions = {
+                removeComments: document.getElementById('remove-comments').checked,
+                removeWhitespace: document.getElementById('remove-whitespace').checked,
+                removeEmptyRules: document.getElementById('remove-empty-rules').checked,
+                optimizeColors: document.getElementById('optimize-colors').checked,
+                optimizeFonts: document.getElementById('optimize-fonts').checked,
+                mergeRules: document.getElementById('merge-rules').checked,
+                removeUnused: document.getElementById('remove-unused').checked,
+                optimizeShorthand: document.getElementById('optimize-shorthand').checked,
+                removeSemicolons: document.getElementById('remove-semicolons').checked,
+                optimizeUnits: document.getElementById('optimize-units').checked,
+                sortProperties: document.getElementById('sort-properties').checked,
+                compressionLevel: document.getElementById('compression-level').value
+            };
+            
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+            
+            // Show compression statistics
+            showCompressionStats(inputText, result);
+        }
+        
+        function showCompressionStats(original, minified) {
+            const originalSize = new Blob([original]).size;
+            const minifiedSize = new Blob([minified]).size;
+            const reduction = originalSize - minifiedSize;
+            const percentage = ((reduction / originalSize) * 100).toFixed(1);
+            
+            const statsHtml = `
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Original Size:</span>
+                        <span class="stat-value">${formatBytes(originalSize)}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Minified Size:</span>
+                        <span class="stat-value">${formatBytes(minifiedSize)}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Size Reduction:</span>
+                        <span class="stat-value">${formatBytes(reduction)}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Compression Ratio:</span>
+                        <span class="stat-value">${percentage}%</span>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('compression-stats').innerHTML = statsHtml;
+            document.getElementById('stats-section').style.display = 'block';
+        }
+        
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+        
+        function downloadResult() {
+            const content = document.getElementById('output-text').value;
+            if (!content.trim()) {
+                alert('No CSS content to download. Please minify CSS first.');
+                return;
+            }
+            
+            const blob = new Blob([content], { type: 'text/css' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'minified.css';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        function validateCSS() {
+            const content = document.getElementById('output-text').value;
+            if (!content.trim()) {
+                alert('No CSS content to validate.');
+                return;
+            }
+            
+            // Basic CSS validation
+            try {
+                // Simple validation - check for basic CSS structure
+                const hasValidStructure = /[^{}]*\{[^{}]*\}/.test(content);
+                if (hasValidStructure) {
+                    alert('✅ CSS appears to be valid!');
+                } else {
+                    alert('⚠️ CSS structure may have issues. Please check manually.');
+                }
+            } catch (error) {
+                alert('❌ Error validating CSS: ' + error.message);
+            }
+        }
+        
+        function showComparison() {
+            const original = document.getElementById('input-text').value;
+            const minified = document.getElementById('output-text').value;
+            
+            if (!original.trim() || !minified.trim()) {
+                alert('Please minify CSS first to see comparison.');
+                return;
+            }
+            
+            document.getElementById('before-code').textContent = original;
+            document.getElementById('after-code').textContent = minified;
+            document.getElementById('comparison-section').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

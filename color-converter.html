@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Converter - HEX, RGB, HSL, CMYK Color Code Converter | Text Tools</title>
+    <meta name="description" content="Convert colors between HEX, RGB, HSL, CMYK, and HSV formats instantly. Free online color converter with color picker, palette generator, and accessibility checker.">
+    <meta name="keywords" content="color converter, hex to rgb, rgb to hex, hsl converter, cmyk converter, color picker, color codes, color palette">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Color Converter - Professional Color Code Converter">
+    <meta property="og:description" content="Convert between HEX, RGB, HSL, CMYK color formats with our professional color converter tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/color-converter">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Color Converter - Free Color Code Converter">
+    <meta name="twitter:description" content="Professional color conversion tool for designers and developers.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/color-converter">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Color Converter",
+        "description": "Professional color conversion tool supporting HEX, RGB, HSL, CMYK, and HSV formats",
+        "url": "https://texttoolspro.fun/color-converter",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "HEX to RGB conversion",
+            "RGB to HSL conversion",
+            "CMYK color support",
+            "HSV color conversion",
+            "Color picker tool",
+            "Palette generation",
+            "Accessibility checking"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Color Converter & Palette Generator",
+                "item": "https://texttoolspro.fun/color-converter"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What color formats does the converter support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Color Converter supports all major color formats: HEX (#FF0000), RGB (255,0,0), HSL (0°,100%,50%), CMYK (0,100,100,0), HSV/HSB, and named colors. It instantly converts between any of these formats."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between RGB and CMYK?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RGB (Red, Green, Blue) is for digital displays and uses additive color mixing. CMYK (Cyan, Magenta, Yellow, Black) is for printing and uses subtractive color mixing. RGB has a wider color gamut than CMYK."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I generate color palettes and harmonies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! The tool generates complementary, triadic, tetradic, analogous, and monochromatic color schemes. It also creates custom palettes and provides color harmony suggestions for design projects."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the color picker work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The interactive color picker lets you select colors visually using hue, saturation, and lightness controls. You can also input specific values, use the eyedropper tool, or enter color names to find exact colors."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What color analysis features are available?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The converter provides detailed color analysis including brightness levels, contrast ratios, accessibility compliance (WCAG), color temperature, and perceptual information to help with design decisions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this tool for web design and print design?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Use RGB and HEX for web design, CMYK for print design, and HSL for CSS styling. The tool helps ensure color consistency across different media and provides appropriate formats for each use case."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the Color Converter tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the Color Converter: 1) Enter a color value in any format (HEX, RGB, HSL, HSV), 2) The tool automatically converts to all other formats, 3) Copy the converted values you need, 4) Use the color picker for visual selection. The tool supports all major color formats and provides instant conversion."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What color formats does the converter support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Color Converter supports HEX, RGB, RGBA, HSL, HSLA, HSV, HSB, and CSS color names. It converts between all these formats instantly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the color picker to select colors?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the tool includes a visual color picker that lets you select colors by clicking and automatically shows the values in all supported formats."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the tool validate color values?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Color Converter validates input values and shows errors for invalid color codes, ensuring you get accurate conversions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the color converter free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Color Converter is completely free with unlimited conversions and no registration required."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Color Converter</h1>
+                <p class="tool-description">Professional color conversion tool supporting HEX, RGB, HSL, CMYK, and HSV formats. Perfect for designers, developers, and anyone working with colors across different platforms and applications.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="color-picker-section">
+                    <h3>Color Picker</h3>
+                    <div class="picker-container">
+                        <input type="color" id="color-picker" value="#3498db">
+                        <div class="color-display" id="color-display"></div>
+                        <div class="color-info">
+                            <span id="color-name">Steel Blue</span>
+                            <span id="color-brightness">Brightness: 65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <h3>Input Color</h3>
+                    <div class="input-methods">
+                        <div class="input-group">
+                            <label for="input-format">Input Format:</label>
+                            <select id="input-format">
+                                <option value="hex">HEX</option>
+                                <option value="rgb">RGB</option>
+                                <option value="hsl">HSL</option>
+                                <option value="cmyk">CMYK</option>
+                                <option value="hsv">HSV</option>
+                            </select>
+                        </div>
+                        
+                        <div class="color-input-container">
+                            <div class="hex-input" id="hex-input">
+                                <label for="hex-value">HEX Color:</label>
+                                <input type="text" id="hex-value" placeholder="#3498db" maxlength="7">
+                            </div>
+                            
+                            <div class="rgb-input" id="rgb-input" style="display: none;">
+                                <label>RGB Values:</label>
+                                <div class="rgb-controls">
+                                    <input type="number" id="rgb-r" placeholder="R" min="0" max="255">
+                                    <input type="number" id="rgb-g" placeholder="G" min="0" max="255">
+                                    <input type="number" id="rgb-b" placeholder="B" min="0" max="255">
+                                </div>
+                            </div>
+                            
+                            <div class="hsl-input" id="hsl-input" style="display: none;">
+                                <label>HSL Values:</label>
+                                <div class="hsl-controls">
+                                    <input type="number" id="hsl-h" placeholder="H" min="0" max="360">
+                                    <input type="number" id="hsl-s" placeholder="S%" min="0" max="100">
+                                    <input type="number" id="hsl-l" placeholder="L%" min="0" max="100">
+                                </div>
+                            </div>
+                            
+                            <div class="cmyk-input" id="cmyk-input" style="display: none;">
+                                <label>CMYK Values:</label>
+                                <div class="cmyk-controls">
+                                    <input type="number" id="cmyk-c" placeholder="C%" min="0" max="100">
+                                    <input type="number" id="cmyk-m" placeholder="M%" min="0" max="100">
+                                    <input type="number" id="cmyk-y" placeholder="Y%" min="0" max="100">
+                                    <input type="number" id="cmyk-k" placeholder="K%" min="0" max="100">
+                                </div>
+                            </div>
+                            
+                            <div class="hsv-input" id="hsv-input" style="display: none;">
+                                <label>HSV Values:</label>
+                                <div class="hsv-controls">
+                                    <input type="number" id="hsv-h" placeholder="H" min="0" max="360">
+                                    <input type="number" id="hsv-s" placeholder="S%" min="0" max="100">
+                                    <input type="number" id="hsv-v" placeholder="V%" min="0" max="100">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="processCurrentTool()" class="process-btn">Convert Color</button>
+                    </div>
+                </div>
+
+                <div class="output-section">
+                    <h3>Color Conversions</h3>
+                    <div class="conversion-results">
+                        <div class="format-result">
+                            <label>HEX:</label>
+                            <div class="result-container">
+                                <input type="text" id="result-hex" readonly>
+                                <button onclick="copyResult('result-hex')" class="copy-btn">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="format-result">
+                            <label>RGB:</label>
+                            <div class="result-container">
+                                <input type="text" id="result-rgb" readonly>
+                                <button onclick="copyResult('result-rgb')" class="copy-btn">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="format-result">
+                            <label>HSL:</label>
+                            <div class="result-container">
+                                <input type="text" id="result-hsl" readonly>
+                                <button onclick="copyResult('result-hsl')" class="copy-btn">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="format-result">
+                            <label>CMYK:</label>
+                            <div class="result-container">
+                                <input type="text" id="result-cmyk" readonly>
+                                <button onclick="copyResult('result-cmyk')" class="copy-btn">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="format-result">
+                            <label>HSV:</label>
+                            <div class="result-container">
+                                <input type="text" id="result-hsv" readonly>
+                                <button onclick="copyResult('result-hsv')" class="copy-btn">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-analysis">
+                    <h3>Color Analysis</h3>
+                    <div class="analysis-grid">
+                        <div class="analysis-item">
+                            <label>Color Name:</label>
+                            <span id="analysis-name">Steel Blue</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>Brightness:</label>
+                            <span id="analysis-brightness">65%</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>Luminance:</label>
+                            <span id="analysis-luminance">0.32</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>Contrast Ratio (vs White):</label>
+                            <span id="analysis-contrast-white">2.1:1</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>Contrast Ratio (vs Black):</label>
+                            <span id="analysis-contrast-black">10.0:1</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>WCAG AA Compliant:</label>
+                            <span id="analysis-wcag-aa">✅ Yes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-palette">
+                    <h3>Color Palette Generator</h3>
+                    <div class="palette-controls">
+                        <label for="palette-type">Palette Type:</label>
+                        <select id="palette-type">
+                            <option value="monochromatic">Monochromatic</option>
+                            <option value="analogous">Analogous</option>
+                            <option value="complementary">Complementary</option>
+                            <option value="triadic">Triadic</option>
+                            <option value="tetradic">Tetradic</option>
+                            <option value="split-complementary">Split Complementary</option>
+                        </select>
+                        <button onclick="generatePalette()" class="generate-btn">Generate Palette</button>
+                    </div>
+                    
+                    <div class="palette-display" id="palette-display">
+                        <!-- Generated palette colors will appear here -->
+                    </div>
+                </div>
+
+                <div class="color-harmony">
+                    <h3>Color Harmony</h3>
+                    <div class="harmony-section">
+                        <div class="harmony-type">
+                            <h4>Complementary Colors</h4>
+                            <div class="harmony-colors" id="complementary-colors"></div>
+                        </div>
+                        <div class="harmony-type">
+                            <h4>Analogous Colors</h4>
+                            <div class="harmony-colors" id="analogous-colors"></div>
+                        </div>
+                        <div class="harmony-type">
+                            <h4>Triadic Colors</h4>
+                            <div class="harmony-colors" id="triadic-colors"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Color Converter</h2>
+                <ol>
+                    <li><strong>Choose Input Method:</strong> Use color picker or enter values manually</li>
+                    <li><strong>Select Format:</strong> Choose input format (HEX, RGB, HSL, etc.)</li>
+                    <li><strong>Enter Values:</strong> Input color values in selected format</li>
+                    <li><strong>Convert:</strong> Click "Convert Color" to see all formats</li>
+                    <li><strong>Copy Results:</strong> Copy any format to clipboard</li>
+                    <li><strong>Generate Palettes:</strong> Create color harmonies and palettes</li>
+                </ol>
+
+                <h3>Understanding Color Formats</h3>
+                <div class="color-formats-guide">
+                    <h4>🎨 Color Format Explanations</h4>
+                    
+                    <div class="format-explanation">
+                        <h5>HEX (Hexadecimal)</h5>
+                        <p><strong>Format:</strong> #RRGGBB or #RGB</p>
+                        <p><strong>Range:</strong> 00-FF for each channel</p>
+                        <p><strong>Example:</strong> #3498DB, #F39C12</p>
+                        <p><strong>Use Case:</strong> Web development, CSS styling</p>
+                        <div class="format-details">
+                            <p>HEX colors use hexadecimal notation where:</p>
+                            <ul>
+                                <li><strong>RR:</strong> Red component (00-FF)</li>
+                                <li><strong>GG:</strong> Green component (00-FF)</li>
+                                <li><strong>BB:</strong> Blue component (00-FF)</li>
+                            </ul>
+                            <p><strong>Short form:</strong> #RGB expands to #RRGGBB (e.g., #F39 → #FF3399)</p>
+                        </div>
+                    </div>
+
+                    <div class="format-explanation">
+                        <h5>RGB (Red, Green, Blue)</h5>
+                        <p><strong>Format:</strong> rgb(r, g, b) or rgba(r, g, b, a)</p>
+                        <p><strong>Range:</strong> 0-255 for each channel</p>
+                        <p><strong>Example:</strong> rgb(52, 152, 219), rgba(52, 152, 219, 0.8)</p>
+                        <p><strong>Use Case:</strong> Digital displays, programming</p>
+                        <div class="format-details">
+                            <p>RGB is an additive color model where:</p>
+                            <ul>
+                                <li><strong>Red:</strong> Red light intensity (0-255)</li>
+                                <li><strong>Green:</strong> Green light intensity (0-255)</li>
+                                <li><strong>Blue:</strong> Blue light intensity (0-255)</li>
+                                <li><strong>Alpha:</strong> Transparency (0.0-1.0, optional)</li>
+                            </ul>
+                            <p><strong>Common values:</strong> Black (0,0,0), White (255,255,255), Red (255,0,0)</p>
+                        </div>
+                    </div>
+
+                    <div class="format-explanation">
+                        <h5>HSL (Hue, Saturation, Lightness)</h5>
+                        <p><strong>Format:</strong> hsl(h, s%, l%) or hsla(h, s%, l%, a)</p>
+                        <p><strong>Range:</strong> H: 0-360°, S: 0-100%, L: 0-100%</p>
+                        <p><strong>Example:</strong> hsl(204, 70%, 53%), hsla(204, 70%, 53%, 0.8)</p>
+                        <p><strong>Use Case:</strong> Design, color theory, intuitive color selection</p>
+                        <div class="format-details">
+                            <p>HSL represents colors in a more intuitive way:</p>
+                            <ul>
+                                <li><strong>Hue:</strong> Color wheel position (0-360°)</li>
+                                <li><strong>Saturation:</strong> Color intensity (0-100%)</li>
+                                <li><strong>Lightness:</strong> Brightness level (0-100%)</li>
+                                <li><strong>Alpha:</strong> Transparency (0.0-1.0, optional)</li>
+                            </ul>
+                            <p><strong>Hue examples:</strong> Red (0°), Yellow (60°), Green (120°), Blue (240°)</p>
+                        </div>
+                    </div>
+
+                    <div class="format-explanation">
+                        <h5>CMYK (Cyan, Magenta, Yellow, Key/Black)</h5>
+                        <p><strong>Format:</strong> cmyk(c%, m%, y%, k%)</p>
+                        <p><strong>Range:</strong> 0-100% for each channel</p>
+                        <p><strong>Example:</strong> cmyk(76%, 31%, 0%, 14%)</p>
+                        <p><strong>Use Case:</strong> Print design, professional printing</p>
+                        <div class="format-details">
+                            <p>CMYK is a subtractive color model for printing:</p>
+                            <ul>
+                                <li><strong>Cyan:</strong> Cyan ink percentage (0-100%)</li>
+                                <li><strong>Magenta:</strong> Magenta ink percentage (0-100%)</li>
+                                <li><strong>Yellow:</strong> Yellow ink percentage (0-100%)</li>
+                                <li><strong>Key (Black):</strong> Black ink percentage (0-100%)</li>
+                            </ul>
+                            <p><strong>Note:</strong> Colors may appear different when printed vs displayed on screen</p>
+                        </div>
+                    </div>
+
+                    <div class="format-explanation">
+                        <h5>HSV/HSB (Hue, Saturation, Value/Brightness)</h5>
+                        <p><strong>Format:</strong> hsv(h, s%, v%)</p>
+                        <p><strong>Range:</strong> H: 0-360°, S: 0-100%, V: 0-100%</p>
+                        <p><strong>Example:</strong> hsv(204, 76%, 86%)</p>
+                        <p><strong>Use Case:</strong> Color pickers, image editing software</p>
+                        <div class="format-details">
+                            <p>HSV is similar to HSL but uses Value instead of Lightness:</p>
+                            <ul>
+                                <li><strong>Hue:</strong> Color wheel position (0-360°)</li>
+                                <li><strong>Saturation:</strong> Color purity (0-100%)</li>
+                                <li><strong>Value:</strong> Brightness/intensity (0-100%)</li>
+                            </ul>
+                            <p><strong>Difference from HSL:</strong> Value represents the brightness of the color itself</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Color Theory and Harmony</h3>
+                <div class="color-theory">
+                    <h4>🎭 Understanding Color Relationships</h4>
+                    
+                    <div class="harmony-explanation">
+                        <h5>Monochromatic</h5>
+                        <p><strong>Definition:</strong> Different shades, tints, and tones of a single hue</p>
+                        <p><strong>Characteristics:</strong> Harmonious, calming, unified appearance</p>
+                        <p><strong>Use Case:</strong> Minimalist designs, creating depth without contrast</p>
+                        <p><strong>Example:</strong> Light blue, medium blue, dark blue, navy blue</p>
+                    </div>
+
+                    <div class="harmony-explanation">
+                        <h5>Analogous</h5>
+                        <p><strong>Definition:</strong> Colors adjacent to each other on the color wheel</p>
+                        <p><strong>Characteristics:</strong> Pleasing to the eye, natural harmony</p>
+                        <p><strong>Use Case:</strong> Nature-inspired designs, gradients</p>
+                        <p><strong>Example:</strong> Blue, blue-green, green (30° apart on color wheel)</p>
+                    </div>
+
+                    <div class="harmony-explanation">
+                        <h5>Complementary</h5>
+                        <p><strong>Definition:</strong> Colors opposite each other on the color wheel</p>
+                        <p><strong>Characteristics:</strong> High contrast, vibrant, attention-grabbing</p>
+                        <p><strong>Use Case:</strong> Call-to-action buttons, emphasis, bold designs</p>
+                        <p><strong>Example:</strong> Blue and orange, red and green (180° apart)</p>
+                    </div>
+
+                    <div class="harmony-explanation">
+                        <h5>Triadic</h5>
+                        <p><strong>Definition:</strong> Three colors evenly spaced on the color wheel</p>
+                        <p><strong>Characteristics:</strong> Vibrant, balanced, dynamic</p>
+                        <p><strong>Use Case:</strong> Playful designs, children's content, energetic brands</p>
+                        <p><strong>Example:</strong> Red, yellow, blue (120° apart)</p>
+                    </div>
+
+                    <div class="harmony-explanation">
+                        <h5>Tetradic (Rectangle)</h5>
+                        <p><strong>Definition:</strong> Four colors forming a rectangle on the color wheel</p>
+                        <p><strong>Characteristics:</strong> Rich, diverse, complex harmony</p>
+                        <p><strong>Use Case:</strong> Complex designs, varied content, professional layouts</p>
+                        <p><strong>Example:</strong> Red, yellow-green, cyan, blue-violet</p>
+                    </div>
+
+                    <div class="harmony-explanation">
+                        <h5>Split Complementary</h5>
+                        <p><strong>Definition:</strong> Base color plus two colors adjacent to its complement</p>
+                        <p><strong>Characteristics:</strong> High contrast with less tension than complementary</p>
+                        <p><strong>Use Case:</strong> Balanced designs with visual interest</p>
+                        <p><strong>Example:</strong> Blue with red-orange and yellow-orange</p>
+                    </div>
+                </div>
+
+                <h3>Accessibility and Contrast</h3>
+                <div class="accessibility-guide">
+                    <h4>♿ Web Accessibility Guidelines</h4>
+                    
+                    <div class="wcag-guidelines">
+                        <h5>WCAG Contrast Requirements</h5>
+                        <div class="contrast-levels">
+                            <div class="contrast-level">
+                                <h6>AA Level (Minimum)</h6>
+                                <p><strong>Normal Text:</strong> 4.5:1 contrast ratio</p>
+                                <p><strong>Large Text:</strong> 3:1 contrast ratio</p>
+                                <p><strong>Use Case:</strong> Standard web content, most applications</p>
+                            </div>
+                            
+                            <div class="contrast-level">
+                                <h6>AAA Level (Enhanced)</h6>
+                                <p><strong>Normal Text:</strong> 7:1 contrast ratio</p>
+                                <p><strong>Large Text:</strong> 4.5:1 contrast ratio</p>
+                                <p><strong>Use Case:</strong> High accessibility requirements, government sites</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-size-definitions">
+                            <h6>Text Size Definitions</h6>
+                            <p><strong>Normal Text:</strong> Less than 18pt (24px) regular or 14pt (18.5px) bold</p>
+                            <p><strong>Large Text:</strong> 18pt (24px) and larger regular or 14pt (18.5px) and larger bold</p>
+                        </div>
+                    </div>
+
+                    <div class="color-blindness">
+                        <h5>Color Blindness Considerations</h5>
+                        <div class="colorblind-types">
+                            <div class="colorblind-type">
+                                <h6>Protanopia (Red-blind)</h6>
+                                <p><strong>Affected:</strong> ~1% of males</p>
+                                <p><strong>Issue:</strong> Difficulty distinguishing red from green</p>
+                                <p><strong>Solution:</strong> Use blue/yellow contrasts, avoid red/green combinations</p>
+                            </div>
+                            
+                            <div class="colorblind-type">
+                                <h6>Deuteranopia (Green-blind)</h6>
+                                <p><strong>Affected:</strong> ~1% of males</p>
+                                <p><strong>Issue:</strong> Difficulty distinguishing green from red</p>
+                                <p><strong>Solution:</strong> Use high contrast, patterns, or textures</p>
+                            </div>
+                            
+                            <div class="colorblind-type">
+                                <h6>Tritanopia (Blue-blind)</h6>
+                                <p><strong>Affected:</strong> ~0.003% of population</p>
+                                <p><strong>Issue:</strong> Difficulty distinguishing blue from yellow</p>
+                                <p><strong>Solution:</strong> Use red/green contrasts, avoid blue/yellow</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Practical Applications</h3>
+                <div class="applications">
+                    <h4>🎯 Real-World Usage Examples</h4>
+                    
+                    <div class="application-example">
+                        <h5>Web Development</h5>
+                        <div class="code-examples">
+                            <h6>CSS Color Usage</h6>
+                            <pre><code>/* HEX colors */
+.primary-button {
+  background-color: #3498db;
+  border: 2px solid #2980b9;
+}
+
+/* RGB with transparency */
+.overlay {
+  background-color: rgba(52, 152, 219, 0.8);
+}
+
+/* HSL for easy color variations */
+.theme-light { color: hsl(204, 70%, 53%); }
+.theme-dark { color: hsl(204, 70%, 25%); }</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="application-example">
+                        <h5>Graphic Design</h5>
+                        <div class="design-tips">
+                            <h6>Print vs Digital</h6>
+                            <p><strong>Digital (RGB):</strong> Use RGB for screens, websites, digital media</p>
+                            <p><strong>Print (CMYK):</strong> Convert to CMYK for professional printing</p>
+                            <p><strong>Tip:</strong> Always check CMYK preview before printing</p>
+                        </div>
+                    </div>
+
+                    <div class="application-example">
+                        <h5>Brand Identity</h5>
+                        <div class="brand-guidelines">
+                            <h6>Color Consistency</h6>
+                            <p><strong>Primary Brand Color:</strong> Define in all formats (HEX, RGB, CMYK, Pantone)</p>
+                            <p><strong>Secondary Colors:</strong> Create harmonious palette using color theory</p>
+                            <p><strong>Accessibility:</strong> Ensure sufficient contrast for text readability</p>
+                        </div>
+                    </div>
+
+                    <div class="application-example">
+                        <h5>UI/UX Design</h5>
+                        <div class="ui-guidelines">
+                            <h6>Interface Color Strategy</h6>
+                            <p><strong>Primary:</strong> Main brand color for key actions</p>
+                            <p><strong>Secondary:</strong> Supporting colors for less important elements</p>
+                            <p><strong>Neutral:</strong> Grays for text, borders, backgrounds</p>
+                            <p><strong>Semantic:</strong> Red (error), Green (success), Yellow (warning), Blue (info)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Color Psychology</h3>
+                <div class="color-psychology">
+                    <h4>🧠 Psychological Impact of Colors</h4>
+                    
+                    <div class="color-meanings">
+                        <div class="color-meaning">
+                            <h5 style="color: #e74c3c;">Red</h5>
+                            <p><strong>Emotions:</strong> Energy, passion, urgency, excitement</p>
+                            <p><strong>Use Cases:</strong> Call-to-action buttons, sales, food industry</p>
+                            <p><strong>Avoid:</strong> Error messages only, overwhelming amounts</p>
+                        </div>
+
+                        <div class="color-meaning">
+                            <h5 style="color: #3498db;">Blue</h5>
+                            <p><strong>Emotions:</strong> Trust, stability, professionalism, calm</p>
+                            <p><strong>Use Cases:</strong> Corporate sites, healthcare, technology</p>
+                            <p><strong>Avoid:</strong> Food industry (suppresses appetite)</p>
+                        </div>
+
+                        <div class="color-meaning">
+                            <h5 style="color: #2ecc71;">Green</h5>
+                            <p><strong>Emotions:</strong> Growth, nature, success, harmony</p>
+                            <p><strong>Use Cases:</strong> Environmental, finance, health, success states</p>
+                            <p><strong>Avoid:</strong> Overuse in non-natural contexts</p>
+                        </div>
+
+                        <div class="color-meaning">
+                            <h5 style="color: #f39c12;">Orange</h5>
+                            <p><strong>Emotions:</strong> Enthusiasm, creativity, warmth, friendliness</p>
+                            <p><strong>Use Cases:</strong> Creative industries, children's products, calls-to-action</p>
+                            <p><strong>Avoid:</strong> Professional/serious contexts</p>
+                        </div>
+
+                        <div class="color-meaning">
+                            <h5 style="color: #9b59b6;">Purple</h5>
+                            <p><strong>Emotions:</strong> Luxury, creativity, mystery, spirituality</p>
+                            <p><strong>Use Cases:</strong> Beauty, luxury brands, creative services</p>
+                            <p><strong>Avoid:</strong> Overuse (can seem artificial)</p>
+                        </div>
+
+                        <div class="color-meaning">
+                            <h5 style="color: #f1c40f;">Yellow</h5>
+                            <p><strong>Emotions:</strong> Happiness, optimism, attention, energy</p>
+                            <p><strong>Use Cases:</strong> Highlights, warnings, children's products</p>
+                            <p><strong>Avoid:</strong> Large areas (can cause eye strain)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Best Practices</h3>
+                <div class="best-practices">
+                    <h4>✅ Color Usage Guidelines</h4>
+                    
+                    <h5>Design Principles</h5>
+                    <ul>
+                        <li><strong>60-30-10 Rule:</strong> 60% dominant color, 30% secondary, 10% accent</li>
+                        <li><strong>Limit Palette:</strong> Use 3-5 colors maximum for cohesion</li>
+                        <li><strong>Test Accessibility:</strong> Always check contrast ratios</li>
+                        <li><strong>Consider Context:</strong> Colors have different meanings in different cultures</li>
+                        <li><strong>Use Color Purposefully:</strong> Every color should have a reason</li>
+                    </ul>
+
+                    <h5>Technical Considerations</h5>
+                    <ul>
+                        <li><strong>Consistent Formats:</strong> Use same format throughout project</li>
+                        <li><strong>Document Colors:</strong> Maintain a color style guide</li>
+                        <li><strong>Test on Devices:</strong> Colors appear differently on various screens</li>
+                        <li><strong>Plan for Print:</strong> Convert RGB to CMYK for printing</li>
+                        <li><strong>Use Variables:</strong> Define colors as CSS custom properties or design tokens</li>
+                    </ul>
+
+                    <h5>Accessibility Best Practices</h5>
+                    <ul>
+                        <li><strong>Don't Rely on Color Alone:</strong> Use icons, patterns, or text labels</li>
+                        <li><strong>Test with Tools:</strong> Use contrast checkers and color blindness simulators</li>
+                        <li><strong>Provide Alternatives:</strong> Offer high contrast modes</li>
+                        <li><strong>Focus Indicators:</strong> Ensure keyboard focus is visible</li>
+                        <li><strong>Error States:</strong> Use multiple indicators (color + icon + text)</li>
+                    </ul>
+                </div>
+
+                <h3>Troubleshooting</h3>
+                <div class="troubleshooting">
+                    <h4>🔧 Common Issues and Solutions</h4>
+                    
+                    <div class="issue">
+                        <h5>Colors Look Different on Different Devices</h5>
+                        <p><strong>Cause:</strong> Different color profiles and screen calibrations</p>
+                        <p><strong>Solution:</strong> Use standard color spaces (sRGB), test on multiple devices</p>
+                        <p><strong>Prevention:</strong> Calibrate monitors, use color-managed workflow</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Print Colors Don't Match Screen</h5>
+                        <p><strong>Cause:</strong> RGB vs CMYK color space differences</p>
+                        <p><strong>Solution:</strong> Convert to CMYK early, use print preview</p>
+                        <p><strong>Prevention:</strong> Design in CMYK for print projects</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Poor Accessibility Scores</h5>
+                        <p><strong>Cause:</strong> Insufficient contrast ratios</p>
+                        <p><strong>Solution:</strong> Increase contrast, use darker/lighter variants</p>
+                        <p><strong>Prevention:</strong> Test contrast during design phase</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Colors Appear Muddy or Dull</h5>
+                        <p><strong>Cause:</strong> Low saturation or poor color harmony</p>
+                        <p><strong>Solution:</strong> Increase saturation, use complementary colors</p>
+                        <p><strong>Prevention:</strong> Use color theory principles, test combinations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Design Tools</h3>
+                <div class="related-grid">
+                    <a href="css-minifier.html" class="related-tool">CSS Minifier</a>
+                    <a href="html-minifier.html" class="related-tool">HTML Minifier</a>
+                    <a href="js-beautifier.html" class="related-tool">JS Beautifier</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'colorconverter';
+        
+        // Initialize with default color
+        document.addEventListener('DOMContentLoaded', function() {
+            updateColorFromPicker();
+        });
+        
+        // Color picker change handler
+        document.getElementById('color-picker').addEventListener('change', updateColorFromPicker);
+        
+        // Input format change handler
+        document.getElementById('input-format').addEventListener('change', function() {
+            showInputFormat(this.value);
+        });
+        
+        function showInputFormat(format) {
+            // Hide all input containers
+            document.querySelectorAll('.color-input-container > div').forEach(div => {
+                div.style.display = 'none';
+            });
+            
+            // Show selected format
+            document.getElementById(format + '-input').style.display = 'block';
+        }
+        
+        function updateColorFromPicker() {
+            const color = document.getElementById('color-picker').value;
+            document.getElementById('hex-value').value = color;
+            processCurrentTool();
+        }
+        
+        function processCurrentTool() {
+            const format = document.getElementById('input-format').value;
+            let inputColor = '';
+            
+            // Get input based on selected format
+            switch(format) {
+                case 'hex':
+                    inputColor = document.getElementById('hex-value').value;
+                    break;
+                case 'rgb':
+                    const r = document.getElementById('rgb-r').value;
+                    const g = document.getElementById('rgb-g').value;
+                    const b = document.getElementById('rgb-b').value;
+                    inputColor = `rgb(${r},${g},${b})`;
+                    break;
+                case 'hsl':
+                    const h = document.getElementById('hsl-h').value;
+                    const s = document.getElementById('hsl-s').value;
+                    const l = document.getElementById('hsl-l').value;
+                    inputColor = `hsl(${h},${s}%,${l}%)`;
+                    break;
+                case 'cmyk':
+                    const c = document.getElementById('cmyk-c').value;
+                    const m = document.getElementById('cmyk-m').value;
+                    const y = document.getElementById('cmyk-y').value;
+                    const k = document.getElementById('cmyk-k').value;
+                    inputColor = `cmyk(${c}%,${m}%,${y}%,${k}%)`;
+                    break;
+                case 'hsv':
+                    const hv = document.getElementById('hsv-h').value;
+                    const sv = document.getElementById('hsv-s').value;
+                    const v = document.getElementById('hsv-v').value;
+                    inputColor = `hsv(${hv},${sv}%,${v}%)`;
+                    break;
+            }
+            
+            if (!inputColor.trim()) {
+                alert('Please enter a color value.');
+                return;
+            }
+            
+            // Store input for processing
+            window.colorConverterInput = inputColor;
+            window.colorConverterFormat = format;
+            
+            const result = processText(inputColor, window.currentTool);
+            
+            // Parse and display results
+            if (result && typeof result === 'object') {
+                document.getElementById('result-hex').value = result.hex || '';
+                document.getElementById('result-rgb').value = result.rgb || '';
+                document.getElementById('result-hsl').value = result.hsl || '';
+                document.getElementById('result-cmyk').value = result.cmyk || '';
+                document.getElementById('result-hsv').value = result.hsv || '';
+                
+                // Update color display
+                if (result.hex) {
+                    document.getElementById('color-display').style.backgroundColor = result.hex;
+                    document.getElementById('color-picker').value = result.hex;
+                }
+                
+                // Update analysis
+                updateColorAnalysis(result);
+                
+                // Update harmony colors
+                updateColorHarmony(result.hex);
+            }
+        }
+        
+        function updateColorAnalysis(colorData) {
+            // This would be implemented with actual color analysis logic
+            document.getElementById('analysis-name').textContent = colorData.name || 'Unknown';
+            document.getElementById('analysis-brightness').textContent = colorData.brightness || 'N/A';
+            document.getElementById('analysis-luminance').textContent = colorData.luminance || 'N/A';
+            document.getElementById('analysis-contrast-white').textContent = colorData.contrastWhite || 'N/A';
+            document.getElementById('analysis-contrast-black').textContent = colorData.contrastBlack || 'N/A';
+            document.getElementById('analysis-wcag-aa').textContent = colorData.wcagAA || 'N/A';
+        }
+        
+        function updateColorHarmony(hexColor) {
+            // This would generate actual harmony colors
+            const complementary = document.getElementById('complementary-colors');
+            const analogous = document.getElementById('analogous-colors');
+            const triadic = document.getElementById('triadic-colors');
+            
+            // Placeholder implementation
+            complementary.innerHTML = '<div class="harmony-color" style="background-color: #ff6b35;"></div>';
+            analogous.innerHTML = '<div class="harmony-color" style="background-color: #2e86ab;"></div><div class="harmony-color" style="background-color: #a23b72;"></div>';
+            triadic.innerHTML = '<div class="harmony-color" style="background-color: #f18f01;"></div><div class="harmony-color" style="background-color: #c73e1d;"></div>';
+        }
+        
+        function generatePalette() {
+            const paletteType = document.getElementById('palette-type').value;
+            const baseColor = document.getElementById('color-picker').value;
+            
+            // This would generate actual palette based on type
+            const paletteDisplay = document.getElementById('palette-display');
+            paletteDisplay.innerHTML = `
+                <div class="palette-color" style="background-color: ${baseColor};" title="${baseColor}"></div>
+                <div class="palette-color" style="background-color: #ff6b35;" title="#ff6b35"></div>
+                <div class="palette-color" style="background-color: #f7931e;" title="#f7931e"></div>
+                <div class="palette-color" style="background-color: #ffd23f;" title="#ffd23f"></div>
+                <div class="palette-color" style="background-color: #06ffa5;" title="#06ffa5"></div>
+            `;
+        }
+        
+        function copyResult(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+

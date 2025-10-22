@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester - Test Regular Expressions Online | Free Regex Tool</title>
+    <meta name="description" content="Test and validate regular expressions online with real-time matching, syntax highlighting, and detailed explanations. Perfect for developers and data validation.">
+    <meta name="keywords" content="regex tester, regular expressions, regex validator, pattern matching, regex tool, javascript regex, regex examples, regex tutorial">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Regex Tester - Test Regular Expressions Online">
+    <meta property="og:description" content="Test and validate regular expressions with real-time matching and detailed explanations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/regex-tester">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Regex Tester - Test Regular Expressions Online">
+    <meta name="twitter:description" content="Professional regex testing tool with real-time validation and examples.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/regex-tester">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Regex Tester",
+        "description": "Test and validate regular expressions with real-time matching and detailed explanations",
+        "url": "https://texttoolspro.fun/regex-tester",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Real-time regex testing",
+            "Pattern matching",
+            "Regex flags support",
+            "Match highlighting",
+            "Pattern explanation",
+            "Common regex examples"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Regex Tester & Debugger",
+                "item": "https://texttoolspro.fun/regex-tester"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a regular expression (regex)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A regular expression is a sequence of characters that defines a search pattern. It's used for pattern matching, text validation, and string manipulation in programming and text processing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I test if my regex pattern works?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enter your regex pattern in the pattern field and your test text in the text area. The tool will highlight matches in real-time and show you exactly what your pattern matches or if there are any errors."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are regex flags and how do I use them?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Regex flags modify how the pattern matching works. Common flags include 'g' (global - find all matches), 'i' (case-insensitive), and 'm' (multiline). You can select these options in the tool interface."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I get help with common regex patterns?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the tool includes a library of common regex patterns for emails, phone numbers, URLs, dates, and more. You can select these examples to learn and modify them for your needs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why isn't my regex pattern matching anything?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Common issues include incorrect escaping of special characters, case sensitivity, or overly specific patterns. Check if you need the case-insensitive flag, verify special characters are properly escaped, and test with simpler patterns first."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I learn regex syntax?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Start with the common examples provided in the tool, then gradually modify them. Key concepts include character classes [a-z], quantifiers (+, *, ?), anchors (^, $), and groups (). Practice with real text examples to build understanding."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Regex Tester</h1>
+                <p class="tool-description">Test and validate regular expressions with real-time matching, syntax highlighting, and detailed explanations. Perfect for pattern matching and data validation.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="regex-input-section">
+                    <label for="regex-pattern">Regular Expression Pattern:</label>
+                    <input type="text" id="regex-pattern" placeholder="Enter your regex pattern (e.g., \d{3}-\d{3}-\d{4})" value="">
+                    <div class="regex-flags">
+                        <label><input type="checkbox" id="flag-global"> Global (g)</label>
+                        <label><input type="checkbox" id="flag-ignorecase"> Ignore Case (i)</label>
+                        <label><input type="checkbox" id="flag-multiline"> Multiline (m)</label>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <label for="input-text">Test String:</label>
+                    <textarea id="input-text" placeholder="Enter text to test against your regex pattern...
+Example: 123-456-7890
+Another example: abc@example.com"></textarea>
+                </div>
+
+                <div class="controls">
+                    <h3>Quick Examples:</h3>
+                    <div class="regex-examples">
+                        <button onclick="loadExample('email')" class="example-btn">Email</button>
+                        <button onclick="loadExample('phone')" class="example-btn">Phone</button>
+                        <button onclick="loadExample('url')" class="example-btn">URL</button>
+                        <button onclick="loadExample('date')" class="example-btn">Date</button>
+                        <button onclick="loadExample('ip')" class="example-btn">IP Address</button>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Test Regex</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Test Results:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Results</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Regex Tester</h2>
+                <ol>
+                    <li><strong>Enter Pattern:</strong> Type your regular expression in the pattern field</li>
+                    <li><strong>Set Flags:</strong> Choose global, case-insensitive, or multiline options</li>
+                    <li><strong>Add Test Text:</strong> Enter the text you want to test against</li>
+                    <li><strong>Test:</strong> Click "Test Regex" to see matches and results</li>
+                    <li><strong>Refine:</strong> Adjust your pattern based on the results</li>
+                </ol>
+
+                <h3>Common Regex Patterns</h3>
+                <div class="regex-patterns">
+                    <h4>Email Validation:</h4>
+                    <code>^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$</code>
+                    
+                    <h4>Phone Number (US):</h4>
+                    <code>^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$</code>
+                    
+                    <h4>URL Validation:</h4>
+                    <code>^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$</code>
+                    
+                    <h4>Date (MM/DD/YYYY):</h4>
+                    <code>^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$</code>
+                    
+                    <h4>IP Address:</h4>
+                    <code>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code>
+                </div>
+
+                <h3>Regex Syntax Guide</h3>
+                <table class="regex-syntax">
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>Any character</td>
+                        <td>a.c matches "abc", "axc"</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Zero or more</td>
+                        <td>ab*c matches "ac", "abc", "abbc"</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>One or more</td>
+                        <td>ab+c matches "abc", "abbc"</td>
+                    </tr>
+                    <tr>
+                        <td>?</td>
+                        <td>Zero or one</td>
+                        <td>ab?c matches "ac", "abc"</td>
+                    </tr>
+                    <tr>
+                        <td>^</td>
+                        <td>Start of string</td>
+                        <td>^abc matches "abc..." not "...abc"</td>
+                    </tr>
+                    <tr>
+                        <td>$</td>
+                        <td>End of string</td>
+                        <td>abc$ matches "...abc" not "abc..."</td>
+                    </tr>
+                    <tr>
+                        <td>[abc]</td>
+                        <td>Character class</td>
+                        <td>[abc] matches "a", "b", or "c"</td>
+                    </tr>
+                    <tr>
+                        <td>\d</td>
+                        <td>Digit (0-9)</td>
+                        <td>\d+ matches "123", "4567"</td>
+                    </tr>
+                    <tr>
+                        <td>\w</td>
+                        <td>Word character</td>
+                        <td>\w+ matches "hello", "test123"</td>
+                    </tr>
+                    <tr>
+                        <td>\s</td>
+                        <td>Whitespace</td>
+                        <td>\s+ matches spaces, tabs, newlines</td>
+                    </tr>
+                </table>
+
+                <h3>Regex Flags Explained</h3>
+                <ul>
+                    <li><strong>Global (g):</strong> Find all matches, not just the first one</li>
+                    <li><strong>Ignore Case (i):</strong> Case-insensitive matching</li>
+                    <li><strong>Multiline (m):</strong> ^ and $ match line breaks</li>
+                </ul>
+
+                <h3>Common Use Cases</h3>
+                <ul>
+                    <li><strong>Form Validation:</strong> Validate email, phone, and other inputs</li>
+                    <li><strong>Data Extraction:</strong> Extract specific patterns from text</li>
+                    <li><strong>Search & Replace:</strong> Find and replace text patterns</li>
+                    <li><strong>Log Analysis:</strong> Parse log files for specific entries</li>
+                    <li><strong>Data Cleaning:</strong> Remove or format unwanted characters</li>
+                </ul>
+
+                <h3>Tips for Better Regex</h3>
+                <ul>
+                    <li>Start simple and build complexity gradually</li>
+                    <li>Use online regex testers to validate patterns</li>
+                    <li>Comment complex regex patterns for future reference</li>
+                    <li>Consider performance - avoid excessive backtracking</li>
+                    <li>Test with various input scenarios</li>
+                </ul>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Tools</h3>
+                <div class="related-grid">
+                    <a href="find-replace.html" class="related-tool">Find & Replace</a>
+                    <a href="text-cleaner.html" class="related-tool">Text Cleaner</a>
+                    <a href="character-frequency.html" class="related-tool">Character Analysis</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'regextester';
+        
+        const regexExamples = {
+            email: {
+                pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$',
+                testText: 'user@example.com\ninvalid.email\ntest@domain.co.uk\n@invalid.com'
+            },
+            phone: {
+                pattern: '^\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$',
+                testText: '(123) 456-7890\n123-456-7890\n123.456.7890\n1234567890\ninvalid-phone'
+            },
+            url: {
+                pattern: '^https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)$',
+                testText: 'https://www.example.com\nhttp://test.org\nhttps://subdomain.example.com/path\ninvalid-url'
+            },
+            date: {
+                pattern: '^(0[1-9]|1[0-2])\\/(0[1-9]|[12][0-9]|3[01])\\/\\d{4}$',
+                testText: '12/25/2023\n01/01/2024\n13/45/2023\n2023/12/25'
+            },
+            ip: {
+                pattern: '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$',
+                testText: '192.168.1.1\n10.0.0.1\n255.255.255.255\n256.1.1.1\ninvalid.ip'
+            }
+        };
+        
+        function loadExample(type) {
+            const example = regexExamples[type];
+            if (example) {
+                document.getElementById('regex-pattern').value = example.pattern;
+                document.getElementById('input-text').value = example.testText;
+            }
+        }
+        
+        function processCurrentTool() {
+            const pattern = document.getElementById('regex-pattern').value;
+            const inputText = document.getElementById('input-text').value;
+            
+            // Get flags
+            const flags = [];
+            if (document.getElementById('flag-global').checked) flags.push('g');
+            if (document.getElementById('flag-ignorecase').checked) flags.push('i');
+            if (document.getElementById('flag-multiline').checked) flags.push('m');
+            
+            // Store flags in a way the processText function can access
+            window.regexFlags = flags.join('');
+            window.regexPattern = pattern;
+            
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

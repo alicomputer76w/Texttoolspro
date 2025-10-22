@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Minifier - Compress HTML Code Online | Free HTML Optimization Tool</title>
+    <meta name="description" content="Minify HTML code online to reduce file size and improve website performance. Remove whitespace, comments, and optimize HTML for faster loading times.">
+    <meta name="keywords" content="html minifier, html compressor, html optimizer, minify html, compress html, website optimization, page speed, html compression">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HTML Minifier - Compress HTML Code for Better Performance">
+    <meta property="og:description" content="Optimize your HTML code by removing unnecessary whitespace and comments for faster loading websites.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/html-minifier">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HTML Minifier - Compress HTML Code Online">
+    <meta name="twitter:description" content="Free HTML minification tool for website optimization and performance.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/html-minifier">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HTML Minifier",
+        "description": "Minify HTML code by removing whitespace, comments, and optimizing for smaller file sizes",
+        "url": "https://texttoolspro.fun/html-minifier",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "HTML minification",
+            "Remove whitespace",
+            "Remove comments",
+            "Optimize attributes",
+            "File size reduction",
+            "Preserve functionality"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "HTML Minifier & Compressor",
+                "item": "https://texttoolspro.fun/html-minifier"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What does HTML minification do?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HTML minification removes unnecessary whitespace, line breaks, comments, and redundant code from HTML files to reduce file size and improve website loading speed without affecting functionality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will minifying HTML break my website?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, proper HTML minification only removes unnecessary characters and preserves all functionality. The minifier is designed to maintain the structure and behavior of your HTML while reducing file size."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much can HTML minification reduce file size?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HTML minification typically reduces file size by 10-30%, depending on the original formatting and amount of whitespace. Files with extensive indentation and comments see the greatest reduction."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I minify HTML for production websites?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, minifying HTML for production is recommended as it reduces bandwidth usage, improves page load times, and can positively impact SEO rankings. Keep unminified versions for development and debugging."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I minify HTML with inline CSS and JavaScript?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the HTML minifier can handle files with inline CSS and JavaScript. It will minify the HTML structure while preserving the functionality of embedded styles and scripts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between minification and compression?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Minification removes unnecessary characters from code, while compression (like gzip) uses algorithms to reduce file size further. Both can be used together for maximum file size reduction and faster loading."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the HTML Minifier tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the HTML Minifier: 1) Paste your HTML code in the input area, 2) Choose minification options (remove comments, whitespace, empty attributes), 3) Click 'Minify HTML' button, 4) Copy the minified HTML code. The tool reduces file size while preserving functionality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does HTML minification remove?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HTML minification removes unnecessary whitespace, comments, empty attributes, and redundant code while preserving the structure and functionality of your HTML."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does minification affect HTML functionality?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, HTML minification only removes unnecessary characters and formatting. Your HTML will work exactly the same but load faster."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I minify HTML with inline CSS and JavaScript?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the HTML Minifier can handle HTML files containing inline CSS and JavaScript, optimizing the entire document."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the HTML minifier free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the HTML Minifier is completely free to use with no file size limits or usage restrictions."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>HTML Minifier</h1>
+                <p class="tool-description">Compress and optimize your HTML code by removing unnecessary whitespace, comments, and formatting. Improve website performance and reduce file sizes.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter HTML code to minify:</label>
+                    <textarea id="input-text" placeholder="<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+    <!-- Your HTML content here -->
+    <h1>Hello World</h1>
+</body>
+</html>"></textarea>
+                </div>
+
+                <div class="controls">
+                    <h3>Minification Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="remove-comments" checked> Remove HTML comments</label>
+                        <label><input type="checkbox" id="remove-whitespace" checked> Remove extra whitespace</label>
+                        <label><input type="checkbox" id="remove-empty-lines" checked> Remove empty lines</label>
+                        <label><input type="checkbox" id="preserve-line-breaks"> Preserve some line breaks</label>
+                        <label><input type="checkbox" id="show-stats" checked> Show compression statistics</label>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Minify HTML</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Minified HTML:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Minified HTML</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use HTML Minifier</h2>
+                <ol>
+                    <li><strong>Paste HTML:</strong> Enter your HTML code in the input field</li>
+                    <li><strong>Select Options:</strong> Choose which elements to remove or preserve</li>
+                    <li><strong>Minify:</strong> Click "Minify HTML" to compress your code</li>
+                    <li><strong>Review Stats:</strong> Check compression ratio and file size reduction</li>
+                    <li><strong>Copy Result:</strong> Use the minified HTML in your projects</li>
+                </ol>
+
+                <h3>HTML Minification Benefits</h3>
+                <ul>
+                    <li><strong>Faster Loading:</strong> Smaller files load quicker</li>
+                    <li><strong>Bandwidth Savings:</strong> Reduced data transfer costs</li>
+                    <li><strong>Better SEO:</strong> Page speed is a ranking factor</li>
+                    <li><strong>Improved UX:</strong> Faster sites provide better user experience</li>
+                    <li><strong>Server Efficiency:</strong> Less bandwidth usage on your server</li>
+                </ul>
+
+                <h3>What Gets Removed</h3>
+                <ul>
+                    <li><strong>HTML Comments:</strong> <!-- comment --> tags</li>
+                    <li><strong>Extra Whitespace:</strong> Unnecessary spaces and tabs</li>
+                    <li><strong>Empty Lines:</strong> Blank lines between elements</li>
+                    <li><strong>Redundant Spaces:</strong> Multiple consecutive spaces</li>
+                    <li><strong>Line Breaks:</strong> Unnecessary new lines (optional)</li>
+                </ul>
+
+                <h3>Before vs After Example</h3>
+                <div class="example-comparison">
+                    <h4>❌ Before Minification (156 bytes):</h4>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Main content --&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    
+                    <h4>✅ After Minification (89 bytes - 43% smaller):</h4>
+                    <pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Example&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+                </div>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li><strong>Keep Originals:</strong> Always keep unminified versions for development</li>
+                    <li><strong>Test Thoroughly:</strong> Verify functionality after minification</li>
+                    <li><strong>Automate Process:</strong> Use build tools for automatic minification</li>
+                    <li><strong>Combine with Gzip:</strong> Use server compression for even better results</li>
+                    <li><strong>Monitor Performance:</strong> Measure actual speed improvements</li>
+                </ul>
+
+                <h3>When to Use HTML Minification</h3>
+                <ul>
+                    <li><strong>Production Websites:</strong> Always minify for live sites</li>
+                    <li><strong>Email Templates:</strong> Reduce email size limits</li>
+                    <li><strong>Mobile Apps:</strong> Optimize for slower connections</li>
+                    <li><strong>CDN Distribution:</strong> Reduce bandwidth costs</li>
+                    <li><strong>Performance Optimization:</strong> Part of overall speed strategy</li>
+                </ul>
+
+                <h3>Performance Impact</h3>
+                <table class="performance-table">
+                    <tr>
+                        <th>File Size</th>
+                        <th>Typical Reduction</th>
+                        <th>Load Time Improvement</th>
+                    </tr>
+                    <tr>
+                        <td>Small (&lt;10KB)</td>
+                        <td>20-40%</td>
+                        <td>0.1-0.3 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>Medium (10-50KB)</td>
+                        <td>30-50%</td>
+                        <td>0.3-1.0 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>Large (&gt;50KB)</td>
+                        <td>40-60%</td>
+                        <td>1.0+ seconds</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Tools</h3>
+                <div class="related-grid">
+                    <a href="css-minifier.html" class="related-tool">CSS Minifier</a>
+                    <a href="js-beautifier.html" class="related-tool">JS Beautifier</a>
+                    <a href="json-formatter.html" class="related-tool">JSON Formatter</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'htmlminifier';
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+

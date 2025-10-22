@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter & Validator - Pretty Print JSON Online | Free JSON Tool</title>
+    <meta name="description" content="Format, validate, and beautify JSON data online. Free JSON formatter with syntax highlighting, error detection, and minification. Perfect for developers and API testing.">
+    <meta name="keywords" content="json formatter, json validator, json beautifier, json pretty print, json minifier, json parser, api testing, json syntax">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="JSON Formatter & Validator - Format JSON Online">
+    <meta property="og:description" content="Format, validate, and beautify JSON data with syntax highlighting and error detection.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/json-formatter">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JSON Formatter & Validator - Format JSON Online">
+    <meta name="twitter:description" content="Professional JSON formatting and validation tool for developers.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/json-formatter">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON Formatter & Validator",
+        "description": "Format, validate, and beautify JSON data with syntax highlighting and error detection",
+        "url": "https://texttoolspro.fun/json-formatter",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "JSON formatting",
+            "JSON validation",
+            "Syntax highlighting",
+            "Error detection",
+            "Minify JSON",
+            "Real-time processing"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Text Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "JSON Formatter & Validator",
+                "item": "https://texttoolspro.fun/json-formatter"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Text Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "JSON Formatter & Validator",
+                "item": "https://texttoolspro.fun/json-formatter"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the JSON Formatter & Validator tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the JSON Formatter & Validator: 1) Paste your JSON data in the input area, 2) The tool automatically validates syntax and shows errors if any, 3) Choose format options (beautify, minify, or validate), 4) Click the desired action button, 5) Copy the formatted JSON from the output area. The tool works instantly and shows validation results."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I validate JSON syntax?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Paste your JSON data into the JSON Formatter & Validator tool. It will automatically check for syntax errors, missing brackets, incorrect commas, and other JSON formatting issues, highlighting any problems found."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I format minified JSON to make it readable?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the JSON Formatter can take compressed or minified JSON and format it with proper indentation, line breaks, and spacing to make it human-readable and easier to debug."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What JSON errors can the validator detect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The validator can detect various JSON errors including missing quotes around keys, trailing commas, unclosed brackets or braces, invalid escape sequences, and incorrect data types."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my JSON data secure when using this tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all JSON processing happens locally in your browser. Your data is never sent to any server, ensuring complete privacy and security of your JSON content."
+                }
+            }
+        ]
+    }
+    </script>
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>JSON Formatter & Validator</h1>
+                <p class="tool-description">Format, validate, and beautify JSON data with professional-grade tools. Perfect for API development, debugging, and data analysis.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter JSON data to format:</label>
+                    <textarea id="input-text" placeholder='{"name":"John","age":30,"city":"New York"}'></textarea>
+                </div>
+
+                <div class="controls">
+                    <h3>Formatting Options:</h3>
+                    <div class="control-group">
+                        <label><input type="radio" name="format-type" value="format" checked> Format (Pretty Print)</label>
+                        <label><input type="radio" name="format-type" value="minify"> Minify (Compact)</label>
+                        <label><input type="checkbox" id="validate-only"> Validate Only</label>
+                        <label>
+                            Indentation: 
+                            <select id="indent-size">
+                                <option value="2" selected>2 spaces</option>
+                                <option value="4">4 spaces</option>
+                                <option value="tab">Tab</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Format JSON</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Formatted JSON:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy JSON</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use JSON Formatter</h2>
+                <ol>
+                    <li><strong>Paste JSON:</strong> Enter your JSON data in the input field</li>
+                    <li><strong>Choose Format:</strong> Select formatting (pretty print) or minification</li>
+                    <li><strong>Set Options:</strong> Choose indentation style and validation preferences</li>
+                    <li><strong>Format:</strong> Click "Format JSON" to process your data</li>
+                    <li><strong>Copy Result:</strong> Use the formatted JSON in your projects</li>
+                </ol>
+
+                <h3>JSON Formatting Features</h3>
+                <ul>
+                    <li><strong>Pretty Print:</strong> Makes JSON readable with proper indentation</li>
+                    <li><strong>Validation:</strong> Checks for syntax errors and invalid structure</li>
+                    <li><strong>Minification:</strong> Removes whitespace for smaller file size</li>
+                    <li><strong>Error Detection:</strong> Highlights syntax issues with helpful messages</li>
+                    <li><strong>Custom Indentation:</strong> Choose between spaces or tabs</li>
+                </ul>
+
+                <h3>Common JSON Use Cases</h3>
+                <ul>
+                    <li><strong>API Development:</strong> Format API responses for testing</li>
+                    <li><strong>Configuration Files:</strong> Clean up config JSON files</li>
+                    <li><strong>Data Exchange:</strong> Prepare JSON for data transfer</li>
+                    <li><strong>Debugging:</strong> Make complex JSON structures readable</li>
+                    <li><strong>Documentation:</strong> Create clean examples for docs</li>
+                </ul>
+
+                <h3>JSON Best Practices</h3>
+                <ul>
+                    <li>Use double quotes for strings (not single quotes)</li>
+                    <li>Don't include trailing commas</li>
+                    <li>Use consistent indentation (2 or 4 spaces)</li>
+                    <li>Keep property names descriptive but concise</li>
+                    <li>Validate JSON before using in production</li>
+                </ul>
+
+                <h3>Common JSON Errors</h3>
+                <div class="error-examples">
+                    <h4>❌ Invalid JSON:</h4>
+                    <pre><code>{name: 'John', age: 30,}</code></pre>
+                    
+                    <h4>✅ Valid JSON:</h4>
+                    <pre><code>{"name": "John", "age": 30}</code></pre>
+                </div>
+
+                <h3>JSON vs Other Formats</h3>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>JSON</th>
+                        <th>XML</th>
+                        <th>YAML</th>
+                    </tr>
+                    <tr>
+                        <td>Human Readable</td>
+                        <td>✅ Good</td>
+                        <td>⚠️ Verbose</td>
+                        <td>✅ Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>File Size</td>
+                        <td>✅ Compact</td>
+                        <td>❌ Large</td>
+                        <td>✅ Compact</td>
+                    </tr>
+                    <tr>
+                        <td>Parsing Speed</td>
+                        <td>✅ Fast</td>
+                        <td>⚠️ Slower</td>
+                        <td>⚠️ Moderate</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Tools</h3>
+                <div class="related-grid">
+                    <a href="xml-to-json.html" class="related-tool">XML to JSON</a>
+                    <a href="html-minifier.html" class="related-tool">HTML Minifier</a>
+                    <a href="css-minifier.html" class="related-tool">CSS Minifier</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'jsonformatter';
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

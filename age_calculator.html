@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator & Birthday Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the Age Calculator tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the Age Calculator: 1) Enter your birth date using the date picker or manual input, 2) Click 'Calculate Age' button, 3) View your exact age in years, months, and days, 4) See additional information like days until next birthday and total days lived. The tool provides precise age calculations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is the age calculation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Age Calculator is extremely accurate, accounting for leap years, different month lengths, and providing exact age down to the day level with precise calculations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I calculate age for any date?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, you can calculate age for any birth date, and the tool also shows how many days until the next birthday and other useful date-related information."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it work with different date formats?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Age Calculator accepts various date formats and includes a user-friendly date picker for easy date selection."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the age calculator free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Age Calculator is completely free to use with unlimited calculations and no registration required."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-purple-200 hover:text-white mr-4">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </a>
+                    <h1 class="text-3xl font-bold">
+                        <i class="fas fa-birthday-cake mr-3"></i>Age Calculator & Birthday Tools
+                    </h1>
+                </div>
+                <a href="index.html" class="bg-purple-500 hover:bg-purple-400 px-4 py-2 rounded-lg transition-colors duration-300">
+                    <i class="fas fa-home mr-2"></i>Home
+                </a>
+            </div>
+            <p class="text-purple-100 mt-2">Calculate age, find birthday details, and discover amazing age-related facts</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Age Calculator Section -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-calculator text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Age Calculator</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Input Section -->
+                    <div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Birth Date</label>
+                                <input type="date" id="birthDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Calculate Age On (Optional)</label>
+                                <input type="date" id="calculateDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <p class="text-xs text-gray-500 mt-1">Leave empty to calculate current age</p>
+                            </div>
+                            <button onclick="calculateAge()" class="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                                <i class="fas fa-calculator mr-2"></i>Calculate Age
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div id="ageResults" class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Age Details</h3>
+                        <div class="space-y-3 text-sm">
+                            <p class="text-gray-600">Enter your birth date to see detailed age information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday Tools Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                
+                <!-- Next Birthday Countdown -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-gift text-green-500 text-2xl mr-3"></i>
+                        <h2 class="text-xl font-bold text-gray-800">Next Birthday Countdown</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <input type="date" id="birthdayDate" placeholder="Enter your birthday" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <button onclick="startCountdown()" class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300">
+                            <i class="fas fa-clock mr-2"></i>Start Countdown
+                        </button>
+                        <div id="countdownResult" class="bg-green-50 rounded-lg p-4 text-center hidden">
+                            <div class="grid grid-cols-4 gap-2 text-center">
+                                <div class="bg-white rounded-lg p-3">
+                                    <div id="daysLeft" class="text-2xl font-bold text-green-600">0</div>
+                                    <div class="text-xs text-gray-600">Days</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3">
+                                    <div id="hoursLeft" class="text-2xl font-bold text-green-600">0</div>
+                                    <div class="text-xs text-gray-600">Hours</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3">
+                                    <div id="minutesLeft" class="text-2xl font-bold text-green-600">0</div>
+                                    <div class="text-xs text-gray-600">Minutes</div>
+                                </div>
+                                <div class="bg-white rounded-lg p-3">
+                                    <div id="secondsLeft" class="text-2xl font-bold text-green-600">0</div>
+                                    <div class="text-xs text-gray-600">Seconds</div>
+                                </div>
+                            </div>
+                            <p id="birthdayMessage" class="mt-4 text-green-700 font-medium"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zodiac Sign Finder -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-purple-500 text-2xl mr-3"></i>
+                        <h2 class="text-xl font-bold text-gray-800">Zodiac Sign & Birth Info</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <input type="date" id="zodiacDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <button onclick="findZodiacSign()" class="w-full bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors duration-300">
+                            <i class="fas fa-star mr-2"></i>Find Zodiac Sign
+                        </button>
+                        <div id="zodiacResult" class="space-y-3 text-sm">
+                            <p class="text-gray-600">Enter a date to find zodiac sign and birth information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Age Statistics & Fun Facts -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                
+                <!-- Life Statistics -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-orange-500 text-2xl mr-3"></i>
+                        <h3 class="text-lg font-bold text-gray-800">Life Statistics</h3>
+                    </div>
+                    <div id="lifeStats" class="space-y-3 text-sm">
+                        <p class="text-gray-600">Calculate age first to see life statistics</p>
+                    </div>
+                </div>
+
+                <!-- Age Milestones -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-trophy text-yellow-500 text-2xl mr-3"></i>
+                        <h3 class="text-lg font-bold text-gray-800">Age Milestones</h3>
+                    </div>
+                    <div id="milestones" class="space-y-2 text-sm">
+                        <p class="text-gray-600">Calculate age first to see milestones</p>
+                    </div>
+                </div>
+
+                <!-- Fun Age Facts -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-lightbulb text-cyan-500 text-2xl mr-3"></i>
+                        <h3 class="text-lg font-bold text-gray-800">Fun Age Facts</h3>
+                    </div>
+                    <div id="funFacts" class="space-y-2 text-sm">
+                        <p class="text-gray-600">Calculate age first to see fun facts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Age Comparison Tool -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-users text-indigo-500 text-2xl mr-3"></i>
+                    <h2 class="text-xl font-bold text-gray-800">Age Comparison Tool</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Person 1 Birth Date</label>
+                        <input type="date" id="person1Date" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Person 2 Birth Date</label>
+                        <input type="date" id="person2Date" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="flex items-end">
+                        <button onclick="compareAges()" class="w-full bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors duration-300">
+                            <i class="fas fa-balance-scale mr-2"></i>Compare Ages
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="comparisonResult" class="mt-6 p-4 bg-indigo-50 rounded-lg hidden">
+                    <h3 class="font-semibold text-indigo-800 mb-3">Age Comparison Results</h3>
+                    <div id="comparisonDetails" class="space-y-2 text-sm text-indigo-700"></div>
+                </div>
+            </div>
+
+            <!-- Birthday Calendar Generator -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-calendar-alt text-red-500 text-2xl mr-3"></i>
+                    <h2 class="text-xl font-bold text-gray-800">Birthday Calendar & Events</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Generate Birthday Calendar</h3>
+                        <div class="space-y-4">
+                            <input type="date" id="calendarBirthDate" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <select id="calendarYear" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
+                                <option value="">Select Year</option>
+                            </select>
+                            <button onclick="generateBirthdayCalendar()" class="w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">
+                                <i class="fas fa-calendar-plus mr-2"></i>Generate Calendar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Birthday Events</h3>
+                        <div id="birthdayEvents" class="space-y-3 text-sm max-h-64 overflow-y-auto">
+                            <p class="text-gray-600">Generate calendar to see birthday events for the year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-300">&copy;  2025 Text Tools Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let countdownInterval;
+
+        // Initialize year selector
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSelect = document.getElementById('calendarYear');
+            const currentYear = new Date().getFullYear();
+            for (let year = currentYear - 10; year <= currentYear + 10; year++) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                if (year === currentYear) option.selected = true;
+                yearSelect.appendChild(option);
+            }
+        });
+
+        // Calculate detailed age
+        function calculateAge() {
+            const birthDate = document.getElementById('birthDate').value;
+            const calculateDate = document.getElementById('calculateDate').value || new Date().toISOString().split('T')[0];
+            
+            if (!birthDate) {
+                showNotification('Please enter your birth date', 'error');
+                return;
+            }
+
+            const birth = new Date(birthDate);
+            const calculate = new Date(calculateDate);
+            
+            if (birth > calculate) {
+                showNotification('Birth date cannot be in the future', 'error');
+                return;
+            }
+
+            const ageDetails = getDetailedAge(birth, calculate);
+            displayAgeResults(ageDetails, birth, calculate);
+            displayLifeStatistics(ageDetails);
+            displayMilestones(ageDetails);
+            displayFunFacts(ageDetails, birth);
+        }
+
+        function getDetailedAge(birthDate, currentDate) {
+            const birth = new Date(birthDate);
+            const current = new Date(currentDate);
+            
+            let years = current.getFullYear() - birth.getFullYear();
+            let months = current.getMonth() - birth.getMonth();
+            let days = current.getDate() - birth.getDate();
+
+            if (days < 0) {
+                months--;
+                const lastMonth = new Date(current.getFullYear(), current.getMonth(), 0);
+                days += lastMonth.getDate();
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            const totalDays = Math.floor((current - birth) / (1000 * 60 * 60 * 24));
+            const totalWeeks = Math.floor(totalDays / 7);
+            const totalMonths = years * 12 + months;
+            const totalHours = totalDays * 24;
+            const totalMinutes = totalHours * 60;
+            const totalSeconds = totalMinutes * 60;
+
+            return {
+                years, months, days, totalDays, totalWeeks, totalMonths,
+                totalHours, totalMinutes, totalSeconds
+            };
+        }
+
+        function displayAgeResults(age, birth, current) {
+            const resultsDiv = document.getElementById('ageResults');
+            resultsDiv.innerHTML = `
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Age Details</h3>
+                <div class="space-y-3">
+                    <div class="bg-blue-100 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-blue-600">${age.years} Years, ${age.months} Months, ${age.days} Days</div>
+                        <div class="text-sm text-blue-700 mt-1">Exact Age</div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3 text-sm">
+                        <div class="bg-gray-100 rounded p-3">
+                            <div class="font-semibold text-gray-700">Total Days</div>
+                            <div class="text-lg text-gray-900">${age.totalDays.toLocaleString()}</div>
+                        </div>
+                        <div class="bg-gray-100 rounded p-3">
+                            <div class="font-semibold text-gray-700">Total Weeks</div>
+                            <div class="text-lg text-gray-900">${age.totalWeeks.toLocaleString()}</div>
+                        </div>
+                        <div class="bg-gray-100 rounded p-3">
+                            <div class="font-semibold text-gray-700">Total Months</div>
+                            <div class="text-lg text-gray-900">${age.totalMonths}</div>
+                        </div>
+                        <div class="bg-gray-100 rounded p-3">
+                            <div class="font-semibold text-gray-700">Total Hours</div>
+                            <div class="text-lg text-gray-900">${age.totalHours.toLocaleString()}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <div>Birth Date: ${birth.toLocaleDateString()}</div>
+                        <div>Calculate Date: ${current.toLocaleDateString()}</div>
+                        <div>Day of Birth: ${birth.toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayLifeStatistics(age) {
+            const statsDiv = document.getElementById('lifeStats');
+            const heartbeats = Math.floor(age.totalMinutes * 70); // Average 70 beats per minute
+            const breaths = Math.floor(age.totalMinutes * 15); // Average 15 breaths per minute
+            const sleepHours = Math.floor(age.totalHours * 0.33); // Average 8 hours sleep per day
+
+            statsDiv.innerHTML = `
+                <div class="space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Heartbeats:</span>
+                        <span class="font-semibold text-red-600">${heartbeats.toLocaleString()}</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Breaths:</span>
+                        <span class="font-semibold text-blue-600">${breaths.toLocaleString()}</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Hours Slept:</span>
+                        <span class="font-semibold text-purple-600">${sleepHours.toLocaleString()}</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Days Slept:</span>
+                        <span class="font-semibold text-indigo-600">${Math.floor(sleepHours / 24).toLocaleString()}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayMilestones(age) {
+            const milestonesDiv = document.getElementById('milestones');
+            const milestones = [];
+
+            if (age.totalDays >= 100) milestones.push('✅ 100 Days Old');
+            if (age.totalDays >= 365) milestones.push('✅ 1 Year Old');
+            if (age.totalDays >= 1000) milestones.push('✅ 1000 Days Old');
+            if (age.years >= 5) milestones.push('✅ School Age');
+            if (age.years >= 10) milestones.push('✅ Double Digits');
+            if (age.years >= 13) milestones.push('✅ Teenager');
+            if (age.years >= 18) milestones.push('✅ Adult');
+            if (age.years >= 21) milestones.push('✅ Legal Drinking Age');
+            if (age.totalDays >= 10000) milestones.push('✅ 10,000 Days Old');
+            if (age.years >= 30) milestones.push('✅ Thirty Club');
+            if (age.years >= 50) milestones.push('✅ Half Century');
+
+            milestonesDiv.innerHTML = milestones.length > 0 
+                ? milestones.map(m => `<div class="text-green-600">${m}</div>`).join('')
+                : '<p class="text-gray-600">No major milestones reached yet</p>';
+        }
+
+        function displayFunFacts(age, birth) {
+            const factsDiv = document.getElementById('funFacts');
+            const facts = [];
+
+            facts.push(`🎂 You've had ${age.years} birthdays`);
+            facts.push(`📅 Born on a ${birth.toLocaleDateString('en-US', { weekday: 'long' })}`);
+            facts.push(`⏰ You're ${age.totalSeconds.toLocaleString()} seconds old`);
+            facts.push(`🌙 You've seen ${Math.floor(age.totalDays / 29.5)} full moons`);
+            facts.push(`🎄 You've experienced ${age.years} New Years`);
+
+            const birthMonth = birth.getMonth();
+            const seasons = ['Winter', 'Winter', 'Spring', 'Spring', 'Spring', 'Summer', 'Summer', 'Summer', 'Fall', 'Fall', 'Fall', 'Winter'];
+            facts.push(`🌸 Born in ${seasons[birthMonth]}`);
+
+            factsDiv.innerHTML = facts.map(fact => `<div class="text-cyan-700">${fact}</div>`).join('');
+        }
+
+        // Birthday countdown
+        function startCountdown() {
+            const birthdayDate = document.getElementById('birthdayDate').value;
+            if (!birthdayDate) {
+                showNotification('Please enter your birthday date', 'error');
+                return;
+            }
+
+            if (countdownInterval) clearInterval(countdownInterval);
+
+            const countdownDiv = document.getElementById('countdownResult');
+            countdownDiv.classList.remove('hidden');
+
+            countdownInterval = setInterval(() => {
+                updateCountdown(birthdayDate);
+            }, 1000);
+
+            updateCountdown(birthdayDate);
+        }
+
+        function updateCountdown(birthdayDate) {
+            const now = new Date();
+            const birthday = new Date(birthdayDate);
+            
+            // Set birthday to current year
+            birthday.setFullYear(now.getFullYear());
+            
+            // If birthday has passed this year, set to next year
+            if (birthday < now) {
+                birthday.setFullYear(now.getFullYear() + 1);
+            }
+
+            const timeDiff = birthday - now;
+            
+            if (timeDiff <= 0) {
+                document.getElementById('birthdayMessage').textContent = '🎉 Happy Birthday! 🎉';
+                clearInterval(countdownInterval);
+                return;
+            }
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById('daysLeft').textContent = days;
+            document.getElementById('hoursLeft').textContent = hours;
+            document.getElementById('minutesLeft').textContent = minutes;
+            document.getElementById('secondsLeft').textContent = seconds;
+
+            const message = days === 0 ? 'Today is your birthday!' : 
+                           days === 1 ? 'Tomorrow is your birthday!' :
+                           `${days} days until your birthday!`;
+            document.getElementById('birthdayMessage').textContent = message;
+        }
+
+        // Zodiac sign finder
+        function findZodiacSign() {
+            const date = document.getElementById('zodiacDate').value;
+            if (!date) {
+                showNotification('Please enter a date', 'error');
+                return;
+            }
+
+            const birthDate = new Date(date);
+            const zodiac = getZodiacSign(birthDate);
+            const chineseZodiac = getChineseZodiac(birthDate.getFullYear());
+            const birthstone = getBirthstone(birthDate.getMonth());
+            const dayOfWeek = birthDate.toLocaleDateString('en-US', { weekday: 'long' });
+
+            document.getElementById('zodiacResult').innerHTML = `
+                <div class="space-y-3">
+                    <div class="bg-purple-100 rounded-lg p-4">
+                        <div class="text-lg font-bold text-purple-600">${zodiac.sign} ${zodiac.symbol}</div>
+                        <div class="text-sm text-purple-700">${zodiac.dates}</div>
+                        <div class="text-xs text-purple-600 mt-2">${zodiac.traits}</div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Chinese Zodiac:</span>
+                            <span class="font-semibold">${chineseZodiac}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Birthstone:</span>
+                            <span class="font-semibold">${birthstone}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Day of Week:</span>
+                            <span class="font-semibold">${dayOfWeek}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Season:</span>
+                            <span class="font-semibold">${getSeason(birthDate.getMonth())}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getZodiacSign(date) {
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            
+            const signs = [
+                { sign: 'Capricorn', symbol: '♑', dates: 'Dec 22 - Jan 19', traits: 'Ambitious, practical, disciplined' },
+                { sign: 'Aquarius', symbol: '♒', dates: 'Jan 20 - Feb 18', traits: 'Independent, original, humanitarian' },
+                { sign: 'Pisces', symbol: '♓', dates: 'Feb 19 - Mar 20', traits: 'Compassionate, intuitive, artistic' },
+                { sign: 'Aries', symbol: '♈', dates: 'Mar 21 - Apr 19', traits: 'Energetic, courageous, confident' },
+                { sign: 'Taurus', symbol: '♉', dates: 'Apr 20 - May 20', traits: 'Reliable, patient, practical' },
+                { sign: 'Gemini', symbol: '♊', dates: 'May 21 - Jun 20', traits: 'Curious, adaptable, communicative' },
+                { sign: 'Cancer', symbol: '♋', dates: 'Jun 21 - Jul 22', traits: 'Nurturing, emotional, protective' },
+                { sign: 'Leo', symbol: '♌', dates: 'Jul 23 - Aug 22', traits: 'Confident, generous, dramatic' },
+                { sign: 'Virgo', symbol: '♍', dates: 'Aug 23 - Sep 22', traits: 'Analytical, helpful, precise' },
+                { sign: 'Libra', symbol: '♎', dates: 'Sep 23 - Oct 22', traits: 'Diplomatic, fair, social' },
+                { sign: 'Scorpio', symbol: '♏', dates: 'Oct 23 - Nov 21', traits: 'Intense, passionate, mysterious' },
+                { sign: 'Sagittarius', symbol: '♐', dates: 'Nov 22 - Dec 21', traits: 'Adventurous, optimistic, philosophical' }
+            ];
+
+            if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return signs[0];
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return signs[1];
+            if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) return signs[2];
+            if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return signs[3];
+            if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return signs[4];
+            if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return signs[5];
+            if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return signs[6];
+            if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return signs[7];
+            if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return signs[8];
+            if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return signs[9];
+            if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return signs[10];
+            return signs[11];
+        }
+
+        function getChineseZodiac(year) {
+            const animals = ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'];
+            return animals[(year - 1900) % 12];
+        }
+
+        function getBirthstone(month) {
+            const stones = ['Garnet', 'Amethyst', 'Aquamarine', 'Diamond', 'Emerald', 'Pearl', 
+                          'Ruby', 'Peridot', 'Sapphire', 'Opal', 'Topaz', 'Turquoise'];
+            return stones[month];
+        }
+
+        function getSeason(month) {
+            if (month >= 2 && month <= 4) return 'Spring';
+            if (month >= 5 && month <= 7) return 'Summer';
+            if (month >= 8 && month <= 10) return 'Fall';
+            return 'Winter';
+        }
+
+        // Age comparison
+        function compareAges() {
+            const date1 = document.getElementById('person1Date').value;
+            const date2 = document.getElementById('person2Date').value;
+
+            if (!date1 || !date2) {
+                showNotification('Please enter both birth dates', 'error');
+                return;
+            }
+
+            const birth1 = new Date(date1);
+            const birth2 = new Date(date2);
+            const now = new Date();
+
+            const age1 = getDetailedAge(birth1, now);
+            const age2 = getDetailedAge(birth2, now);
+
+            const ageDiff = Math.abs(birth1 - birth2);
+            const daysDiff = Math.floor(ageDiff / (1000 * 60 * 60 * 24));
+            const yearsDiff = Math.abs(age1.years - age2.years);
+
+            const older = birth1 < birth2 ? 'Person 1' : 'Person 2';
+            const younger = birth1 < birth2 ? 'Person 2' : 'Person 1';
+
+            document.getElementById('comparisonResult').classList.remove('hidden');
+            document.getElementById('comparisonDetails').innerHTML = `
+                <div class="space-y-2">
+                    <div><strong>Person 1:</strong> ${age1.years} years, ${age1.months} months, ${age1.days} days old</div>
+                    <div><strong>Person 2:</strong> ${age2.years} years, ${age2.months} months, ${age2.days} days old</div>
+                    <div class="border-t pt-2 mt-3">
+                        <div><strong>${older}</strong> is older by:</div>
+                        <div class="ml-4">• ${yearsDiff} years</div>
+                        <div class="ml-4">• ${daysDiff} days</div>
+                        <div class="ml-4">• ${Math.floor(daysDiff / 7)} weeks</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Birthday calendar generator
+        function generateBirthdayCalendar() {
+            const birthDate = document.getElementById('calendarBirthDate').value;
+            const year = document.getElementById('calendarYear').value;
+
+            if (!birthDate || !year) {
+                showNotification('Please enter birth date and select year', 'error');
+                return;
+            }
+
+            const birth = new Date(birthDate);
+            const events = [];
+
+            // Birthday in selected year
+            const birthday = new Date(year, birth.getMonth(), birth.getDate());
+            const age = year - birth.getFullYear();
+            
+            events.push({
+                date: birthday.toLocaleDateString(),
+                event: `🎂 ${age}${getOrdinalSuffix(age)} Birthday`,
+                type: 'birthday'
+            });
+
+            // Half birthday
+            const halfBirthday = new Date(birthday);
+            halfBirthday.setMonth(halfBirthday.getMonth() + 6);
+            if (halfBirthday.getFullYear() == year) {
+                events.push({
+                    date: halfBirthday.toLocaleDateString(),
+                    event: `🎈 Half Birthday (${age}.5 years)`,
+                    type: 'half'
+                });
+            }
+
+            // Age milestones
+            if (age === 16) events.push({ date: birthday.toLocaleDateString(), event: '🚗 Sweet 16 / Driving Age', type: 'milestone' });
+            if (age === 18) events.push({ date: birthday.toLocaleDateString(), event: '🗳️ Legal Adult', type: 'milestone' });
+            if (age === 21) events.push({ date: birthday.toLocaleDateString(), event: '🍻 Legal Drinking Age', type: 'milestone' });
+            if (age % 10 === 0) events.push({ date: birthday.toLocaleDateString(), event: `🎊 Decade Birthday`, type: 'milestone' });
+
+            displayBirthdayEvents(events);
+        }
+
+        function displayBirthdayEvents(events) {
+            const eventsDiv = document.getElementById('birthdayEvents');
+            eventsDiv.innerHTML = events.map(event => `
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <div>
+                        <div class="font-medium text-gray-800">${event.event}</div>
+                        <div class="text-sm text-gray-600">${event.date}</div>
+                    </div>
+                    <div class="text-2xl">${event.type === 'birthday' ? '🎂' : event.type === 'milestone' ? '🏆' : '🎈'}</div>
+                </div>
+            `).join('');
+        }
+
+        function getOrdinalSuffix(num) {
+            const j = num % 10;
+            const k = num % 100;
+            if (j === 1 && k !== 11) return 'st';
+            if (j === 2 && k !== 12) return 'nd';
+            if (j === 3 && k !== 13) return 'rd';
+            return 'th';
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg text-white z-50 ${
+                type === 'success' ? 'bg-green-500' : 
+                type === 'error' ? 'bg-red-500' : 
+                type === 'info' ? 'bg-blue-500' : 'bg-gray-500'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+

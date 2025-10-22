@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-case=1.0">
+    <title>Smart Formatter - Auto Format Text with Proper Capitalization | Free Online Tool</title>
+    <meta name="description" content="Automatically format your text with proper capitalization, punctuation, and spacing. Smart text formatter for sentences, titles, and paragraphs. Free online formatting tool.">
+    <meta name="keywords" content="smart formatter, text formatting, auto capitalization, sentence case, title case, text processor, format text">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Smart Formatter - Auto Format Text Online">
+    <meta property="og:description" content="Automatically format your text with proper capitalization, punctuation, and spacing. Free smart text formatting tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/smart-formatter">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Smart Formatter - Auto Format Text Online">
+    <meta name="twitter:description" content="Automatically format your text with proper capitalization and punctuation.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/smart-formatter">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Smart Formatter",
+        "description": "Intelligent text formatting tool with multiple formatting options and real-time preview",
+        "url": "https://texttoolspro.fun/smart-formatter",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Smart text formatting",
+            "Multiple format options",
+            "Real-time preview",
+            "Case conversion",
+            "Text alignment",
+            "Custom formatting rules"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Text Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Smart Text Formatter",
+                "item": "https://texttoolspro.fun/smart-formatter"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What formatting options are available in Smart Formatter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Smart Formatter offers multiple formatting options including case conversion (uppercase, lowercase, title case), text alignment, line spacing adjustment, paragraph formatting, and custom formatting rules for specific text patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the real-time preview work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "As you type or paste text and select formatting options, Smart Formatter instantly shows you a preview of how your text will look. This allows you to see the results before applying the final formatting."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I format text for different purposes like emails or documents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Smart Formatter includes preset formatting styles optimized for different purposes including professional emails, academic documents, social media posts, and general text formatting."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Smart Formatter preserve the original text structure?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Smart Formatter intelligently preserves important text structure elements like paragraphs, lists, and intentional line breaks while applying your chosen formatting rules."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I undo formatting changes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Smart Formatter keeps track of your original text, and you can easily revert to the unformatted version or try different formatting options without losing your original content."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Smart Formatter</h1>
+                <p class="tool-description">Automatically format your text with proper capitalization, punctuation, and spacing. Perfect for cleaning up messy text and ensuring professional formatting.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter your text to format:</label>
+                    <textarea id="input-text" placeholder="paste your unformatted text here and watch it get automatically formatted..."></textarea>
+                </div>
+
+                <div class="controls">
+                    <h3>Formatting Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="auto-capitalize" checked> Auto capitalize sentences</label>
+                        <label><input type="checkbox" id="fix-punctuation" checked> Fix punctuation spacing</label>
+                        <label><input type="checkbox" id="format-paragraphs" checked> Format paragraphs</label>
+                        <label><input type="checkbox" id="fix-common-errors"> Fix common grammar errors</label>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Format Text</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Formatted text:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Result</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Smart Formatter</h2>
+                <ol>
+                    <li><strong>Input Text:</strong> Paste or type the text you want to format</li>
+                    <li><strong>Choose Options:</strong> Select which formatting features to apply</li>
+                    <li><strong>Format:</strong> Click "Format Text" to automatically improve your text</li>
+                    <li><strong>Copy:</strong> Use the copy button to get your formatted text</li>
+                </ol>
+
+                <h3>Formatting Features</h3>
+                <ul>
+                    <li><strong>Auto Capitalize:</strong> Capitalizes the first letter of each sentence</li>
+                    <li><strong>Fix Punctuation:</strong> Adds proper spacing around punctuation marks</li>
+                    <li><strong>Format Paragraphs:</strong> Ensures proper paragraph breaks and spacing</li>
+                    <li><strong>Fix Common Errors:</strong> Corrects common grammar and formatting mistakes</li>
+                </ul>
+
+                <h3>Perfect For</h3>
+                <ul>
+                    <li>Cleaning up text from voice-to-text transcriptions</li>
+                    <li>Formatting social media posts</li>
+                    <li>Preparing text for professional documents</li>
+                    <li>Fixing copy-pasted text from various sources</li>
+                    <li>Standardizing text formatting across documents</li>
+                </ul>
+
+                <h3>Before and After Examples</h3>
+                <div class="example-box">
+                    <h4>Before:</h4>
+                    <p><em>hello world.this is a test sentence without proper formatting.does this look good?no it doesn't!</em></p>
+                    
+                    <h4>After:</h4>
+                    <p><em>Hello world. This is a test sentence without proper formatting. Does this look good? No it doesn't!</em></p>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Tools</h3>
+                <div class="related-grid">
+                    <a href="text-cleaner.html" class="related-tool">Text Cleaner Pro</a>
+                    <a href="grammar-helper.html" class="related-tool">Grammar Helper</a>
+                    <a href="title-optimizer.html" class="related-tool">Title Optimizer</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'smartformatter';
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

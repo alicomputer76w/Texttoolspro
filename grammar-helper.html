@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Helper - Free Grammar Checker & Writing Assistant | Text Tools</title>
+    <meta name="description" content="Check grammar, spelling, and writing style with our free grammar helper. Improve your writing with instant feedback and suggestions for better communication.">
+    <meta name="keywords" content="grammar checker, spelling checker, writing assistant, grammar help, proofreading tool, writing improvement, grammar correction">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Grammar Helper - Professional Writing Assistant">
+    <meta property="og:description" content="Free grammar and spelling checker with advanced writing suggestions for better communication.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/grammar-helper">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Grammar Helper - Free Grammar Checker">
+    <meta name="twitter:description" content="Professional grammar checking and writing assistance for error-free communication.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/grammar-helper">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Grammar Helper",
+        "description": "Check grammar, spelling, and writing style with comprehensive text analysis and suggestions",
+        "url": "https://texttoolspro.fun/grammar-helper",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Grammar checking",
+            "Spelling correction",
+            "Style suggestions",
+            "Writing improvement",
+            "Text analysis",
+            "Real-time feedback"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Writing Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Grammar & Style Helper",
+                "item": "https://texttoolspro.fun/grammar-helper"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does the Grammar Helper improve my writing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Grammar Helper analyzes your text for grammar errors, spelling mistakes, punctuation issues, and style problems. It provides suggestions to improve clarity, readability, and overall writing quality in real-time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of grammar errors can the tool detect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The tool can detect various grammar issues including subject-verb agreement, tense consistency, sentence fragments, run-on sentences, misplaced modifiers, and punctuation errors like comma splices and apostrophe misuse."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the Grammar Helper work for different writing styles?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Grammar Helper adapts to different writing contexts including academic writing, business communication, creative writing, and casual text. It provides style suggestions appropriate for your intended audience and purpose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the Grammar Helper for non-English text?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Grammar Helper is primarily designed for English text analysis. For best results, use it with English content, though it may provide basic spelling and formatting suggestions for other languages."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is the grammar and spell checking?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Grammar Helper uses advanced algorithms to provide highly accurate grammar and spell checking. However, always review suggestions in context, as some recommendations may not fit your specific writing style or intent."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my text data secure when using the Grammar Helper?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all text processing happens locally in your browser. Your content is never sent to external servers, ensuring complete privacy and security of your writing and sensitive information."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the Grammar Helper tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the Grammar Helper: 1) Paste or type your text in the input area, 2) Click 'Check Grammar' button, 3) Review highlighted grammar errors and suggestions, 4) Click on suggestions to apply corrections, 5) Copy the corrected text. The tool identifies common grammar mistakes and provides improvement suggestions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of grammar errors does it detect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Grammar Helper detects common errors including subject-verb agreement, tense consistency, punctuation mistakes, sentence fragments, and word usage issues."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can it help with writing style improvements?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, beyond grammar errors, the tool suggests improvements for clarity, conciseness, and readability to enhance your writing style."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it work with different types of writing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Grammar Helper works with various writing types including essays, emails, reports, creative writing, and academic papers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the grammar checking tool free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Grammar Helper is free to use with no limits on text length or number of checks."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Grammar Helper</h1>
+                <p class="tool-description">Check your grammar, spelling, and writing style with our comprehensive grammar helper. Get instant feedback and suggestions to improve your writing quality and communication effectiveness.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter your text to check:</label>
+                    <textarea id="input-text" placeholder="Paste or type your text here for grammar and spelling analysis..."></textarea>
+                    <div class="text-stats">
+                        <span>Words: <span id="word-count">0</span></span>
+                        <span>Characters: <span id="char-count">0</span></span>
+                        <span>Sentences: <span id="sentence-count">0</span></span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <h3>Grammar Check Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="check-spelling" checked> Check spelling errors</label>
+                        <label><input type="checkbox" id="check-grammar" checked> Check grammar issues</label>
+                        <label><input type="checkbox" id="check-punctuation" checked> Check punctuation</label>
+                        <label><input type="checkbox" id="check-style" checked> Style suggestions</label>
+                        <label><input type="checkbox" id="check-redundancy" checked> Check redundancy</label>
+                        <label><input type="checkbox" id="suggest-improvements" checked> Suggest improvements</label>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Check Grammar</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Grammar analysis and suggestions:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Analysis</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Grammar Helper</h2>
+                <ol>
+                    <li><strong>Input Text:</strong> Paste or type your text in the input area</li>
+                    <li><strong>Select Options:</strong> Choose which types of checks to perform</li>
+                    <li><strong>Run Analysis:</strong> Click "Check Grammar" to analyze your text</li>
+                    <li><strong>Review Results:</strong> Examine the detailed feedback and suggestions</li>
+                    <li><strong>Apply Changes:</strong> Use the suggestions to improve your writing</li>
+                    <li><strong>Recheck:</strong> Run the tool again after making corrections</li>
+                </ol>
+
+                <h3>Common Grammar Issues We Check</h3>
+                <div class="grammar-categories">
+                    <h4>🔤 Spelling Errors</h4>
+                    <ul>
+                        <li><strong>Misspelled words:</strong> Incorrect letter combinations</li>
+                        <li><strong>Typos:</strong> Common typing mistakes</li>
+                        <li><strong>Homophones:</strong> Words that sound alike (their/there/they're)</li>
+                        <li><strong>Capitalization:</strong> Proper noun and sentence capitalization</li>
+                    </ul>
+
+                    <h4>📝 Grammar Problems</h4>
+                    <ul>
+                        <li><strong>Subject-verb agreement:</strong> Singular/plural matching</li>
+                        <li><strong>Tense consistency:</strong> Maintaining proper tense throughout</li>
+                        <li><strong>Pronoun usage:</strong> Correct pronoun references</li>
+                        <li><strong>Article usage:</strong> Proper use of a, an, the</li>
+                        <li><strong>Sentence fragments:</strong> Incomplete sentences</li>
+                        <li><strong>Run-on sentences:</strong> Overly long, complex sentences</li>
+                    </ul>
+
+                    <h4>🔣 Punctuation Issues</h4>
+                    <ul>
+                        <li><strong>Comma splices:</strong> Incorrect comma usage</li>
+                        <li><strong>Apostrophe errors:</strong> Possessive vs. plural confusion</li>
+                        <li><strong>Quotation marks:</strong> Proper quote formatting</li>
+                        <li><strong>Semicolon usage:</strong> Connecting related clauses</li>
+                        <li><strong>Missing punctuation:</strong> End-of-sentence marks</li>
+                    </ul>
+
+                    <h4>✍️ Style Improvements</h4>
+                    <ul>
+                        <li><strong>Passive voice:</strong> Converting to active voice</li>
+                        <li><strong>Wordiness:</strong> Eliminating unnecessary words</li>
+                        <li><strong>Clarity:</strong> Making sentences clearer</li>
+                        <li><strong>Tone consistency:</strong> Maintaining appropriate tone</li>
+                        <li><strong>Repetition:</strong> Avoiding redundant phrases</li>
+                    </ul>
+                </div>
+
+                <h3>Grammar Rules Quick Reference</h3>
+                <div class="grammar-rules">
+                    <h4>Subject-Verb Agreement</h4>
+                    <table class="rules-table">
+                        <tr>
+                            <th>Rule</th>
+                            <th>Correct</th>
+                            <th>Incorrect</th>
+                        </tr>
+                        <tr>
+                            <td>Singular subject + singular verb</td>
+                            <td>The cat runs quickly.</td>
+                            <td>The cat run quickly.</td>
+                        </tr>
+                        <tr>
+                            <td>Plural subject + plural verb</td>
+                            <td>The cats run quickly.</td>
+                            <td>The cats runs quickly.</td>
+                        </tr>
+                        <tr>
+                            <td>Collective nouns</td>
+                            <td>The team is ready.</td>
+                            <td>The team are ready.</td>
+                        </tr>
+                    </table>
+
+                    <h4>Common Homophones</h4>
+                    <table class="rules-table">
+                        <tr>
+                            <th>Word</th>
+                            <th>Meaning</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>Their</td>
+                            <td>Possessive pronoun</td>
+                            <td>Their house is beautiful.</td>
+                        </tr>
+                        <tr>
+                            <td>There</td>
+                            <td>Location/existence</td>
+                            <td>There are many options.</td>
+                        </tr>
+                        <tr>
+                            <td>They're</td>
+                            <td>They are (contraction)</td>
+                            <td>They're coming tomorrow.</td>
+                        </tr>
+                        <tr>
+                            <td>Your</td>
+                            <td>Possessive pronoun</td>
+                            <td>Your idea is great.</td>
+                        </tr>
+                        <tr>
+                            <td>You're</td>
+                            <td>You are (contraction)</td>
+                            <td>You're absolutely right.</td>
+                        </tr>
+                    </table>
+
+                    <h4>Punctuation Guidelines</h4>
+                    <ul>
+                        <li><strong>Comma before coordinating conjunctions:</strong> "I went to the store, and I bought milk."</li>
+                        <li><strong>Apostrophes for possession:</strong> "John's car" (not "Johns car")</li>
+                        <li><strong>Semicolons for related clauses:</strong> "I love reading; it relaxes me."</li>
+                        <li><strong>Quotation marks for direct speech:</strong> She said, "Hello there."</li>
+                    </ul>
+                </div>
+
+                <h3>Writing Style Tips</h3>
+                <div class="style-tips">
+                    <h4>Active vs. Passive Voice</h4>
+                    <div class="voice-examples">
+                        <div class="example-pair">
+                            <div class="passive">
+                                <strong>❌ Passive:</strong> The report was written by Sarah.
+                            </div>
+                            <div class="active">
+                                <strong>✅ Active:</strong> Sarah wrote the report.
+                            </div>
+                        </div>
+                        <div class="example-pair">
+                            <div class="passive">
+                                <strong>❌ Passive:</strong> Mistakes were made during the process.
+                            </div>
+                            <div class="active">
+                                <strong>✅ Active:</strong> We made mistakes during the process.
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Conciseness Tips</h4>
+                    <ul>
+                        <li><strong>Eliminate filler words:</strong> "very," "really," "quite," "rather"</li>
+                        <li><strong>Remove redundancies:</strong> "free gift" → "gift"</li>
+                        <li><strong>Use strong verbs:</strong> "walked quickly" → "hurried"</li>
+                        <li><strong>Avoid nominalizations:</strong> "make a decision" → "decide"</li>
+                    </ul>
+
+                    <h4>Clarity Improvements</h4>
+                    <ul>
+                        <li><strong>Use specific nouns:</strong> "vehicle" → "car," "truck," "motorcycle"</li>
+                        <li><strong>Choose precise verbs:</strong> "said" → "explained," "whispered," "declared"</li>
+                        <li><strong>Limit sentence length:</strong> Aim for 15-20 words per sentence</li>
+                        <li><strong>Use parallel structure:</strong> "Reading, writing, and arithmetic"</li>
+                    </ul>
+                </div>
+
+                <h3>Professional Writing Guidelines</h3>
+                <div class="professional-guidelines">
+                    <h4>Business Communication</h4>
+                    <ul>
+                        <li><strong>Be direct and concise:</strong> Get to the point quickly</li>
+                        <li><strong>Use professional tone:</strong> Avoid slang and casual language</li>
+                        <li><strong>Structure clearly:</strong> Use headings and bullet points</li>
+                        <li><strong>Proofread carefully:</strong> Errors undermine credibility</li>
+                    </ul>
+
+                    <h4>Academic Writing</h4>
+                    <ul>
+                        <li><strong>Use formal language:</strong> Avoid contractions and colloquialisms</li>
+                        <li><strong>Cite sources properly:</strong> Follow citation style guidelines</li>
+                        <li><strong>Maintain objectivity:</strong> Use third person perspective</li>
+                        <li><strong>Support arguments:</strong> Provide evidence for claims</li>
+                    </ul>
+
+                    <h4>Creative Writing</h4>
+                    <ul>
+                        <li><strong>Show, don't tell:</strong> Use descriptive details</li>
+                        <li><strong>Vary sentence structure:</strong> Mix short and long sentences</li>
+                        <li><strong>Use vivid imagery:</strong> Appeal to the senses</li>
+                        <li><strong>Maintain consistency:</strong> Keep tense and perspective uniform</li>
+                    </ul>
+                </div>
+
+                <h3>Common Grammar Mistakes to Avoid</h3>
+                <div class="common-mistakes">
+                    <h4>Top 10 Grammar Errors</h4>
+                    <ol>
+                        <li><strong>Its vs. It's:</strong> "Its" is possessive; "It's" means "it is"</li>
+                        <li><strong>Affect vs. Effect:</strong> "Affect" is a verb; "Effect" is a noun</li>
+                        <li><strong>Who vs. Whom:</strong> "Who" is subject; "Whom" is object</li>
+                        <li><strong>Lay vs. Lie:</strong> "Lay" requires an object; "Lie" doesn't</li>
+                        <li><strong>Less vs. Fewer:</strong> "Less" for uncountable; "Fewer" for countable</li>
+                        <li><strong>Between vs. Among:</strong> "Between" for two; "Among" for more than two</li>
+                        <li><strong>That vs. Which:</strong> "That" for essential; "Which" for non-essential</li>
+                        <li><strong>Me vs. I:</strong> Use "I" as subject; "Me" as object</li>
+                        <li><strong>Good vs. Well:</strong> "Good" is adjective; "Well" is adverb</li>
+                        <li><strong>Dangling modifiers:</strong> Ensure modifiers clearly relate to intended words</li>
+                    </ol>
+                </div>
+
+                <h3>Proofreading Checklist</h3>
+                <div class="proofreading-checklist">
+                    <h4>First Pass - Content and Structure</h4>
+                    <ul>
+                        <li>☐ Clear main idea and purpose</li>
+                        <li>☐ Logical organization and flow</li>
+                        <li>☐ Complete thoughts and arguments</li>
+                        <li>☐ Appropriate tone and style</li>
+                    </ul>
+
+                    <h4>Second Pass - Grammar and Mechanics</h4>
+                    <ul>
+                        <li>☐ Subject-verb agreement</li>
+                        <li>☐ Proper tense consistency</li>
+                        <li>☐ Correct pronoun usage</li>
+                        <li>☐ Proper punctuation</li>
+                    </ul>
+
+                    <h4>Final Pass - Details</h4>
+                    <ul>
+                        <li>☐ Spelling accuracy</li>
+                        <li>☐ Capitalization rules</li>
+                        <li>☐ Number and date formatting</li>
+                        <li>☐ Consistent formatting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Writing Tools</h3>
+                <div class="related-grid">
+                    <a href="plagiarism-checker.html" class="related-tool">Plagiarism Checker</a>
+                    <a href="readability-score.html" class="related-tool">Readability Score</a>
+                    <a href="word-frequency.html" class="related-tool">Word Frequency</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'grammar';
+        
+        // Real-time text statistics
+        function updateTextStats() {
+            const text = document.getElementById('input-text').value;
+            const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+            const chars = text.length;
+            const sentences = text.trim() ? text.split(/[.!?]+/).filter(s => s.trim().length > 0).length : 0;
+            
+            document.getElementById('word-count').textContent = words;
+            document.getElementById('char-count').textContent = chars;
+            document.getElementById('sentence-count').textContent = sentences;
+        }
+        
+        document.getElementById('input-text').addEventListener('input', updateTextStats);
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText.trim()) {
+                document.getElementById('output-text').value = 'Please enter some text to check for grammar and spelling issues.';
+                return;
+            }
+            
+            // Collect grammar check options
+            window.grammarOptions = {
+                checkSpelling: document.getElementById('check-spelling').checked,
+                checkGrammar: document.getElementById('check-grammar').checked,
+                checkPunctuation: document.getElementById('check-punctuation').checked,
+                checkStyle: document.getElementById('check-style').checked,
+                checkRedundancy: document.getElementById('check-redundancy').checked,
+                suggestImprovements: document.getElementById('suggest-improvements').checked
+            };
+            
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+        
+        // Initialize stats on page load
+        updateTextStats();
+    </script>
+</body>
+</html>
+

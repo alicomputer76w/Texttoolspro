@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Frequency Analyzer - Count Character Occurrences | Free Text Analysis Tool</title>
+    <meta name="description" content="Analyze character frequency in text with detailed statistics, charts, and insights. Perfect for cryptography, linguistics, and text analysis projects.">
+    <meta name="keywords" content="character frequency, character count, text analysis, letter frequency, cryptography, linguistics, character statistics, text mining">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Character Frequency Analyzer - Analyze Text Character Patterns">
+    <meta property="og:description" content="Analyze character frequency patterns in text with detailed statistics and visual insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/character-frequency">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Character Frequency Analyzer - Text Analysis Tool">
+    <meta name="twitter:description" content="Professional character frequency analysis for cryptography and linguistics.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/character-frequency">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Character Frequency Analyzer",
+        "description": "Analyze character frequency and distribution in text with detailed statistics and visualizations",
+        "url": "https://texttoolspro.fun/character-frequency",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Character frequency analysis",
+            "Character distribution charts",
+            "Statistical insights",
+            "Case sensitivity options",
+            "Export results",
+            "Visual representations"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Text Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Character Frequency Analyzer",
+                "item": "https://texttoolspro.fun/character-frequency"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the Character Frequency Analyzer tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the Character Frequency Analyzer: 1) Paste or type your text in the input area, 2) Click 'Analyze Characters' button, 3) View the frequency chart showing how often each character appears, 4) Use the results for text analysis, cryptography, or linguistic studies. The tool counts all characters including letters, numbers, and symbols."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is character frequency analysis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Character frequency analysis counts how often each character appears in a text. It's useful for cryptography, linguistics, data compression, and understanding text patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the tool count spaces and punctuation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Character Frequency Analyzer counts all characters including spaces, punctuation marks, numbers, and special symbols, giving you a complete character distribution."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I analyze text in different languages?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! The tool works with any language and character set including English, Chinese, Arabic, Russian, and other Unicode characters."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the character frequency tool free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Character Frequency Analyzer is completely free to use with no limitations on text length or number of analyses."
+                }
+            }
+        ]
+    }
+    </script>
+                    "@type": "Answer",
+                    "text": "Character frequency analyzes individual letters and symbols, while word frequency analyzes complete words. Character frequency is more granular and useful for cryptographic analysis, while word frequency is better for content analysis."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the Character Frequency Analyzer tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the Character Frequency Analyzer: 1) Paste or type your text in the input area, 2) Click 'Analyze Characters' button, 3) View the frequency chart showing how often each character appears, 4) Use the results for text analysis, cryptography, or linguistic studies. The tool counts all characters including letters, numbers, and symbols."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is character frequency analysis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Character frequency analysis counts how often each character appears in a text. It's useful for cryptography, linguistics, data compression, and understanding text patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the tool count spaces and punctuation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Character Frequency Analyzer counts all characters including spaces, punctuation marks, numbers, and special symbols, giving you a complete character distribution."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I analyze text in different languages?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! The tool works with any language and character set including English, Chinese, Arabic, Russian, and other Unicode characters."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the character frequency tool free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Character Frequency Analyzer is completely free to use with no limitations on text length or number of analyses."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">ðŸ”§ Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Character Frequency Analyzer</h1>
+                <p class="tool-description">Analyze character frequency patterns in your text with detailed statistics, insights, and visual representations. Perfect for cryptography, linguistics, and data analysis.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter text to analyze character frequency:</label>
+                    <textarea id="input-text" placeholder="Enter your text here to analyze character frequency patterns...
+
+Example: The quick brown fox jumps over the lazy dog."></textarea>
+                </div>
+
+                <div class="controls">
+                    <h3>Analysis Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="case-sensitive"> Case sensitive analysis</label>
+                        <label><input type="checkbox" id="include-spaces" checked> Include spaces and punctuation</label>
+                        <label><input type="checkbox" id="letters-only"> Letters only (A-Z)</label>
+                        <label><input type="checkbox" id="show-percentages" checked> Show percentages</label>
+                        <label>
+                            Sort by: 
+                            <select id="sort-order">
+                                <option value="frequency">Frequency (High to Low)</option>
+                                <option value="alphabetical">Alphabetical</option>
+                                <option value="ascii">ASCII Order</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Analyze Characters</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Character frequency analysis:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Analysis</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Character Frequency Analyzer</h2>
+                <ol>
+                    <li><strong>Input Text:</strong> Paste the text you want to analyze</li>
+                    <li><strong>Set Options:</strong> Choose case sensitivity, character types, and sorting</li>
+                    <li><strong>Analyze:</strong> Click "Analyze Characters" to generate frequency data</li>
+                    <li><strong>Review Results:</strong> Examine character patterns and statistics</li>
+                    <li><strong>Export Data:</strong> Copy results for further analysis</li>
+                </ol>
+
+                <h3>Analysis Features</h3>
+                <ul>
+                    <li><strong>Frequency Count:</strong> Exact number of occurrences for each character</li>
+                    <li><strong>Percentage Distribution:</strong> Relative frequency as percentages</li>
+                    <li><strong>Statistical Summary:</strong> Total characters, unique characters, entropy</li>
+                    <li><strong>Pattern Recognition:</strong> Identify common and rare characters</li>
+                    <li><strong>Sorting Options:</strong> Multiple ways to organize results</li>
+                </ul>
+
+                <h3>Common Use Cases</h3>
+                <ul>
+                    <li><strong>Cryptography:</strong> Frequency analysis for cipher breaking</li>
+                    <li><strong>Linguistics:</strong> Study language patterns and characteristics</li>
+                    <li><strong>Data Compression:</strong> Optimize encoding based on frequency</li>
+                    <li><strong>Text Mining:</strong> Analyze document characteristics</li>
+                    <li><strong>Quality Assurance:</strong> Detect unusual character patterns</li>
+                    <li><strong>Academic Research:</strong> Statistical text analysis</li>
+                </ul>
+
+                <h3>English Letter Frequency (Reference)</h3>
+                <div class="frequency-reference">
+                    <table class="frequency-table">
+                        <tr>
+                            <th>Letter</th>
+                            <th>Frequency</th>
+                            <th>Letter</th>
+                            <th>Frequency</th>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>12.7%</td>
+                            <td>N</td>
+                            <td>6.7%</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>9.1%</td>
+                            <td>H</td>
+                            <td>6.1%</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>8.2%</td>
+                            <td>S</td>
+                            <td>6.3%</td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td>7.5%</td>
+                            <td>R</td>
+                            <td>6.0%</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td>7.0%</td>
+                            <td>L</td>
+                            <td>4.0%</td>
+                        </tr>
+                    </table>
+                    <p><em>Based on typical English text analysis</em></p>
+                </div>
+
+                <h3>Cryptographic Applications</h3>
+                <ul>
+                    <li><strong>Caesar Cipher:</strong> Identify shifted letter patterns</li>
+                    <li><strong>Substitution Cipher:</strong> Match frequency patterns to decode</li>
+                    <li><strong>VigenÃ¨re Cipher:</strong> Analyze repeating key patterns</li>
+                    <li><strong>Transposition:</strong> Detect character distribution anomalies</li>
+                </ul>
+
+                <h3>Linguistic Analysis</h3>
+                <ul>
+                    <li><strong>Language Detection:</strong> Compare frequency patterns</li>
+                    <li><strong>Author Attribution:</strong> Identify writing style patterns</li>
+                    <li><strong>Text Classification:</strong> Categorize documents by character usage</li>
+                    <li><strong>Readability Assessment:</strong> Analyze character complexity</li>
+                </ul>
+
+                <h3>Understanding Results</h3>
+                <div class="results-explanation">
+                    <h4>Sample Output Explanation:</h4>
+                    <pre><code>Character Frequency Analysis
+===========================
+Total Characters: 1,234
+Unique Characters: 45
+Most Common: 'e' (156 occurrences, 12.6%)
+Least Common: 'z' (2 occurrences, 0.2%)
+
+Frequency Distribution:
+e: 156 (12.6%) â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
+t: 112 (9.1%)  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
+a: 101 (8.2%)  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
+...</code></pre>
+                </div>
+
+                <h3>Tips for Better Analysis</h3>
+                <ul>
+                    <li>Use larger text samples for more accurate frequency data</li>
+                    <li>Consider the text type (formal, casual, technical) when interpreting results</li>
+                    <li>Compare results with known language frequency patterns</li>
+                    <li>Use case-insensitive analysis for general frequency patterns</li>
+                    <li>Include punctuation analysis for complete text characterization</li>
+                </ul>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Tools</h3>
+                <div class="related-grid">
+                    <a href="word-frequency.html" class="related-tool">Word Frequency</a>
+                    <a href="text-statistics.html" class="related-tool">Text Statistics</a>
+                    <a href="regex-tester.html" class="related-tool">Regex Tester</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'charfrequency';
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+

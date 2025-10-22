@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder/Decoder Pro - Free Online URL Encoding Tool | Text Tools</title>
+    <meta name="description" content="Professional URL encoder and decoder tool. Encode/decode URLs, handle special characters, and ensure proper URL formatting for web development and SEO.">
+    <meta name="keywords" content="url encoder, url decoder, percent encoding, url encoding, web development, special characters, query parameters">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="URL Encoder/Decoder Pro - Professional URL Encoding Tool">
+    <meta property="og:description" content="Free online tool for URL encoding and decoding with advanced options for web developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/url-encoder">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="URL Encoder/Decoder Pro - Free URL Encoding">
+    <meta name="twitter:description" content="Professional URL encoding and decoding tool for developers and SEO specialists.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/url-encoder">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "URL Encoder/Decoder Pro",
+        "description": "Encode and decode URLs with advanced options for web development and data processing",
+        "url": "https://texttoolspro.fun/url-encoder",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "URL encoding",
+            "URL decoding",
+            "Batch processing",
+            "Custom encoding",
+            "URL validation",
+            "Component analysis"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "URL Encoder & Decoder",
+                "item": "https://texttoolspro.fun/url-encoder"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is URL encoding and why is it needed?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "URL encoding converts special characters in URLs to percent-encoded format (%XX) to ensure they're transmitted correctly over the internet. Characters like spaces, ampersands, and non-ASCII characters must be encoded to prevent URL parsing errors."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between URL encoding and HTML encoding?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "URL encoding uses percent notation (%20 for space) for web addresses, while HTML encoding uses entity references (&amp; for &). URL encoding is for URLs and query parameters, HTML encoding is for displaying special characters in web pages."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I encode multiple URLs at once?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! The tool supports batch processing. Simply enter multiple URLs (one per line) and the encoder will process them all simultaneously, providing encoded or decoded results for each URL in the same order."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the tool validate URL format?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! The URL Encoder includes built-in validation that checks URL structure, identifies malformed URLs, and provides suggestions for common formatting issues. It also analyzes URL components like protocol, domain, and parameters."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What encoding standards does the tool support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The tool supports RFC 3986 standard URL encoding, application/x-www-form-urlencoded format, and custom encoding options. You can choose different encoding levels from basic ASCII to full Unicode character support."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it safe to use this tool with sensitive URLs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all URL processing happens locally in your browser. No URLs or data are sent to external servers, ensuring complete privacy and security of your sensitive links, API endpoints, or confidential parameters."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>URL Encoder/Decoder Pro</h1>
+                <p class="tool-description">Professional URL encoding and decoding tool for web developers. Handle special characters, query parameters, and ensure proper URL formatting with advanced encoding options and validation.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="mode-selector">
+                    <button id="encode-mode" class="mode-btn active" onclick="switchMode('encode')">🔒 Encode URL</button>
+                    <button id="decode-mode" class="mode-btn" onclick="switchMode('decode')">🔓 Decode URL</button>
+                </div>
+
+                <div class="input-section">
+                    <label for="input-text" id="input-label">Enter URL to encode:</label>
+                    <textarea id="input-text" placeholder="Enter your URL here...&#10;&#10;Example:&#10;https://example.com/search?q=hello world&amp;category=news&amp;date=2024-01-15"></textarea>
+                    <div class="url-examples">
+                        <button onclick="loadExample('basic')" class="example-btn">Basic URL</button>
+                        <button onclick="loadExample('query')" class="example-btn">With Query Params</button>
+                        <button onclick="loadExample('special')" class="example-btn">Special Characters</button>
+                        <button onclick="loadExample('encoded')" class="example-btn">Already Encoded</button>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <h3>Encoding Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="encode-spaces" checked> Encode spaces as %20</label>
+                        <label><input type="checkbox" id="encode-plus"> Encode spaces as + (query params)</label>
+                        <label><input type="checkbox" id="encode-reserved" checked> Encode reserved characters</label>
+                        <label><input type="checkbox" id="encode-unreserved"> Encode unreserved characters</label>
+                        <label><input type="checkbox" id="encode-unicode" checked> Encode Unicode characters</label>
+                        <label><input type="checkbox" id="preserve-structure" checked> Preserve URL structure</label>
+                    </div>
+                    
+                    <div class="encoding-type">
+                        <label for="encoding-standard">Encoding Standard:</label>
+                        <select id="encoding-standard">
+                            <option value="rfc3986">RFC 3986 (Standard)</option>
+                            <option value="rfc1738">RFC 1738 (Legacy)</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                    </div>
+                    
+                    <div class="custom-chars" id="custom-chars" style="display: none;">
+                        <label for="custom-encode">Custom characters to encode:</label>
+                        <input type="text" id="custom-encode" placeholder="Enter characters to encode">
+                    </div>
+                    
+                    <button onclick="processCurrentTool()" class="process-btn" id="process-btn">Encode URL</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text" id="output-label">Encoded URL result:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <div class="output-controls">
+                        <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Result</button>
+                        <button onclick="validateURL()" class="validate-btn">Validate URL</button>
+                        <button onclick="analyzeURL()" class="analyze-btn">Analyze URL</button>
+                        <button onclick="swapInputOutput()" class="swap-btn">↔️ Swap</button>
+                    </div>
+                </div>
+
+                <div class="url-analysis" id="url-analysis" style="display: none;">
+                    <h3>URL Analysis</h3>
+                    <div id="analysis-result"></div>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use URL Encoder/Decoder Pro</h2>
+                <ol>
+                    <li><strong>Choose Mode:</strong> Select encode or decode mode</li>
+                    <li><strong>Input URL:</strong> Paste or type your URL</li>
+                    <li><strong>Configure Options:</strong> Set encoding preferences</li>
+                    <li><strong>Process:</strong> Click encode/decode button</li>
+                    <li><strong>Review Result:</strong> Check the processed URL</li>
+                    <li><strong>Copy/Validate:</strong> Use the result or validate format</li>
+                </ol>
+
+                <h3>Understanding URL Encoding</h3>
+                <div class="encoding-guide">
+                    <h4>🔤 What is URL Encoding?</h4>
+                    <p>URL encoding (percent encoding) converts characters into a format that can be transmitted over the Internet. Special characters are replaced with a percent sign (%) followed by two hexadecimal digits.</p>
+                    
+                    <div class="encoding-examples">
+                        <h5>Common Character Encodings</h5>
+                        <div class="encoding-table">
+                            <div class="encoding-row">
+                                <span class="char">Space</span>
+                                <span class="original"> </span>
+                                <span class="encoded">%20 or +</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Exclamation</span>
+                                <span class="original">!</span>
+                                <span class="encoded">%21</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Hash</span>
+                                <span class="original">#</span>
+                                <span class="encoded">%23</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Dollar</span>
+                                <span class="original">$</span>
+                                <span class="encoded">%24</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Percent</span>
+                                <span class="original">%</span>
+                                <span class="encoded">%25</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Ampersand</span>
+                                <span class="original">&</span>
+                                <span class="encoded">%26</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Plus</span>
+                                <span class="original">+</span>
+                                <span class="encoded">%2B</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Comma</span>
+                                <span class="original">,</span>
+                                <span class="encoded">%2C</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Forward Slash</span>
+                                <span class="original">/</span>
+                                <span class="encoded">%2F</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Colon</span>
+                                <span class="original">:</span>
+                                <span class="encoded">%3A</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Semicolon</span>
+                                <span class="original">;</span>
+                                <span class="encoded">%3B</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Equal</span>
+                                <span class="original">=</span>
+                                <span class="encoded">%3D</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">Question Mark</span>
+                                <span class="original">?</span>
+                                <span class="encoded">%3F</span>
+                            </div>
+                            <div class="encoding-row">
+                                <span class="char">At Symbol</span>
+                                <span class="original">@</span>
+                                <span class="encoded">%40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>URL Structure and Components</h3>
+                <div class="url-structure">
+                    <h4>🏗️ Anatomy of a URL</h4>
+                    
+                    <div class="url-breakdown">
+                        <div class="url-example">
+                            <code>https://user:pass@example.com:8080/path/to/page?param1=value1&param2=value2#section</code>
+                        </div>
+                        
+                        <div class="url-parts">
+                            <div class="url-part">
+                                <span class="part-name">Scheme:</span>
+                                <span class="part-value">https://</span>
+                                <span class="part-desc">Protocol identifier</span>
+                            </div>
+                            <div class="url-part">
+                                <span class="part-name">User Info:</span>
+                                <span class="part-value">user:pass@</span>
+                                <span class="part-desc">Authentication credentials</span>
+                            </div>
+                            <div class="url-part">
+                                <span class="part-name">Host:</span>
+                                <span class="part-value">example.com</span>
+                                <span class="part-desc">Domain name or IP</span>
+                            </div>
+                            <div class="url-part">
+                                <span class="part-name">Port:</span>
+                                <span class="part-value">:8080</span>
+                                <span class="part-desc">Port number</span>
+                            </div>
+                            <div class="url-part">
+                                <span class="part-name">Path:</span>
+                                <span class="part-value">/path/to/page</span>
+                                <span class="part-desc">Resource location</span>
+                            </div>
+                            <div class="url-part">
+                                <span class="part-name">Query:</span>
+                                <span class="part-value">?param1=value1&param2=value2</span>
+                                <span class="part-desc">Parameters</span>
+                            </div>
+                            <div class="url-part">
+                                <span class="part-name">Fragment:</span>
+                                <span class="part-value">#section</span>
+                                <span class="part-desc">Page anchor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Encoding Examples</h3>
+                <div class="encoding-examples-detailed">
+                    <h4>📝 Real-World Examples</h4>
+                    
+                    <div class="example-case">
+                        <h5>Search Query with Spaces</h5>
+                        <div class="example-pair">
+                            <div class="original-example">
+                                <strong>Original:</strong>
+                                <pre><code>https://example.com/search?q=hello world</code></pre>
+                            </div>
+                            <div class="encoded-example">
+                                <strong>Encoded:</strong>
+                                <pre><code>https://example.com/search?q=hello%20world</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-case">
+                        <h5>Special Characters in Path</h5>
+                        <div class="example-pair">
+                            <div class="original-example">
+                                <strong>Original:</strong>
+                                <pre><code>https://example.com/files/my document (1).pdf</code></pre>
+                            </div>
+                            <div class="encoded-example">
+                                <strong>Encoded:</strong>
+                                <pre><code>https://example.com/files/my%20document%20%281%29.pdf</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-case">
+                        <h5>Query Parameters with Special Characters</h5>
+                        <div class="example-pair">
+                            <div class="original-example">
+                                <strong>Original:</strong>
+                                <pre><code>https://api.example.com/data?filter=name="John Doe"&sort=date</code></pre>
+                            </div>
+                            <div class="encoded-example">
+                                <strong>Encoded:</strong>
+                                <pre><code>https://api.example.com/data?filter=name%3D%22John%20Doe%22&sort=date</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-case">
+                        <h5>Unicode Characters</h5>
+                        <div class="example-pair">
+                            <div class="original-example">
+                                <strong>Original:</strong>
+                                <pre><code>https://example.com/café/naïve</code></pre>
+                            </div>
+                            <div class="encoded-example">
+                                <strong>Encoded:</strong>
+                                <pre><code>https://example.com/caf%C3%A9/na%C3%AFve</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Encoding Standards</h3>
+                <div class="encoding-standards">
+                    <h4>📋 RFC Standards</h4>
+                    
+                    <div class="standard-detail">
+                        <h5>RFC 3986 (Current Standard)</h5>
+                        <p><strong>Year:</strong> 2005</p>
+                        <p><strong>Usage:</strong> Modern web applications and APIs</p>
+                        <p><strong>Reserved Characters:</strong> : / ? # [ ] @</p>
+                        <p><strong>Sub-delimiters:</strong> ! $ & ' ( ) * + , ; =</p>
+                        <p><strong>Unreserved Characters:</strong> A-Z a-z 0-9 - . _ ~</p>
+                    </div>
+
+                    <div class="standard-detail">
+                        <h5>RFC 1738 (Legacy Standard)</h5>
+                        <p><strong>Year:</strong> 1994</p>
+                        <p><strong>Usage:</strong> Older systems and legacy applications</p>
+                        <p><strong>Differences:</strong> More restrictive character set</p>
+                        <p><strong>Note:</strong> Encodes more characters than RFC 3986</p>
+                    </div>
+                </div>
+
+                <h3>Common Use Cases</h3>
+                <div class="use-cases">
+                    <h4>🎯 When to Use URL Encoding</h4>
+                    
+                    <div class="use-case">
+                        <h5>Form Data Submission</h5>
+                        <p>Encoding form data for POST requests</p>
+                        <ul>
+                            <li>Contact forms with special characters</li>
+                            <li>Search queries with spaces</li>
+                            <li>User input validation</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>API Development</h5>
+                        <p>Handling parameters in REST APIs</p>
+                        <ul>
+                            <li>Query parameter encoding</li>
+                            <li>Path parameter handling</li>
+                            <li>JSON data in URLs</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>SEO and Analytics</h5>
+                        <p>Tracking and campaign URLs</p>
+                        <ul>
+                            <li>UTM parameter encoding</li>
+                            <li>Campaign tracking</li>
+                            <li>Social media sharing</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>File Handling</h5>
+                        <p>Encoding file names and paths</p>
+                        <ul>
+                            <li>File uploads with special names</li>
+                            <li>Document sharing links</li>
+                            <li>Media file URLs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Best Practices</h3>
+                <div class="best-practices">
+                    <h4>✅ URL Encoding Guidelines</h4>
+                    
+                    <h5>When to Encode</h5>
+                    <ul>
+                        <li><strong>Always encode:</strong> User input in URLs</li>
+                        <li><strong>Query parameters:</strong> Values with special characters</li>
+                        <li><strong>Path components:</strong> File names with spaces</li>
+                        <li><strong>Form data:</strong> All form field values</li>
+                    </ul>
+
+                    <h5>When NOT to Encode</h5>
+                    <ul>
+                        <li><strong>URL structure:</strong> Protocol, domain, basic path</li>
+                        <li><strong>Already encoded:</strong> Don't double-encode</li>
+                        <li><strong>Reserved characters:</strong> When used for their purpose</li>
+                        <li><strong>Safe characters:</strong> Letters, numbers, hyphens</li>
+                    </ul>
+
+                    <h5>Security Considerations</h5>
+                    <ul>
+                        <li><strong>Validate input:</strong> Check decoded URLs</li>
+                        <li><strong>Prevent injection:</strong> Sanitize user input</li>
+                        <li><strong>Length limits:</strong> Enforce URL length restrictions</li>
+                        <li><strong>Character filtering:</strong> Block dangerous characters</li>
+                    </ul>
+                </div>
+
+                <h3>Troubleshooting</h3>
+                <div class="troubleshooting">
+                    <h4>🔧 Common Issues and Solutions</h4>
+                    
+                    <div class="issue">
+                        <h5>Double Encoding</h5>
+                        <p><strong>Problem:</strong> URL encoded multiple times</p>
+                        <p><strong>Example:</strong> %2520 instead of %20</p>
+                        <p><strong>Solution:</strong> Decode first, then encode once</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Incorrect Space Encoding</h5>
+                        <p><strong>Problem:</strong> Using + in path instead of %20</p>
+                        <p><strong>Example:</strong> /path/file+name.txt</p>
+                        <p><strong>Solution:</strong> Use %20 for paths, + for query params</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Unicode Handling</h5>
+                        <p><strong>Problem:</strong> Non-ASCII characters not encoded</p>
+                        <p><strong>Example:</strong> café not encoded as caf%C3%A9</p>
+                        <p><strong>Solution:</strong> Enable Unicode encoding option</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Reserved Character Confusion</h5>
+                        <p><strong>Problem:</strong> Encoding characters that shouldn't be</p>
+                        <p><strong>Example:</strong> Encoding : in https%3A//</p>
+                        <p><strong>Solution:</strong> Understand URL structure and reserved chars</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Developer Tools</h3>
+                <div class="related-grid">
+                    <a href="hash-generator.html" class="related-tool">Hash Generator</a>
+                    <a href="xml-to-json.html" class="related-tool">XML to JSON</a>
+                    <a href="css-minifier.html" class="related-tool">CSS Minifier</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'urlencoder';
+        let currentMode = 'encode';
+        
+        function switchMode(mode) {
+            currentMode = mode;
+            const encodeBtn = document.getElementById('encode-mode');
+            const decodeBtn = document.getElementById('decode-mode');
+            const inputLabel = document.getElementById('input-label');
+            const outputLabel = document.getElementById('output-label');
+            const processBtn = document.getElementById('process-btn');
+            
+            if (mode === 'encode') {
+                encodeBtn.classList.add('active');
+                decodeBtn.classList.remove('active');
+                inputLabel.textContent = 'Enter URL to encode:';
+                outputLabel.textContent = 'Encoded URL result:';
+                processBtn.textContent = 'Encode URL';
+            } else {
+                decodeBtn.classList.add('active');
+                encodeBtn.classList.remove('active');
+                inputLabel.textContent = 'Enter URL to decode:';
+                outputLabel.textContent = 'Decoded URL result:';
+                processBtn.textContent = 'Decode URL';
+            }
+            
+            // Clear outputs when switching modes
+            document.getElementById('output-text').value = '';
+            document.getElementById('url-analysis').style.display = 'none';
+        }
+        
+        function loadExample(type) {
+            const inputText = document.getElementById('input-text');
+            const examples = {
+                basic: 'https://example.com/page',
+                query: 'https://example.com/search?q=hello world&category=news&date=2024-01-15',
+                special: 'https://example.com/files/my document (1).pdf?name="John Doe"&email=john@example.com',
+                encoded: 'https://example.com/search?q=hello%20world&category=news&date=2024-01-15'
+            };
+            inputText.value = examples[type] || '';
+        }
+        
+        // Show/hide custom encoding options
+        document.getElementById('encoding-standard').addEventListener('change', function() {
+            const customChars = document.getElementById('custom-chars');
+            if (this.value === 'custom') {
+                customChars.style.display = 'block';
+            } else {
+                customChars.style.display = 'none';
+            }
+        });
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText.trim()) {
+                document.getElementById('output-text').value = 'Please enter a URL to encode or decode.';
+                return;
+            }
+            
+            // Collect encoding options
+            window.urlEncoderOptions = {
+                mode: currentMode,
+                encodeSpaces: document.getElementById('encode-spaces').checked,
+                encodePlus: document.getElementById('encode-plus').checked,
+                encodeReserved: document.getElementById('encode-reserved').checked,
+                encodeUnreserved: document.getElementById('encode-unreserved').checked,
+                encodeUnicode: document.getElementById('encode-unicode').checked,
+                preserveStructure: document.getElementById('preserve-structure').checked,
+                encodingStandard: document.getElementById('encoding-standard').value,
+                customChars: document.getElementById('custom-encode').value
+            };
+            
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+        
+        function validateURL() {
+            const url = document.getElementById('output-text').value || document.getElementById('input-text').value;
+            if (!url.trim()) {
+                alert('No URL to validate.');
+                return;
+            }
+            
+            try {
+                new URL(url);
+                alert('✅ Valid URL format!');
+            } catch (error) {
+                alert('❌ Invalid URL format: ' + error.message);
+            }
+        }
+        
+        function analyzeURL() {
+            const url = document.getElementById('output-text').value || document.getElementById('input-text').value;
+            if (!url.trim()) {
+                alert('No URL to analyze.');
+                return;
+            }
+            
+            try {
+                const urlObj = new URL(url);
+                const analysis = document.getElementById('analysis-result');
+                const analysisSection = document.getElementById('url-analysis');
+                
+                let html = '<div class="url-components">';
+                html += `<div class="component"><strong>Protocol:</strong> ${urlObj.protocol}</div>`;
+                html += `<div class="component"><strong>Host:</strong> ${urlObj.hostname}</div>`;
+                if (urlObj.port) html += `<div class="component"><strong>Port:</strong> ${urlObj.port}</div>`;
+                html += `<div class="component"><strong>Path:</strong> ${urlObj.pathname}</div>`;
+                if (urlObj.search) html += `<div class="component"><strong>Query:</strong> ${urlObj.search}</div>`;
+                if (urlObj.hash) html += `<div class="component"><strong>Fragment:</strong> ${urlObj.hash}</div>`;
+                
+                if (urlObj.searchParams.toString()) {
+                    html += '<div class="component"><strong>Parameters:</strong><ul>';
+                    for (const [key, value] of urlObj.searchParams) {
+                        html += `<li>${key} = ${value}</li>`;
+                    }
+                    html += '</ul></div>';
+                }
+                
+                html += '</div>';
+                analysis.innerHTML = html;
+                analysisSection.style.display = 'block';
+            } catch (error) {
+                alert('❌ Cannot analyze URL: ' + error.message);
+            }
+        }
+        
+        function swapInputOutput() {
+            const input = document.getElementById('input-text');
+            const output = document.getElementById('output-text');
+            const temp = input.value;
+            input.value = output.value;
+            output.value = temp;
+            
+            // Switch mode automatically
+            switchMode(currentMode === 'encode' ? 'decode' : 'encode');
+        }
+    </script>
+</body>
+</html>

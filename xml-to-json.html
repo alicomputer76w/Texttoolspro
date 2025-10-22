@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML to JSON Converter - Free Online XML JSON Conversion Tool | Text Tools</title>
+    <meta name="description" content="Convert XML to JSON format instantly with our free online converter. Transform XML data structures to JSON with proper formatting and validation.">
+    <meta name="keywords" content="xml to json converter, xml json conversion, data format converter, xml parser, json formatter, api data conversion">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="XML to JSON Converter - Instant Data Format Conversion">
+    <meta property="og:description" content="Free online tool to convert XML data to JSON format with validation and proper formatting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/xml-to-json">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="XML to JSON Converter - Free Data Conversion">
+    <meta name="twitter:description" content="Professional XML to JSON conversion tool for developers and data analysts.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/xml-to-json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "XML to JSON Converter",
+        "description": "Convert XML files to JSON format with advanced parsing options and validation",
+        "url": "https://texttoolspro.fun/xml-to-json",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "XML to JSON conversion",
+            "File upload support",
+            "Syntax validation",
+            "Pretty formatting",
+            "Download results",
+            "Error detection"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "XML to JSON Converter",
+                "item": "https://texttoolspro.fun/xml-to-json"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does XML to JSON conversion work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The converter parses XML structure and transforms it into equivalent JSON format. XML elements become JSON objects, attributes are converted to properties, and text content is preserved. The tool maintains data hierarchy and relationships during conversion."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens to XML attributes during conversion?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "XML attributes are converted to JSON properties with a configurable prefix (default: '@'). For example, <element attr='value'>text</element> becomes {'@attr': 'value', '#text': 'text'}. You can customize this behavior in the conversion options."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can the tool handle large XML files?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the converter can process large XML files efficiently. However, very large files (>50MB) may take longer to process and could impact browser performance. For optimal results, consider breaking down extremely large files into smaller chunks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the converter validate XML syntax?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! The tool includes built-in XML validation that checks for syntax errors, malformed tags, and structural issues before conversion. If errors are found, detailed error messages help you identify and fix the problems."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What output formats are available?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The converter provides multiple output options: pretty-formatted JSON for readability, minified JSON for smaller file sizes, and raw JSON. You can copy the result to clipboard or download it as a .json file."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my XML data secure during conversion?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all conversion happens locally in your browser. Your XML files and data are never uploaded to external servers, ensuring complete privacy and security of your sensitive information and documents."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>XML to JSON Converter</h1>
+                <p class="tool-description">Convert XML data to JSON format instantly with our professional conversion tool. Perfect for API development, data migration, and format transformation with validation and error checking.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter XML data to convert:</label>
+                    <textarea id="input-text" placeholder="Paste your XML data here...&#10;&#10;Example:&#10;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;root&gt;&#10;  &lt;user id=&quot;1&quot;&gt;&#10;    &lt;name&gt;John Doe&lt;/name&gt;&#10;    &lt;email&gt;john@example.com&lt;/email&gt;&#10;  &lt;/user&gt;&#10;&lt;/root&gt;"></textarea>
+                    <div class="file-upload">
+                        <input type="file" id="xml-file" accept=".xml,.txt" style="display: none;">
+                        <button onclick="document.getElementById('xml-file').click()" class="upload-btn">Upload XML File</button>
+                        <span id="file-name"></span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <h3>Conversion Options:</h3>
+                    <div class="control-group">
+                        <label><input type="checkbox" id="preserve-attributes" checked> Preserve XML attributes</label>
+                        <label><input type="checkbox" id="compact-output"> Compact JSON output</label>
+                        <label><input type="checkbox" id="validate-xml" checked> Validate XML structure</label>
+                        <label><input type="checkbox" id="pretty-print" checked> Pretty print JSON</label>
+                        <label><input type="checkbox" id="include-root"> Include root element</label>
+                        <label><input type="checkbox" id="convert-arrays" checked> Auto-detect arrays</label>
+                    </div>
+                    
+                    <div class="format-options">
+                        <label for="attribute-prefix">Attribute Prefix:</label>
+                        <input type="text" id="attribute-prefix" value="@" placeholder="@">
+                        
+                        <label for="text-key">Text Content Key:</label>
+                        <input type="text" id="text-key" value="#text" placeholder="#text">
+                    </div>
+                    
+                    <button onclick="processCurrentTool()" class="process-btn">Convert XML to JSON</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Converted JSON output:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <div class="output-controls">
+                        <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy JSON</button>
+                        <button onclick="downloadResult()" class="download-btn">Download JSON</button>
+                        <button onclick="validateJSON()" class="validate-btn">Validate JSON</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use XML to JSON Converter</h2>
+                <ol>
+                    <li><strong>Input XML:</strong> Paste XML data or upload an XML file</li>
+                    <li><strong>Configure Options:</strong> Set conversion preferences and formatting</li>
+                    <li><strong>Convert:</strong> Click "Convert XML to JSON" to transform the data</li>
+                    <li><strong>Review Output:</strong> Check the converted JSON for accuracy</li>
+                    <li><strong>Download/Copy:</strong> Save or copy the result for use</li>
+                    <li><strong>Validate:</strong> Verify JSON structure if needed</li>
+                </ol>
+
+                <h3>Understanding XML to JSON Conversion</h3>
+                <div class="conversion-guide">
+                    <h4>🔄 Basic Conversion Rules</h4>
+                    
+                    <div class="conversion-example">
+                        <h5>Simple Elements</h5>
+                        <div class="example-pair">
+                            <div class="xml-example">
+                                <strong>XML:</strong>
+                                <pre><code>&lt;name&gt;John Doe&lt;/name&gt;</code></pre>
+                            </div>
+                            <div class="json-example">
+                                <strong>JSON:</strong>
+                                <pre><code>{"name": "John Doe"}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conversion-example">
+                        <h5>Elements with Attributes</h5>
+                        <div class="example-pair">
+                            <div class="xml-example">
+                                <strong>XML:</strong>
+                                <pre><code>&lt;user id="123" active="true"&gt;John&lt;/user&gt;</code></pre>
+                            </div>
+                            <div class="json-example">
+                                <strong>JSON:</strong>
+                                <pre><code>{
+  "user": {
+    "@id": "123",
+    "@active": "true",
+    "#text": "John"
+  }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conversion-example">
+                        <h5>Nested Elements</h5>
+                        <div class="example-pair">
+                            <div class="xml-example">
+                                <strong>XML:</strong>
+                                <pre><code>&lt;person&gt;
+  &lt;name&gt;John&lt;/name&gt;
+  &lt;age&gt;30&lt;/age&gt;
+&lt;/person&gt;</code></pre>
+                            </div>
+                            <div class="json-example">
+                                <strong>JSON:</strong>
+                                <pre><code>{
+  "person": {
+    "name": "John",
+    "age": "30"
+  }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conversion-example">
+                        <h5>Repeated Elements (Arrays)</h5>
+                        <div class="example-pair">
+                            <div class="xml-example">
+                                <strong>XML:</strong>
+                                <pre><code>&lt;users&gt;
+  &lt;user&gt;John&lt;/user&gt;
+  &lt;user&gt;Jane&lt;/user&gt;
+&lt;/users&gt;</code></pre>
+                            </div>
+                            <div class="json-example">
+                                <strong>JSON:</strong>
+                                <pre><code>{
+  "users": {
+    "user": ["John", "Jane"]
+  }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Conversion Options Explained</h3>
+                <div class="options-guide">
+                    <h4>⚙️ Configuration Settings</h4>
+                    
+                    <div class="option-detail">
+                        <h5>Preserve XML Attributes</h5>
+                        <p><strong>Enabled:</strong> XML attributes become JSON properties with prefix</p>
+                        <p><strong>Disabled:</strong> Attributes are ignored during conversion</p>
+                        <p><strong>Use case:</strong> Keep when attributes contain important data</p>
+                    </div>
+
+                    <div class="option-detail">
+                        <h5>Compact JSON Output</h5>
+                        <p><strong>Enabled:</strong> Removes whitespace and formatting</p>
+                        <p><strong>Disabled:</strong> Pretty-printed with indentation</p>
+                        <p><strong>Use case:</strong> Enable for smaller file sizes</p>
+                    </div>
+
+                    <div class="option-detail">
+                        <h5>Validate XML Structure</h5>
+                        <p><strong>Enabled:</strong> Checks XML syntax before conversion</p>
+                        <p><strong>Disabled:</strong> Attempts conversion without validation</p>
+                        <p><strong>Use case:</strong> Always recommended for error detection</p>
+                    </div>
+
+                    <div class="option-detail">
+                        <h5>Include Root Element</h5>
+                        <p><strong>Enabled:</strong> Root XML element becomes top-level JSON object</p>
+                        <p><strong>Disabled:</strong> Root element is omitted from output</p>
+                        <p><strong>Use case:</strong> Depends on desired JSON structure</p>
+                    </div>
+
+                    <div class="option-detail">
+                        <h5>Auto-detect Arrays</h5>
+                        <p><strong>Enabled:</strong> Repeated elements become JSON arrays</p>
+                        <p><strong>Disabled:</strong> Each element becomes separate property</p>
+                        <p><strong>Use case:</strong> Essential for proper data structure</p>
+                    </div>
+                </div>
+
+                <h3>Common XML Structures</h3>
+                <div class="xml-structures">
+                    <h4>📋 Typical XML Patterns</h4>
+                    
+                    <div class="structure-example">
+                        <h5>Configuration Files</h5>
+                        <pre><code>&lt;?xml version="1.0"?&gt;
+&lt;config&gt;
+  &lt;database host="localhost" port="5432"&gt;
+    &lt;name&gt;myapp&lt;/name&gt;
+    &lt;user&gt;admin&lt;/user&gt;
+  &lt;/database&gt;
+  &lt;features&gt;
+    &lt;feature enabled="true"&gt;logging&lt;/feature&gt;
+    &lt;feature enabled="false"&gt;debug&lt;/feature&gt;
+  &lt;/features&gt;
+&lt;/config&gt;</code></pre>
+                    </div>
+
+                    <div class="structure-example">
+                        <h5>API Responses</h5>
+                        <pre><code>&lt;response status="success"&gt;
+  &lt;data&gt;
+    &lt;users total="2"&gt;
+      &lt;user id="1"&gt;
+        &lt;name&gt;John Doe&lt;/name&gt;
+        &lt;email&gt;john@example.com&lt;/email&gt;
+      &lt;/user&gt;
+      &lt;user id="2"&gt;
+        &lt;name&gt;Jane Smith&lt;/name&gt;
+        &lt;email&gt;jane@example.com&lt;/email&gt;
+      &lt;/user&gt;
+    &lt;/users&gt;
+  &lt;/data&gt;
+&lt;/response&gt;</code></pre>
+                    </div>
+
+                    <div class="structure-example">
+                        <h5>Data Export</h5>
+                        <pre><code>&lt;export timestamp="2024-01-15T10:30:00Z"&gt;
+  &lt;products&gt;
+    &lt;product sku="ABC123"&gt;
+      &lt;name&gt;Widget A&lt;/name&gt;
+      &lt;price currency="USD"&gt;29.99&lt;/price&gt;
+      &lt;categories&gt;
+        &lt;category&gt;Electronics&lt;/category&gt;
+        &lt;category&gt;Gadgets&lt;/category&gt;
+      &lt;/categories&gt;
+    &lt;/product&gt;
+  &lt;/products&gt;
+&lt;/export&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h3>JSON Output Formats</h3>
+                <div class="json-formats">
+                    <h4>📊 Different JSON Structures</h4>
+                    
+                    <div class="format-comparison">
+                        <h5>With Attributes Preserved</h5>
+                        <pre><code>{
+  "user": {
+    "@id": "123",
+    "@active": "true",
+    "name": "John Doe",
+    "email": "john@example.com"
+  }
+}</code></pre>
+                    </div>
+
+                    <div class="format-comparison">
+                        <h5>Without Attributes</h5>
+                        <pre><code>{
+  "user": {
+    "name": "John Doe",
+    "email": "john@example.com"
+  }
+}</code></pre>
+                    </div>
+
+                    <div class="format-comparison">
+                        <h5>Compact Format</h5>
+                        <pre><code>{"user":{"name":"John Doe","email":"john@example.com"}}</code></pre>
+                    </div>
+
+                    <div class="format-comparison">
+                        <h5>Array Detection</h5>
+                        <pre><code>{
+  "users": [
+    {"name": "John", "id": "1"},
+    {"name": "Jane", "id": "2"}
+  ]
+}</code></pre>
+                    </div>
+                </div>
+
+                <h3>Error Handling and Troubleshooting</h3>
+                <div class="error-handling">
+                    <h4>🚨 Common XML Errors</h4>
+                    
+                    <div class="error-type">
+                        <h5>Malformed XML</h5>
+                        <p><strong>Error:</strong> "XML parsing error: mismatched tags"</p>
+                        <p><strong>Cause:</strong> Opening and closing tags don't match</p>
+                        <p><strong>Solution:</strong> Check tag names and nesting structure</p>
+                        <p><strong>Example:</strong> <code>&lt;name&gt;John&lt;/nam&gt;</code> → <code>&lt;name&gt;John&lt;/name&gt;</code></p>
+                    </div>
+
+                    <div class="error-type">
+                        <h5>Invalid Characters</h5>
+                        <p><strong>Error:</strong> "Invalid character in XML"</p>
+                        <p><strong>Cause:</strong> Special characters not properly escaped</p>
+                        <p><strong>Solution:</strong> Use XML entities (&amp;lt;, &amp;gt;, &amp;amp;)</p>
+                        <p><strong>Example:</strong> <code>&lt;text&gt;A &amp; B&lt;/text&gt;</code> → <code>&lt;text&gt;A &amp;amp; B&lt;/text&gt;</code></p>
+                    </div>
+
+                    <div class="error-type">
+                        <h5>Encoding Issues</h5>
+                        <p><strong>Error:</strong> "Character encoding error"</p>
+                        <p><strong>Cause:</strong> Incorrect character encoding declaration</p>
+                        <p><strong>Solution:</strong> Ensure encoding matches actual file encoding</p>
+                        <p><strong>Example:</strong> Use UTF-8 encoding consistently</p>
+                    </div>
+
+                    <div class="error-type">
+                        <h5>Namespace Problems</h5>
+                        <p><strong>Error:</strong> "Undefined namespace prefix"</p>
+                        <p><strong>Cause:</strong> Namespace prefixes not declared</p>
+                        <p><strong>Solution:</strong> Declare namespaces in root element</p>
+                        <p><strong>Example:</strong> <code>&lt;root xmlns:ns="http://example.com"&gt;</code></p>
+                    </div>
+                </div>
+
+                <h3>Best Practices</h3>
+                <div class="best-practices">
+                    <h4>✅ XML to JSON Conversion Tips</h4>
+                    
+                    <h5>Before Conversion</h5>
+                    <ul>
+                        <li><strong>Validate XML:</strong> Ensure XML is well-formed</li>
+                        <li><strong>Check encoding:</strong> Verify character encoding</li>
+                        <li><strong>Review structure:</strong> Understand XML hierarchy</li>
+                        <li><strong>Plan mapping:</strong> Decide how to handle attributes</li>
+                    </ul>
+
+                    <h5>During Conversion</h5>
+                    <ul>
+                        <li><strong>Test with samples:</strong> Use small XML snippets first</li>
+                        <li><strong>Check arrays:</strong> Verify repeated elements become arrays</li>
+                        <li><strong>Preserve data:</strong> Don't lose important information</li>
+                        <li><strong>Handle namespaces:</strong> Consider namespace implications</li>
+                    </ul>
+
+                    <h5>After Conversion</h5>
+                    <ul>
+                        <li><strong>Validate JSON:</strong> Ensure output is valid JSON</li>
+                        <li><strong>Test integration:</strong> Verify compatibility with target system</li>
+                        <li><strong>Document changes:</strong> Note any data transformations</li>
+                        <li><strong>Backup original:</strong> Keep original XML files</li>
+                    </ul>
+                </div>
+
+                <h3>Use Cases and Applications</h3>
+                <div class="use-cases">
+                    <h4>🎯 When to Convert XML to JSON</h4>
+                    
+                    <div class="use-case">
+                        <h5>API Migration</h5>
+                        <p>Converting legacy XML APIs to modern JSON APIs</p>
+                        <ul>
+                            <li>Modernizing web services</li>
+                            <li>Improving API performance</li>
+                            <li>Enhancing developer experience</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>Data Integration</h5>
+                        <p>Integrating XML data sources with JSON-based systems</p>
+                        <ul>
+                            <li>Database imports</li>
+                            <li>ETL processes</li>
+                            <li>Data warehouse loading</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>Frontend Development</h5>
+                        <p>Converting XML data for JavaScript applications</p>
+                        <ul>
+                            <li>AJAX responses</li>
+                            <li>Configuration files</li>
+                            <li>Data visualization</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>Configuration Management</h5>
+                        <p>Converting XML config files to JSON format</p>
+                        <ul>
+                            <li>Application settings</li>
+                            <li>Deployment configurations</li>
+                            <li>Environment variables</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Performance Considerations</h3>
+                <div class="performance">
+                    <h4>⚡ Optimization Tips</h4>
+                    
+                    <h5>Large File Handling</h5>
+                    <ul>
+                        <li><strong>Stream processing:</strong> For very large XML files</li>
+                        <li><strong>Chunk conversion:</strong> Process in smaller segments</li>
+                        <li><strong>Memory management:</strong> Monitor browser memory usage</li>
+                        <li><strong>Progress tracking:</strong> Show conversion progress</li>
+                    </ul>
+
+                    <h5>Output Optimization</h5>
+                    <ul>
+                        <li><strong>Compact format:</strong> Reduce file size</li>
+                        <li><strong>Compression:</strong> Use gzip for transfer</li>
+                        <li><strong>Selective conversion:</strong> Convert only needed elements</li>
+                        <li><strong>Batch processing:</strong> Handle multiple files efficiently</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Developer Tools</h3>
+                <div class="related-grid">
+                    <a href="json-formatter.html" class="related-tool">JSON Formatter</a>
+                    <a href="url-encoder.html" class="related-tool">URL Encoder</a>
+                    <a href="hash-generator.html" class="related-tool">Hash Generator</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'xmltojson';
+        
+        // File upload handling
+        document.getElementById('xml-file').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                document.getElementById('file-name').textContent = file.name;
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('input-text').value = e.target.result;
+                };
+                reader.readAsText(file);
+            }
+        });
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText.trim()) {
+                document.getElementById('output-text').value = 'Please enter XML data to convert to JSON format.';
+                return;
+            }
+            
+            // Collect conversion options
+            window.xmlToJsonOptions = {
+                preserveAttributes: document.getElementById('preserve-attributes').checked,
+                compactOutput: document.getElementById('compact-output').checked,
+                validateXml: document.getElementById('validate-xml').checked,
+                prettyPrint: document.getElementById('pretty-print').checked,
+                includeRoot: document.getElementById('include-root').checked,
+                convertArrays: document.getElementById('convert-arrays').checked,
+                attributePrefix: document.getElementById('attribute-prefix').value || '@',
+                textKey: document.getElementById('text-key').value || '#text'
+            };
+            
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+        
+        function downloadResult() {
+            const content = document.getElementById('output-text').value;
+            if (!content.trim()) {
+                alert('No JSON content to download. Please convert XML first.');
+                return;
+            }
+            
+            const blob = new Blob([content], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'converted.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        function validateJSON() {
+            const content = document.getElementById('output-text').value;
+            if (!content.trim()) {
+                alert('No JSON content to validate.');
+                return;
+            }
+            
+            try {
+                JSON.parse(content);
+                alert('✅ Valid JSON format!');
+            } catch (error) {
+                alert('❌ Invalid JSON format: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

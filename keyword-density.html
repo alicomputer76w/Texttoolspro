@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Density Checker - SEO Keyword Analysis Tool | Free Online SEO Tool</title>
+    <meta name="description" content="Analyze keyword density and frequency in your content for better SEO optimization. Check keyword distribution, avoid over-optimization, and improve search rankings.">
+    <meta name="keywords" content="keyword density, seo analysis, keyword frequency, seo optimization, content analysis, keyword checker, search engine optimization">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Keyword Density Checker - Optimize Your SEO Content">
+    <meta property="og:description" content="Analyze keyword density and frequency to optimize your content for better search engine rankings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/keyword-density">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Keyword Density Checker - SEO Analysis Tool">
+    <meta name="twitter:description" content="Professional keyword density analysis for SEO optimization and content improvement.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/keyword-density">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Keyword Density Checker",
+        "description": "Analyze keyword density and frequency for SEO optimization",
+        "url": "https://texttoolspro.fun/keyword-density",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Keyword density analysis",
+            "Keyword frequency counting",
+            "SEO optimization insights",
+            "Over-optimization detection",
+            "Content analysis",
+            "Search ranking improvement"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "SEO Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Keyword Density Analyzer",
+                "item": "https://texttoolspro.fun/keyword-density"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is keyword density and why is it important for SEO?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Keyword density is the percentage of times a keyword appears in your content compared to the total word count. It helps search engines understand your content's topic, but should be balanced to avoid keyword stuffing penalties."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the ideal keyword density for SEO?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The ideal keyword density is typically 1-3% for primary keywords. Focus on natural, readable content rather than hitting exact percentages. Modern SEO emphasizes semantic relevance over keyword density."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I check density for multiple keywords at once?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Keyword Density Checker can analyze multiple keywords simultaneously, showing individual density percentages for each keyword and helping you balance your content optimization strategy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I avoid keyword stuffing while optimizing content?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Focus on natural language, use synonyms and related terms, vary your keyword placement, and prioritize user experience. The tool helps you monitor density to stay within acceptable ranges."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does keyword density affect search engine rankings?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Keyword density is one of many SEO factors. While it helps search engines understand content relevance, factors like content quality, user experience, and semantic relevance are more important for modern SEO."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I optimize for exact match or related keywords?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use both exact match and related keywords (LSI keywords) for comprehensive optimization. This approach helps search engines better understand your content context and improves rankings for various search queries."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Keyword Density Checker</h1>
+                <p class="tool-description">Analyze keyword density and frequency in your content to optimize for search engines. Avoid over-optimization and improve your SEO rankings with data-driven insights.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter your content to analyze keyword density:</label>
+                    <textarea id="input-text" placeholder="Paste your article, blog post, or web page content here to analyze keyword density and frequency patterns..."></textarea>
+                </div>
+
+                <div class="controls">
+                    <h3>Analysis Options:</h3>
+                    <div class="control-group">
+                        <label>
+                            Target Keyword: 
+                            <input type="text" id="target-keyword" placeholder="Enter specific keyword to analyze">
+                        </label>
+                        <label><input type="checkbox" id="case-insensitive" checked> Case insensitive analysis</label>
+                        <label><input type="checkbox" id="include-variations" checked> Include keyword variations</label>
+                        <label><input type="checkbox" id="show-recommendations" checked> Show SEO recommendations</label>
+                        <label>
+                            Minimum word length: 
+                            <select id="min-word-length">
+                                <option value="2">2 characters</option>
+                                <option value="3" selected>3 characters</option>
+                                <option value="4">4 characters</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button onclick="processCurrentTool()" class="process-btn">Analyze Keywords</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="output-text">Keyword density analysis:</label>
+                    <textarea id="output-text" readonly></textarea>
+                    <button onclick="copyToClipboard('output-text')" class="copy-btn">Copy Analysis</button>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Keyword Density Checker</h2>
+                <ol>
+                    <li><strong>Input Content:</strong> Paste your article, blog post, or webpage content</li>
+                    <li><strong>Set Target Keyword:</strong> Enter the specific keyword you want to analyze (optional)</li>
+                    <li><strong>Configure Options:</strong> Choose analysis settings and minimum word length</li>
+                    <li><strong>Analyze:</strong> Click "Analyze Keywords" to get density report</li>
+                    <li><strong>Optimize:</strong> Use recommendations to improve your content's SEO</li>
+                </ol>
+
+                <h3>Understanding Keyword Density</h3>
+                <p>Keyword density is the percentage of times a keyword appears in your content compared to the total word count. It's calculated as:</p>
+                <div class="formula">
+                    <strong>Keyword Density = (Number of keyword occurrences / Total words) × 100</strong>
+                </div>
+
+                <h3>Optimal Keyword Density Guidelines</h3>
+                <div class="density-guidelines">
+                    <ul>
+                        <li><strong>1-2%:</strong> Ideal range for most content</li>
+                        <li><strong>2-3%:</strong> Acceptable for competitive keywords</li>
+                        <li><strong>3-5%:</strong> Risky - may trigger over-optimization penalties</li>
+                        <li><strong>5%+:</strong> Likely to be penalized by search engines</li>
+                    </ul>
+                </div>
+
+                <h3>SEO Best Practices</h3>
+                <ul>
+                    <li><strong>Natural Integration:</strong> Use keywords naturally in your content</li>
+                    <li><strong>Semantic Variations:</strong> Include related terms and synonyms</li>
+                    <li><strong>Strategic Placement:</strong> Use keywords in titles, headings, and meta descriptions</li>
+                    <li><strong>User Intent:</strong> Focus on providing value to readers first</li>
+                    <li><strong>Content Quality:</strong> Prioritize comprehensive, helpful content</li>
+                </ul>
+
+                <h3>Common Keyword Density Mistakes</h3>
+                <ul>
+                    <li><strong>Keyword Stuffing:</strong> Overusing keywords unnaturally</li>
+                    <li><strong>Ignoring Context:</strong> Using keywords without proper context</li>
+                    <li><strong>Single Keyword Focus:</strong> Not using related terms and variations</li>
+                    <li><strong>Neglecting User Experience:</strong> Prioritizing SEO over readability</li>
+                    <li><strong>Outdated Practices:</strong> Following old SEO guidelines</li>
+                </ul>
+
+                <h3>Modern SEO Approach</h3>
+                <div class="modern-seo">
+                    <h4>Beyond Keyword Density:</h4>
+                    <ul>
+                        <li><strong>Topic Clusters:</strong> Create content around related topics</li>
+                        <li><strong>Semantic SEO:</strong> Use contextually related terms</li>
+                        <li><strong>User Intent:</strong> Match content to search intent</li>
+                        <li><strong>E-A-T:</strong> Focus on Expertise, Authoritativeness, Trustworthiness</li>
+                        <li><strong>Content Depth:</strong> Provide comprehensive coverage of topics</li>
+                    </ul>
+                </div>
+
+                <h3>Keyword Placement Strategy</h3>
+                <table class="placement-table">
+                    <tr>
+                        <th>Location</th>
+                        <th>Importance</th>
+                        <th>Best Practice</th>
+                    </tr>
+                    <tr>
+                        <td>Title Tag</td>
+                        <td>Very High</td>
+                        <td>Include primary keyword near the beginning</td>
+                    </tr>
+                    <tr>
+                        <td>H1 Heading</td>
+                        <td>High</td>
+                        <td>Use primary keyword naturally</td>
+                    </tr>
+                    <tr>
+                        <td>Meta Description</td>
+                        <td>High</td>
+                        <td>Include keyword for click-through rates</td>
+                    </tr>
+                    <tr>
+                        <td>First Paragraph</td>
+                        <td>Medium</td>
+                        <td>Mention keyword within first 100 words</td>
+                    </tr>
+                    <tr>
+                        <td>Subheadings (H2-H6)</td>
+                        <td>Medium</td>
+                        <td>Use variations and related terms</td>
+                    </tr>
+                    <tr>
+                        <td>Body Content</td>
+                        <td>Medium</td>
+                        <td>Distribute naturally throughout</td>
+                    </tr>
+                </table>
+
+                <h3>Tools Integration</h3>
+                <ul>
+                    <li><strong>Google Search Console:</strong> Monitor actual search performance</li>
+                    <li><strong>Google Analytics:</strong> Track user engagement metrics</li>
+                    <li><strong>Keyword Research Tools:</strong> Find related terms and variations</li>
+                    <li><strong>Content Optimization:</strong> Use insights to improve existing content</li>
+                </ul>
+
+                <h3>Content Optimization Checklist</h3>
+                <div class="checklist">
+                    <ul>
+                        <li>✅ Keyword density between 1-2%</li>
+                        <li>✅ Primary keyword in title and H1</li>
+                        <li>✅ Related keywords in subheadings</li>
+                        <li>✅ Natural keyword distribution</li>
+                        <li>✅ Semantic variations included</li>
+                        <li>✅ Content provides value to users</li>
+                        <li>✅ Proper content structure and formatting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related SEO Tools</h3>
+                <div class="related-grid">
+                    <a href="meta-tag-generator.html" class="related-tool">Meta Tag Generator</a>
+                    <a href="title-optimizer.html" class="related-tool">Title Optimizer</a>
+                    <a href="readability-score.html" class="related-tool">Readability Score</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'keyworddensity';
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            const targetKeyword = document.getElementById('target-keyword').value;
+            
+            // Store target keyword for the analysis function
+            window.targetKeyword = targetKeyword;
+            
+            const result = processText(inputText, window.currentTool);
+            document.getElementById('output-text').value = result;
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

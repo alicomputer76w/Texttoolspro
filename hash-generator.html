@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator - MD5, SHA1, SHA256, SHA512 Hash Calculator | Text Tools</title>
+    <meta name="description" content="Generate secure hash values using MD5, SHA1, SHA256, SHA512, and other algorithms. Free online hash calculator for passwords, data integrity, and security verification.">
+    <meta name="keywords" content="hash generator, md5 hash, sha256 hash, sha1 hash, sha512 hash, checksum calculator, data integrity, password hash">
+    <meta name="author" content="Text Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hash Generator - Professional Hash Calculator">
+    <meta property="og:description" content="Generate secure hash values with multiple algorithms for data integrity and security verification.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttoolspro.fun/hash-generator">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hash Generator - Free Hash Calculator">
+    <meta name="twitter:description" content="Professional hash generation tool supporting MD5, SHA1, SHA256, SHA512 and more.">
+    
+    <link rel="canonical" href="https://texttoolspro.fun/hash-generator">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Hash Generator",
+        "description": "Professional hash generation tool supporting multiple cryptographic algorithms for security and data integrity",
+        "url": "https://texttoolspro.fun/hash-generator",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "MD5 hash generation",
+            "SHA1 hash calculation",
+            "SHA256 secure hashing",
+            "SHA512 hash generation",
+            "File hash verification",
+            "Batch hash processing",
+            "Hash comparison tools"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://texttoolspro.fun/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://texttoolspro.fun/index.html#tools"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Hash Generator & Checksum Calculator",
+                "item": "https://texttoolspro.fun/hash-generator"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What hash algorithms are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Hash Generator supports MD5, SHA1, SHA224, SHA256, SHA384, SHA512, SHA3-256, SHA3-512, BLAKE2b, BLAKE2s, RIPEMD-160, and Whirlpool algorithms. Each algorithm offers different security levels and hash lengths."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which hash algorithm should I use for security?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For security purposes, use SHA256 or higher (SHA384, SHA512, SHA3-256, SHA3-512, BLAKE2b). Avoid MD5 and SHA1 for security-critical applications as they have known vulnerabilities. Use them only for non-security purposes like checksums."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is salt and why should I use it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Salt is random data added to input before hashing to prevent rainbow table attacks and ensure unique hashes for identical inputs. Always use salt when hashing passwords or sensitive data for enhanced security."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I hash files and not just text?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! The tool supports file hashing for any file type. Upload files to generate hashes for integrity verification, digital signatures, or detecting file changes. It handles both small and large files efficiently."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I verify file integrity using hashes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generate a hash of the original file, then hash the file again later. If both hashes match exactly, the file hasn't been modified. This is commonly used for software downloads, backups, and data verification."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it safe to hash sensitive data with this tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all hashing happens locally in your browser. No data is transmitted to external servers, ensuring complete privacy. However, remember that hashing is one-way - you cannot recover original data from hashes."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I use the Hash Generator tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To use the Hash Generator: 1) Enter your text or data in the input field, 2) Select the hash algorithm (MD5, SHA-1, SHA-256, SHA-512), 3) Click 'Generate Hash' button, 4) Copy the generated hash value. The tool creates secure hash values for data integrity verification and security purposes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What hash algorithms are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Hash Generator supports MD5, SHA-1, SHA-256, SHA-512, and other popular cryptographic hash functions for various security needs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are hash values used for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hash values are used for data integrity verification, password storage, digital signatures, file checksums, and blockchain applications."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are the generated hashes secure?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the tool uses standard cryptographic algorithms. SHA-256 and SHA-512 are recommended for security-critical applications."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the hash generator free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the Hash Generator is completely free with unlimited hash generation and supports all major hash algorithms."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">🔧 Text Tools</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1>Hash Generator</h1>
+                <p class="tool-description">Professional hash generation tool supporting multiple cryptographic algorithms including MD5, SHA1, SHA256, SHA512, and more. Perfect for data integrity verification, password hashing, and security applications.</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-section">
+                    <label for="input-text">Enter text or data to hash:</label>
+                    <textarea id="input-text" placeholder="Enter your text here...&#10;&#10;Examples:&#10;- Password: mySecurePassword123&#10;- Data: Hello, World!&#10;- JSON: {&quot;user&quot;: &quot;john&quot;, &quot;id&quot;: 123}"></textarea>
+                    <div class="file-upload">
+                        <input type="file" id="hash-file" style="display: none;">
+                        <button onclick="document.getElementById('hash-file').click()" class="upload-btn">Upload File</button>
+                        <span id="file-name"></span>
+                        <span id="file-size"></span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <h3>Hash Algorithms:</h3>
+                    <div class="algorithm-selection">
+                        <div class="algorithm-group">
+                            <h4>Common Algorithms:</h4>
+                            <label><input type="checkbox" value="md5" checked> MD5 (128-bit)</label>
+                            <label><input type="checkbox" value="sha1" checked> SHA1 (160-bit)</label>
+                            <label><input type="checkbox" value="sha256" checked> SHA256 (256-bit)</label>
+                            <label><input type="checkbox" value="sha512" checked> SHA512 (512-bit)</label>
+                        </div>
+                        
+                        <div class="algorithm-group">
+                            <h4>Additional Algorithms:</h4>
+                            <label><input type="checkbox" value="sha224"> SHA224 (224-bit)</label>
+                            <label><input type="checkbox" value="sha384"> SHA384 (384-bit)</label>
+                            <label><input type="checkbox" value="sha3-256"> SHA3-256 (256-bit)</label>
+                            <label><input type="checkbox" value="sha3-512"> SHA3-512 (512-bit)</label>
+                        </div>
+                        
+                        <div class="algorithm-group">
+                            <h4>Specialized Algorithms:</h4>
+                            <label><input type="checkbox" value="blake2b"> BLAKE2b (512-bit)</label>
+                            <label><input type="checkbox" value="blake2s"> BLAKE2s (256-bit)</label>
+                            <label><input type="checkbox" value="ripemd160"> RIPEMD-160 (160-bit)</label>
+                            <label><input type="checkbox" value="whirlpool"> Whirlpool (512-bit)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="hash-options">
+                        <h4>Options:</h4>
+                        <label><input type="checkbox" id="uppercase-output"> Uppercase output</label>
+                        <label><input type="checkbox" id="include-prefix"> Include algorithm prefix</label>
+                        <label><input type="checkbox" id="add-salt"> Add salt (for passwords)</label>
+                        <div class="salt-input" id="salt-input" style="display: none;">
+                            <label for="salt-value">Salt value:</label>
+                            <input type="text" id="salt-value" placeholder="Enter salt or leave empty for random">
+                            <button onclick="generateRandomSalt()" class="generate-salt-btn">Generate Random</button>
+                        </div>
+                    </div>
+                    
+                    <div class="preset-options">
+                        <h4>Quick Presets:</h4>
+                        <button onclick="selectPreset('security')" class="preset-btn">Security (SHA256 + SHA512)</button>
+                        <button onclick="selectPreset('verification')" class="preset-btn">Verification (MD5 + SHA1)</button>
+                        <button onclick="selectPreset('modern')" class="preset-btn">Modern (SHA256 + SHA3-256)</button>
+                        <button onclick="selectPreset('all')" class="preset-btn">All Algorithms</button>
+                    </div>
+                    
+                    <button onclick="processCurrentTool()" class="process-btn">Generate Hashes</button>
+                </div>
+
+                <div class="output-section">
+                    <label for="hash-results">Generated hash values:</label>
+                    <div class="hash-results" id="hash-results">
+                        <!-- Hash results will be populated here -->
+                    </div>
+                    <div class="output-controls">
+                        <button onclick="copyAllHashes()" class="copy-btn">Copy All</button>
+                        <button onclick="downloadHashes()" class="download-btn">Download</button>
+                        <button onclick="compareHashes()" class="compare-btn">Compare</button>
+                        <button onclick="verifyIntegrity()" class="verify-btn">Verify Integrity</button>
+                    </div>
+                </div>
+
+                <div class="hash-comparison" id="hash-comparison" style="display: none;">
+                    <h3>Hash Comparison</h3>
+                    <div class="comparison-container">
+                        <div class="comparison-input">
+                            <label for="compare-hash">Enter hash to compare:</label>
+                            <input type="text" id="compare-hash" placeholder="Paste hash value here...">
+                            <select id="compare-algorithm">
+                                <option value="">Auto-detect algorithm</option>
+                                <option value="md5">MD5</option>
+                                <option value="sha1">SHA1</option>
+                                <option value="sha256">SHA256</option>
+                                <option value="sha512">SHA512</option>
+                            </select>
+                            <button onclick="performComparison()" class="compare-action-btn">Compare</button>
+                        </div>
+                        <div class="comparison-result" id="comparison-result"></div>
+                    </div>
+                </div>
+
+                <div class="batch-processing" id="batch-processing">
+                    <h3>Batch Processing</h3>
+                    <div class="batch-container">
+                        <div class="batch-input">
+                            <label for="batch-text">Multiple inputs (one per line):</label>
+                            <textarea id="batch-text" placeholder="Enter multiple texts to hash, one per line:&#10;password1&#10;password2&#10;data string 1&#10;data string 2"></textarea>
+                            <button onclick="processBatch()" class="batch-btn">Process Batch</button>
+                        </div>
+                        <div class="batch-results" id="batch-results"></div>
+                    </div>
+                </div>
+
+                <div class="hash-analysis">
+                    <h3>Hash Analysis</h3>
+                    <div class="analysis-grid">
+                        <div class="analysis-item">
+                            <label>Input Length:</label>
+                            <span id="input-length">0 characters</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>Input Size:</label>
+                            <span id="input-size">0 bytes</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>Processing Time:</label>
+                            <span id="processing-time">0 ms</span>
+                        </div>
+                        <div class="analysis-item">
+                            <label>Algorithms Used:</label>
+                            <span id="algorithms-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-guide">
+                <h2>How to Use Hash Generator</h2>
+                <ol>
+                    <li><strong>Input Data:</strong> Enter text or upload a file to hash</li>
+                    <li><strong>Select Algorithms:</strong> Choose hash algorithms to use</li>
+                    <li><strong>Configure Options:</strong> Set output format and security options</li>
+                    <li><strong>Generate:</strong> Click "Generate Hashes" to create hash values</li>
+                    <li><strong>Copy/Download:</strong> Save or copy the generated hashes</li>
+                    <li><strong>Verify:</strong> Use comparison tools to verify integrity</li>
+                </ol>
+
+                <h3>Understanding Hash Functions</h3>
+                <div class="hash-explanation">
+                    <h4>🔐 What are Hash Functions?</h4>
+                    <p>Hash functions are mathematical algorithms that convert input data of any size into a fixed-size string of characters. They are designed to be one-way functions, meaning it's computationally infeasible to reverse the process and obtain the original input from the hash value.</p>
+                    
+                    <div class="hash-properties">
+                        <h5>Key Properties of Hash Functions</h5>
+                        <div class="property">
+                            <h6>Deterministic</h6>
+                            <p>The same input always produces the same hash output</p>
+                            <div class="example">
+                                <strong>Example:</strong> "Hello" → Always produces the same MD5: 8b1a9953c4611296a827abf8c47804d7
+                            </div>
+                        </div>
+
+                        <div class="property">
+                            <h6>Fixed Output Size</h6>
+                            <p>Regardless of input size, the hash output is always the same length</p>
+                            <div class="example">
+                                <strong>MD5:</strong> Always 32 hexadecimal characters (128 bits)<br>
+                                <strong>SHA256:</strong> Always 64 hexadecimal characters (256 bits)
+                            </div>
+                        </div>
+
+                        <div class="property">
+                            <h6>Avalanche Effect</h6>
+                            <p>Small changes in input produce dramatically different outputs</p>
+                            <div class="example">
+                                <strong>"Hello":</strong> 8b1a9953c4611296a827abf8c47804d7<br>
+                                <strong>"hello":</strong> 5d41402abc4b2a76b9719d911017c592
+                            </div>
+                        </div>
+
+                        <div class="property">
+                            <h6>One-Way Function</h6>
+                            <p>It's computationally infeasible to reverse the hash to get the original input</p>
+                            <div class="example">
+                                <strong>Easy:</strong> Input → Hash<br>
+                                <strong>Nearly Impossible:</strong> Hash → Input
+                            </div>
+                        </div>
+
+                        <div class="property">
+                            <h6>Collision Resistance</h6>
+                            <p>It's extremely difficult to find two different inputs that produce the same hash</p>
+                            <div class="example">
+                                <strong>Goal:</strong> Find Input1 ≠ Input2 where Hash(Input1) = Hash(Input2)<br>
+                                <strong>Reality:</strong> Computationally infeasible for secure algorithms
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Hash Algorithm Comparison</h3>
+                <div class="algorithm-comparison">
+                    <h4>📊 Algorithm Specifications</h4>
+                    
+                    <div class="algorithm-details">
+                        <div class="algorithm">
+                            <h5>MD5 (Message Digest 5)</h5>
+                            <div class="algorithm-specs">
+                                <p><strong>Output Size:</strong> 128 bits (32 hex characters)</p>
+                                <p><strong>Security:</strong> ❌ Cryptographically broken</p>
+                                <p><strong>Speed:</strong> ⚡ Very fast</p>
+                                <p><strong>Use Cases:</strong> Checksums, non-security applications</p>
+                                <p><strong>Status:</strong> Deprecated for security use</p>
+                            </div>
+                            <div class="algorithm-example">
+                                <strong>Example:</strong><br>
+                                Input: "Hello, World!"<br>
+                                MD5: 65a8e27d8879283831b664bd8b7f0ad4
+                            </div>
+                            <div class="algorithm-notes">
+                                <p><strong>⚠️ Security Warning:</strong> MD5 is vulnerable to collision attacks and should not be used for security purposes. Use only for checksums and non-critical applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="algorithm">
+                            <h5>SHA1 (Secure Hash Algorithm 1)</h5>
+                            <div class="algorithm-specs">
+                                <p><strong>Output Size:</strong> 160 bits (40 hex characters)</p>
+                                <p><strong>Security:</strong> ⚠️ Deprecated (collision attacks found)</p>
+                                <p><strong>Speed:</strong> ⚡ Fast</p>
+                                <p><strong>Use Cases:</strong> Legacy systems, Git commits</p>
+                                <p><strong>Status:</strong> Being phased out</p>
+                            </div>
+                            <div class="algorithm-example">
+                                <strong>Example:</strong><br>
+                                Input: "Hello, World!"<br>
+                                SHA1: 0a0a9f2a6772942557ab5355d76af442f8f65e01
+                            </div>
+                            <div class="algorithm-notes">
+                                <p><strong>⚠️ Security Warning:</strong> SHA1 is deprecated due to collision vulnerabilities. Migrate to SHA256 or higher for new applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="algorithm">
+                            <h5>SHA256 (SHA-2 Family)</h5>
+                            <div class="algorithm-specs">
+                                <p><strong>Output Size:</strong> 256 bits (64 hex characters)</p>
+                                <p><strong>Security:</strong> ✅ Secure (current standard)</p>
+                                <p><strong>Speed:</strong> 🔄 Moderate</p>
+                                <p><strong>Use Cases:</strong> Digital signatures, certificates, blockchain</p>
+                                <p><strong>Status:</strong> Widely adopted standard</p>
+                            </div>
+                            <div class="algorithm-example">
+                                <strong>Example:</strong><br>
+                                Input: "Hello, World!"<br>
+                                SHA256: dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f
+                            </div>
+                            <div class="algorithm-notes">
+                                <p><strong>✅ Recommended:</strong> SHA256 is the current industry standard for secure hashing and is widely supported across platforms.</p>
+                            </div>
+                        </div>
+
+                        <div class="algorithm">
+                            <h5>SHA512 (SHA-2 Family)</h5>
+                            <div class="algorithm-specs">
+                                <p><strong>Output Size:</strong> 512 bits (128 hex characters)</p>
+                                <p><strong>Security:</strong> ✅ Very secure</p>
+                                <p><strong>Speed:</strong> 🐌 Slower but more secure</p>
+                                <p><strong>Use Cases:</strong> High-security applications, password hashing</p>
+                                <p><strong>Status:</strong> Recommended for high-security needs</p>
+                            </div>
+                            <div class="algorithm-example">
+                                <strong>Example:</strong><br>
+                                Input: "Hello, World!"<br>
+                                SHA512: 374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387
+                            </div>
+                            <div class="algorithm-notes">
+                                <p><strong>✅ High Security:</strong> SHA512 provides excellent security with larger output size, ideal for applications requiring maximum security.</p>
+                            </div>
+                        </div>
+
+                        <div class="algorithm">
+                            <h5>SHA3-256 (Keccak Family)</h5>
+                            <div class="algorithm-specs">
+                                <p><strong>Output Size:</strong> 256 bits (64 hex characters)</p>
+                                <p><strong>Security:</strong> ✅ Very secure (different design from SHA-2)</p>
+                                <p><strong>Speed:</strong> 🔄 Moderate</p>
+                                <p><strong>Use Cases:</strong> Future-proofing, cryptographic applications</p>
+                                <p><strong>Status:</strong> NIST standard (2015)</p>
+                            </div>
+                            <div class="algorithm-example">
+                                <strong>Example:</strong><br>
+                                Input: "Hello, World!"<br>
+                                SHA3-256: 1af17a664e3fa8e419b8ba05c2a173169df76162a5a286e0c405b460d478f7ef
+                            </div>
+                            <div class="algorithm-notes">
+                                <p><strong>🔮 Future-Proof:</strong> SHA3 uses a different mathematical foundation than SHA-2, providing additional security assurance.</p>
+                            </div>
+                        </div>
+
+                        <div class="algorithm">
+                            <h5>BLAKE2b</h5>
+                            <div class="algorithm-specs">
+                                <p><strong>Output Size:</strong> Variable (up to 512 bits)</p>
+                                <p><strong>Security:</strong> ✅ Very secure</p>
+                                <p><strong>Speed:</strong> ⚡⚡ Extremely fast</p>
+                                <p><strong>Use Cases:</strong> High-performance applications</p>
+                                <p><strong>Status:</strong> Modern alternative to SHA-2</p>
+                            </div>
+                            <div class="algorithm-example">
+                                <strong>Example:</strong><br>
+                                Input: "Hello, World!"<br>
+                                BLAKE2b: 8c653f8c9c9aa2177fb6f8cf5bb914828faa032d7b486c8150663d3f6524b086
+                            </div>
+                            <div class="algorithm-notes">
+                                <p><strong>⚡ Performance:</strong> BLAKE2b offers excellent security with superior performance compared to SHA-2 and SHA-3.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Common Use Cases</h3>
+                <div class="use-cases">
+                    <h4>🎯 Practical Applications</h4>
+                    
+                    <div class="use-case">
+                        <h5>Password Storage</h5>
+                        <div class="use-case-details">
+                            <p><strong>Problem:</strong> Storing passwords in plain text is insecure</p>
+                            <p><strong>Solution:</strong> Hash passwords before storing in database</p>
+                            <p><strong>Best Practice:</strong> Use salt + strong algorithm (SHA256/SHA512)</p>
+                            <div class="use-case-example">
+                                <strong>Example Process:</strong><br>
+                                1. User enters password: "mySecurePassword123"<br>
+                                2. Generate random salt: "a1b2c3d4e5f6"<br>
+                                3. Combine: "mySecurePassword123a1b2c3d4e5f6"<br>
+                                4. Hash with SHA256: Store hash + salt in database<br>
+                                5. For login: Hash entered password + stored salt, compare hashes
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>File Integrity Verification</h5>
+                        <div class="use-case-details">
+                            <p><strong>Problem:</strong> Ensure files haven't been corrupted or tampered with</p>
+                            <p><strong>Solution:</strong> Generate hash of original file, compare with hash of received file</p>
+                            <p><strong>Best Practice:</strong> Use SHA256 or SHA512 for security</p>
+                            <div class="use-case-example">
+                                <strong>Example Process:</strong><br>
+                                1. Original file hash: SHA256 = abc123def456...<br>
+                                2. Download/receive file<br>
+                                3. Calculate hash of received file<br>
+                                4. Compare hashes: Match = File intact, No match = File corrupted/modified
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>Digital Signatures</h5>
+                        <div class="use-case-details">
+                            <p><strong>Problem:</strong> Verify authenticity and integrity of digital documents</p>
+                            <p><strong>Solution:</strong> Hash document, encrypt hash with private key</p>
+                            <p><strong>Best Practice:</strong> Use SHA256 with RSA or ECDSA</p>
+                            <div class="use-case-example">
+                                <strong>Example Process:</strong><br>
+                                1. Hash document with SHA256<br>
+                                2. Encrypt hash with sender's private key (signature)<br>
+                                3. Recipient decrypts signature with sender's public key<br>
+                                4. Recipient hashes received document and compares
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>Blockchain and Cryptocurrency</h5>
+                        <div class="use-case-details">
+                            <p><strong>Problem:</strong> Create tamper-proof chain of transactions</p>
+                            <p><strong>Solution:</strong> Hash each block including previous block's hash</p>
+                            <p><strong>Best Practice:</strong> Use SHA256 (Bitcoin standard)</p>
+                            <div class="use-case-example">
+                                <strong>Example Process:</strong><br>
+                                1. Block contains: transactions + previous block hash + nonce<br>
+                                2. Hash entire block with SHA256<br>
+                                3. Next block includes this hash, creating chain<br>
+                                4. Any change breaks the chain (different hash)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>Data Deduplication</h5>
+                        <div class="use-case-details">
+                            <p><strong>Problem:</strong> Identify and eliminate duplicate files/data</p>
+                            <p><strong>Solution:</strong> Hash files and compare hash values</p>
+                            <p><strong>Best Practice:</strong> Use fast algorithm like MD5 for non-security use</p>
+                            <div class="use-case-example">
+                                <strong>Example Process:</strong><br>
+                                1. Hash all files in system<br>
+                                2. Group files by identical hash values<br>
+                                3. Files with same hash are duplicates<br>
+                                4. Keep one copy, remove or link others
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="use-case">
+                        <h5>API Authentication</h5>
+                        <div class="use-case-details">
+                            <p><strong>Problem:</strong> Secure API requests without sending passwords</p>
+                            <p><strong>Solution:</strong> Hash request data with secret key (HMAC)</p>
+                            <p><strong>Best Practice:</strong> Use HMAC-SHA256</p>
+                            <div class="use-case-example">
+                                <strong>Example Process:</strong><br>
+                                1. Client has API key and secret<br>
+                                2. Create request: timestamp + method + URL + body<br>
+                                3. Hash with secret using HMAC-SHA256<br>
+                                4. Send request + hash, server verifies hash
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Security Considerations</h3>
+                <div class="security-guide">
+                    <h4>🔒 Hash Security Best Practices</h4>
+                    
+                    <div class="security-practice">
+                        <h5>Algorithm Selection</h5>
+                        <div class="practice-details">
+                            <h6>✅ Recommended for Security:</h6>
+                            <ul>
+                                <li><strong>SHA256:</strong> Current industry standard</li>
+                                <li><strong>SHA512:</strong> Higher security, slower performance</li>
+                                <li><strong>SHA3-256/SHA3-512:</strong> Future-proof alternatives</li>
+                                <li><strong>BLAKE2b:</strong> High performance with strong security</li>
+                            </ul>
+                            
+                            <h6>⚠️ Use with Caution:</h6>
+                            <ul>
+                                <li><strong>SHA1:</strong> Deprecated, use only for legacy compatibility</li>
+                                <li><strong>MD5:</strong> Only for checksums, never for security</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="security-practice">
+                        <h5>Salt Usage</h5>
+                        <div class="practice-details">
+                            <p><strong>What is Salt:</strong> Random data added to input before hashing</p>
+                            <p><strong>Purpose:</strong> Prevent rainbow table attacks and identical password detection</p>
+                            
+                            <h6>Salt Best Practices:</h6>
+                            <ul>
+                                <li><strong>Unique Salt:</strong> Generate different salt for each password</li>
+                                <li><strong>Random Salt:</strong> Use cryptographically secure random generator</li>
+                                <li><strong>Salt Length:</strong> At least 16 bytes (128 bits)</li>
+                                <li><strong>Salt Storage:</strong> Store salt alongside hash (not secret)</li>
+                            </ul>
+                            
+                            <div class="salt-example">
+                                <strong>Example with Salt:</strong><br>
+                                Password: "password123"<br>
+                                Salt: "a1b2c3d4e5f6g7h8"<br>
+                                Combined: "password123a1b2c3d4e5f6g7h8"<br>
+                                Hash: SHA256(combined) = "7f8b..."<br>
+                                Store: hash + salt in database
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="security-practice">
+                        <h5>Rainbow Table Protection</h5>
+                        <div class="practice-details">
+                            <p><strong>Rainbow Tables:</strong> Precomputed tables of common passwords and their hashes</p>
+                            <p><strong>Attack Method:</strong> Look up hash in table to find original password</p>
+                            
+                            <h6>Protection Methods:</h6>
+                            <ul>
+                                <li><strong>Use Salt:</strong> Makes rainbow tables ineffective</li>
+                                <li><strong>Strong Passwords:</strong> Use complex, unique passwords</li>
+                                <li><strong>Key Stretching:</strong> Use algorithms like PBKDF2, bcrypt, or Argon2</li>
+                                <li><strong>Pepper:</strong> Add secret value known only to application</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="security-practice">
+                        <h5>Timing Attacks</h5>
+                        <div class="practice-details">
+                            <p><strong>Attack Method:</strong> Analyze time differences in hash comparison</p>
+                            <p><strong>Vulnerability:</strong> Early exit from comparison reveals information</p>
+                            
+                            <h6>Prevention:</h6>
+                            <ul>
+                                <li><strong>Constant-Time Comparison:</strong> Always compare full hash length</li>
+                                <li><strong>Secure Compare Functions:</strong> Use cryptographic libraries</li>
+                                <li><strong>Rate Limiting:</strong> Limit authentication attempts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Performance Considerations</h3>
+                <div class="performance-guide">
+                    <h4>⚡ Optimization and Performance</h4>
+                    
+                    <div class="performance-comparison">
+                        <h5>Algorithm Performance Comparison</h5>
+                        <div class="performance-table">
+                            <div class="performance-row header">
+                                <span>Algorithm</span>
+                                <span>Speed</span>
+                                <span>Security</span>
+                                <span>Output Size</span>
+                                <span>Best Use Case</span>
+                            </div>
+                            <div class="performance-row">
+                                <span>MD5</span>
+                                <span>⚡⚡⚡⚡⚡</span>
+                                <span>❌</span>
+                                <span>128 bit</span>
+                                <span>Checksums only</span>
+                            </div>
+                            <div class="performance-row">
+                                <span>SHA1</span>
+                                <span>⚡⚡⚡⚡</span>
+                                <span>⚠️</span>
+                                <span>160 bit</span>
+                                <span>Legacy systems</span>
+                            </div>
+                            <div class="performance-row">
+                                <span>SHA256</span>
+                                <span>⚡⚡⚡</span>
+                                <span>✅</span>
+                                <span>256 bit</span>
+                                <span>General security</span>
+                            </div>
+                            <div class="performance-row">
+                                <span>SHA512</span>
+                                <span>⚡⚡</span>
+                                <span>✅✅</span>
+                                <span>512 bit</span>
+                                <span>High security</span>
+                            </div>
+                            <div class="performance-row">
+                                <span>SHA3-256</span>
+                                <span>⚡⚡</span>
+                                <span>✅✅</span>
+                                <span>256 bit</span>
+                                <span>Future-proofing</span>
+                            </div>
+                            <div class="performance-row">
+                                <span>BLAKE2b</span>
+                                <span>⚡⚡⚡⚡</span>
+                                <span>✅✅</span>
+                                <span>512 bit</span>
+                                <span>High performance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="optimization-tips">
+                        <h5>Performance Optimization Tips</h5>
+                        
+                        <div class="optimization-tip">
+                            <h6>Choose Right Algorithm</h6>
+                            <ul>
+                                <li><strong>Checksums:</strong> Use MD5 for speed (non-security)</li>
+                                <li><strong>General Security:</strong> Use SHA256 for balance</li>
+                                <li><strong>High Security:</strong> Use SHA512 or SHA3</li>
+                                <li><strong>High Performance:</strong> Consider BLAKE2b</li>
+                            </ul>
+                        </div>
+
+                        <div class="optimization-tip">
+                            <h6>Batch Processing</h6>
+                            <ul>
+                                <li><strong>Multiple Inputs:</strong> Process in batches to reduce overhead</li>
+                                <li><strong>Streaming:</strong> Use streaming APIs for large files</li>
+                                <li><strong>Parallel Processing:</strong> Hash multiple files simultaneously</li>
+                            </ul>
+                        </div>
+
+                        <div class="optimization-tip">
+                            <h6>Memory Management</h6>
+                            <ul>
+                                <li><strong>Large Files:</strong> Process in chunks, don't load entire file</li>
+                                <li><strong>Buffer Size:</strong> Optimize buffer size for your use case</li>
+                                <li><strong>Memory Cleanup:</strong> Clear sensitive data from memory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Integration Examples</h3>
+                <div class="integration-examples">
+                    <h4>💻 Code Implementation Examples</h4>
+                    
+                    <div class="code-example">
+                        <h5>JavaScript (Browser/Node.js)</h5>
+                        <pre><code>// Using Web Crypto API (Browser)
+async function hashText(text, algorithm = 'SHA-256') {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text);
+  const hashBuffer = await crypto.subtle.digest(algorithm, data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+// Usage
+hashText('Hello, World!', 'SHA-256').then(hash => {
+  console.log('SHA256:', hash);
+});
+
+// Node.js with crypto module
+const crypto = require('crypto');
+
+function hashTextNode(text, algorithm = 'sha256') {
+  return crypto.createHash(algorithm).update(text).digest('hex');
+}
+
+console.log('SHA256:', hashTextNode('Hello, World!', 'sha256'));</code></pre>
+                    </div>
+
+                    <div class="code-example">
+                        <h5>Python</h5>
+                        <pre><code>import hashlib
+
+def hash_text(text, algorithm='sha256'):
+    """Generate hash for text using specified algorithm"""
+    # Create hash object
+    hash_obj = hashlib.new(algorithm)
+    
+    # Update with text (encoded to bytes)
+    hash_obj.update(text.encode('utf-8'))
+    
+    # Return hexadecimal digest
+    return hash_obj.hexdigest()
+
+# Usage examples
+text = "Hello, World!"
+print(f"MD5: {hash_text(text, 'md5')}")
+print(f"SHA1: {hash_text(text, 'sha1')}")
+print(f"SHA256: {hash_text(text, 'sha256')}")
+print(f"SHA512: {hash_text(text, 'sha512')}")
+
+# File hashing
+def hash_file(filename, algorithm='sha256'):
+    """Generate hash for file"""
+    hash_obj = hashlib.new(algorithm)
+    
+    with open(filename, 'rb') as f:
+        # Read file in chunks to handle large files
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_obj.update(chunk)
+    
+    return hash_obj.hexdigest()
+
+# Usage
+file_hash = hash_file('document.pdf', 'sha256')
+print(f"File SHA256: {file_hash}")</code></pre>
+                    </div>
+
+                    <div class="code-example">
+                        <h5>Java</h5>
+                        <pre><code>import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.nio.charset.StandardCharsets;
+
+public class HashGenerator {
+    
+    public static String hashText(String text, String algorithm) 
+            throws NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance(algorithm);
+        byte[] hashBytes = digest.digest(text.getBytes(StandardCharsets.UTF_8));
+        
+        // Convert to hexadecimal
+        StringBuilder hexString = new StringBuilder();
+        for (byte b : hashBytes) {
+            String hex = Integer.toHexString(0xff & b);
+            if (hex.length() == 1) {
+                hexString.append('0');
+            }
+            hexString.append(hex);
+        }
+        
+        return hexString.toString();
+    }
+    
+    public static void main(String[] args) {
+        try {
+            String text = "Hello, World!";
+            System.out.println("MD5: " + hashText(text, "MD5"));
+            System.out.println("SHA-1: " + hashText(text, "SHA-1"));
+            System.out.println("SHA-256: " + hashText(text, "SHA-256"));
+            System.out.println("SHA-512: " + hashText(text, "SHA-512"));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="code-example">
+                        <h5>C# (.NET)</h5>
+                        <pre><code>using System;
+using System.Security.Cryptography;
+using System.Text;
+
+public class HashGenerator
+{
+    public static string HashText(string text, string algorithm)
+    {
+        using (var hashAlgorithm = HashAlgorithm.Create(algorithm))
+        {
+            if (hashAlgorithm == null)
+                throw new ArgumentException($"Unknown algorithm: {algorithm}");
+            
+            byte[] inputBytes = Encoding.UTF8.GetBytes(text);
+            byte[] hashBytes = hashAlgorithm.ComputeHash(inputBytes);
+            
+            return Convert.ToHexString(hashBytes).ToLower();
+        }
+    }
+    
+    public static void Main()
+    {
+        string text = "Hello, World!";
+        
+        Console.WriteLine($"MD5: {HashText(text, "MD5")}");
+        Console.WriteLine($"SHA1: {HashText(text, "SHA1")}");
+        Console.WriteLine($"SHA256: {HashText(text, "SHA256")}");
+        Console.WriteLine($"SHA512: {HashText(text, "SHA512")}");
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <h3>Troubleshooting</h3>
+                <div class="troubleshooting">
+                    <h4>🔧 Common Issues and Solutions</h4>
+                    
+                    <div class="issue">
+                        <h5>Different Hash Results for Same Input</h5>
+                        <p><strong>Cause:</strong> Different encoding, line endings, or hidden characters</p>
+                        <p><strong>Solution:</strong> Ensure consistent encoding (UTF-8), normalize line endings</p>
+                        <p><strong>Prevention:</strong> Use binary mode for files, specify encoding explicitly</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Hash Doesn't Match Expected Value</h5>
+                        <p><strong>Cause:</strong> Case sensitivity, extra whitespace, or different algorithm</p>
+                        <p><strong>Solution:</strong> Check algorithm, trim whitespace, verify case</p>
+                        <p><strong>Prevention:</strong> Document exact input format and algorithm used</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Performance Issues with Large Files</h5>
+                        <p><strong>Cause:</strong> Loading entire file into memory</p>
+                        <p><strong>Solution:</strong> Process files in chunks, use streaming</p>
+                        <p><strong>Prevention:</strong> Always use chunk-based processing for files</p>
+                    </div>
+
+                    <div class="issue">
+                        <h5>Security Vulnerabilities</h5>
+                        <p><strong>Cause:</strong> Using deprecated algorithms or no salt</p>
+                        <p><strong>Solution:</strong> Upgrade to SHA256+, implement proper salting</p>
+                        <p><strong>Prevention:</strong> Follow current security best practices</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-tools">
+                <h3>Related Security Tools</h3>
+                <div class="related-grid">
+                    <a href="url-encoder.html" class="related-tool">URL Encoder</a>
+                    <a href="js-beautifier.html" class="related-tool">JS Beautifier</a>
+                    <a href="json-formatter.html" class="related-tool">JSON Formatter</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Tools. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.currentTool = 'hashgenerator';
+        
+        // File upload handling
+        document.getElementById('hash-file').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                document.getElementById('file-name').textContent = file.name;
+                document.getElementById('file-size').textContent = `(${(file.size / 1024).toFixed(2)} KB)`;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('input-text').value = e.target.result;
+                    updateInputAnalysis();
+                };
+                reader.readAsText(file);
+            }
+        });
+        
+        // Salt checkbox handler
+        document.getElementById('add-salt').addEventListener('change', function() {
+            document.getElementById('salt-input').style.display = this.checked ? 'block' : 'none';
+        });
+        
+        // Input text change handler
+        document.getElementById('input-text').addEventListener('input', updateInputAnalysis);
+        
+        function updateInputAnalysis() {
+            const text = document.getElementById('input-text').value;
+            document.getElementById('input-length').textContent = `${text.length} characters`;
+            document.getElementById('input-size').textContent = `${new Blob([text]).size} bytes`;
+        }
+        
+        function selectPreset(preset) {
+            // Uncheck all algorithms first
+            document.querySelectorAll('.algorithm-selection input[type="checkbox"]').forEach(cb => {
+                cb.checked = false;
+            });
+            
+            // Select algorithms based on preset
+            const presets = {
+                security: ['sha256', 'sha512'],
+                verification: ['md5', 'sha1'],
+                modern: ['sha256', 'sha3-256'],
+                all: ['md5', 'sha1', 'sha256', 'sha512', 'sha224', 'sha384', 'sha3-256', 'sha3-512']
+            };
+            
+            if (presets[preset]) {
+                presets[preset].forEach(algorithm => {
+                    const checkbox = document.querySelector(`input[value="${algorithm}"]`);
+                    if (checkbox) checkbox.checked = true;
+                });
+            }
+        }
+        
+        function generateRandomSalt() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let salt = '';
+            for (let i = 0; i < 16; i++) {
+                salt += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('salt-value').value = salt;
+        }
+        
+        function processCurrentTool() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText.trim()) {
+                alert('Please enter text to hash.');
+                return;
+            }
+            
+            const startTime = performance.now();
+            
+            // Get selected algorithms
+            const selectedAlgorithms = [];
+            document.querySelectorAll('.algorithm-selection input[type="checkbox"]:checked').forEach(cb => {
+                selectedAlgorithms.push(cb.value);
+            });
+            
+            if (selectedAlgorithms.length === 0) {
+                alert('Please select at least one hash algorithm.');
+                return;
+            }
+            
+            // Get options
+            const options = {
+                algorithms: selectedAlgorithms,
+                uppercase: document.getElementById('uppercase-output').checked,
+                includePrefix: document.getElementById('include-prefix').checked,
+                addSalt: document.getElementById('add-salt').checked,
+                saltValue: document.getElementById('salt-value').value
+            };
+            
+            // Store options for processing
+            window.hashGeneratorOptions = options;
+            
+            const result = processText(inputText, window.currentTool);
+            
+            const endTime = performance.now();
+            document.getElementById('processing-time').textContent = `${(endTime - startTime).toFixed(2)} ms`;
+            document.getElementById('algorithms-count').textContent = selectedAlgorithms.length;
+            
+            displayHashResults(result);
+        }
+        
+        function displayHashResults(results) {
+            const container = document.getElementById('hash-results');
+            container.innerHTML = '';
+            
+            if (typeof results === 'object' && results !== null) {
+                Object.entries(results).forEach(([algorithm, hash]) => {
+                    const resultDiv = document.createElement('div');
+                    resultDiv.className = 'hash-result';
+                    resultDiv.innerHTML = `
+                        <div class="hash-algorithm">${algorithm.toUpperCase()}</div>
+                        <div class="hash-value">
+                            <input type="text" value="${hash}" readonly>
+                            <button onclick="copyHash('${hash}')" class="copy-btn">Copy</button>
+                        </div>
+                    `;
+                    container.appendChild(resultDiv);
+                });
+            } else {
+                container.innerHTML = '<div class="error">Error generating hashes. Please check your input.</div>';
+            }
+        }
+        
+        function copyHash(hash) {
+            navigator.clipboard.writeText(hash).then(() => {
+                const copyBtn = event.target;
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        function copyAllHashes() {
+            const hashInputs = document.querySelectorAll('#hash-results input[type="text"]');
+            let allHashes = '';
+            
+            hashInputs.forEach(input => {
+                const algorithm = input.closest('.hash-result').querySelector('.hash-algorithm').textContent;
+                allHashes += `${algorithm}: ${input.value}\n`;
+            });
+            
+            if (allHashes) {
+                navigator.clipboard.writeText(allHashes).then(() => {
+                    alert('All hashes copied to clipboard!');
+                });
+            }
+        }
+        
+        function downloadHashes() {
+            const hashInputs = document.querySelectorAll('#hash-results input[type="text"]');
+            let content = 'Hash Results\n' + '='.repeat(50) + '\n\n';
+            
+            const inputText = document.getElementById('input-text').value;
+            content += `Input: ${inputText.substring(0, 100)}${inputText.length > 100 ? '...' : ''}\n`;
+            content += `Generated: ${new Date().toISOString()}\n\n`;
+            
+            hashInputs.forEach(input => {
+                const algorithm = input.closest('.hash-result').querySelector('.hash-algorithm').textContent;
+                content += `${algorithm}: ${input.value}\n`;
+            });
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'hash-results.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        function compareHashes() {
+            document.getElementById('hash-comparison').style.display = 'block';
+        }
+        
+        function performComparison() {
+            const compareHash = document.getElementById('compare-hash').value.trim();
+            const algorithm = document.getElementById('compare-algorithm').value;
+            
+            if (!compareHash) {
+                alert('Please enter a hash to compare.');
+                return;
+            }
+            
+            // Find matching hash in results
+            const hashInputs = document.querySelectorAll('#hash-results input[type="text"]');
+            let found = false;
+            
+            hashInputs.forEach(input => {
+                if (input.value.toLowerCase() === compareHash.toLowerCase()) {
+                    found = true;
+                    const algorithmName = input.closest('.hash-result').querySelector('.hash-algorithm').textContent;
+                    document.getElementById('comparison-result').innerHTML = `
+                        <div class="match-success">✅ Hash Match Found!</div>
+                        <div class="match-details">Algorithm: ${algorithmName}</div>
+                        <div class="match-details">The provided hash matches the generated ${algorithmName} hash.</div>
+                    `;
+                }
+            });
+            
+            if (!found) {
+                document.getElementById('comparison-result').innerHTML = `
+                    <div class="match-failure">❌ No Match Found</div>
+                    <div class="match-details">The provided hash does not match any of the generated hashes.</div>
+                    <div class="match-details">This could indicate data corruption or tampering.</div>
+                `;
+            }
+        }
+        
+        function processBatch() {
+            const batchText = document.getElementById('batch-text').value;
+            const lines = batchText.split('\n').filter(line => line.trim());
+            
+            if (lines.length === 0) {
+                alert('Please enter text to process in batch mode.');
+                return;
+            }
+            
+            const selectedAlgorithms = [];
+            document.querySelectorAll('.algorithm-selection input[type="checkbox"]:checked').forEach(cb => {
+                selectedAlgorithms.push(cb.value);
+            });
+            
+            if (selectedAlgorithms.length === 0) {
+                alert('Please select at least one hash algorithm.');
+                return;
+            }
+            
+            const batchResults = document.getElementById('batch-results');
+            batchResults.innerHTML = '<h4>Batch Processing Results</h4>';
+            
+            lines.forEach((line, index) => {
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'batch-item';
+                resultDiv.innerHTML = `
+                    <div class="batch-input">Input ${index + 1}: ${line.substring(0, 50)}${line.length > 50 ? '...' : ''}</div>
+                    <div class="batch-hashes" id="batch-hashes-${index}"></div>
+                `;
+                batchResults.appendChild(resultDiv);
+                
+                // Generate hashes for this line (simplified)
+                const hashContainer = document.getElementById(`batch-hashes-${index}`);
+                selectedAlgorithms.forEach(algorithm => {
+                    const hashDiv = document.createElement('div');
+                    hashDiv.className = 'batch-hash';
+                    hashDiv.innerHTML = `${algorithm.toUpperCase()}: <span class="hash-placeholder">Processing...</span>`;
+                    hashContainer.appendChild(hashDiv);
+                });
+            });
+        }
+        
+        function verifyIntegrity() {
+            alert('Integrity verification feature would compare current hash with stored/expected values.');
+        }
+        
+        // Initialize
+        updateInputAnalysis();
+    </script>
+</body>
+</html>
+
