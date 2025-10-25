@@ -1,7 +1,8 @@
+# Enable rewrite engine
+RewriteEngine On
 # Redirect www to non-www
 RewriteCond %{HTTP_HOST} ^www\.texttoolspro\.fun$ [NC]
 RewriteRule ^(.*)$ https://texttoolspro.fun/$1 [L,R=301]
-
 # URL Canonicalization - Force trailing slash for consistency
 RewriteEngine On
 
