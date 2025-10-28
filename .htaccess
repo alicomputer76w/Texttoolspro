@@ -1,8 +1,3 @@
-# Enable rewrite engine
-RewriteEngine On
-# Redirect www to non-www
-RewriteCond %{HTTP_HOST} ^www\.texttoolspro\.fun$ [NC]
-RewriteRule ^(.*)$ https://texttoolspro.fun/$1 [L,R=301]
 # URL Canonicalization - Force trailing slash for consistency
 RewriteEngine On
 
@@ -17,6 +12,26 @@ RewriteRule ^(.*)$ https://texttoolspro.fun/$1 [R=301,L]
 # Redirect any remaining old domain references
 RewriteCond %{QUERY_STRING} alicomputer76w\.github\.io [NC]
 RewriteRule ^(.*)$ https://texttoolspro.fun/$1? [R=301,L]
+
+# Force canonical domain (redirect www to non-www)
+RewriteCond %{HTTP_HOST} ^www\.texttoolspro\.fun$ [NC]
+RewriteRule ^(.*)$ https://texttoolspro.fun/$1 [R=301,L]
+
+# Redirect homepage variations to canonical URL
+RewriteCond %{REQUEST_URI} ^/index\.html$ [NC]
+RewriteRule ^(.*)$ https://texttoolspro.fun/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index\.php$ [NC]
+RewriteRule ^(.*)$ https://texttoolspro.fun/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/home/?$ [NC]
+RewriteRule ^(.*)$ https://texttoolspro.fun/ [R=301,L]
+
+# Add canonical Link header for homepage
+<Files "index.html">
+    Header always set Link '<https://texttoolspro.fun/>; rel="canonical"'
+    Header always set X-Canonical-URL "https://texttoolspro.fun/"
+</Files>
 
 # Add trailing slash to directories and files (except for files with extensions)
 RewriteCond %{REQUEST_FILENAME} !-f

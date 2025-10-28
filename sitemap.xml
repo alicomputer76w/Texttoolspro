@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
     <url>
         <loc>https://texttoolspro.fun/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>1.00</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
-
     <url>
         <loc>https://texttoolspro.fun/text-cleaner/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>0.90</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://texttoolspro.fun/smart-formatter/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>0.90</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://texttoolspro.fun/json-formatter/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>0.90</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://texttoolspro.fun/word-frequency/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>0.90</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://texttoolspro.fun/readability-score/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>0.90</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://texttoolspro.fun/html-minifier/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>0.85</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://texttoolspro.fun/regex-tester/</loc>
-        <lastmod>2025-01-22</lastmod>
-        <priority>0.85</priority>
+        <lastmod>2025-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
     <url>
