@@ -1,23 +1,24 @@
-# URL Canonicalization - Force trailing slash for consistency
+# AGGRESSIVE CANONICAL URL ENFORCEMENT
 RewriteEngine On
+
+# Block any requests with old domain in referrer or query
+RewriteCond %{HTTP_REFERER} alicomputer76w\.github\.io [NC,OR]
+RewriteCond %{QUERY_STRING} alicomputer76w\.github\.io [NC]
+RewriteRule ^(.*)$ https://texttoolspro.fun/$1? [R=301,L]
 
 # Force HTTPS redirect
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# Redirect old GitHub Pages domain to new domain
+# Redirect old GitHub Pages domain to new domain (AGGRESSIVE)
 RewriteCond %{HTTP_HOST} ^alicomputer76w\.github\.io$ [NC]
 RewriteRule ^(.*)$ https://texttoolspro.fun/$1 [R=301,L]
-
-# Redirect any remaining old domain references
-RewriteCond %{QUERY_STRING} alicomputer76w\.github\.io [NC]
-RewriteRule ^(.*)$ https://texttoolspro.fun/$1? [R=301,L]
 
 # Force canonical domain (redirect www to non-www)
 RewriteCond %{HTTP_HOST} ^www\.texttoolspro\.fun$ [NC]
 RewriteRule ^(.*)$ https://texttoolspro.fun/$1 [R=301,L]
 
-# Redirect homepage variations to canonical URL
+# Redirect homepage variations to canonical URL (STRICT)
 RewriteCond %{REQUEST_URI} ^/index\.html$ [NC]
 RewriteRule ^(.*)$ https://texttoolspro.fun/ [R=301,L]
 
@@ -27,11 +28,21 @@ RewriteRule ^(.*)$ https://texttoolspro.fun/ [R=301,L]
 RewriteCond %{REQUEST_URI} ^/home/?$ [NC]
 RewriteRule ^(.*)$ https://texttoolspro.fun/ [R=301,L]
 
-# Add canonical Link header for homepage
-<Files "index.html">
-    Header always set Link '<https://texttoolspro.fun/>; rel="canonical"'
-    Header always set X-Canonical-URL "https://texttoolspro.fun/"
-</Files>
+# FORCE CANONICAL HEADERS FOR ALL PAGES
+<IfModule mod_headers.c>
+    # Homepage canonical headers
+    <Files "index.html">
+        Header always set Link '<https://texttoolspro.fun/>; rel="canonical"'
+        Header always set X-Canonical-URL "https://texttoolspro.fun/"
+        Header always set X-Robots-Tag "index, follow"
+        Header always set Cache-Control "public, max-age=3600"
+    </Files>
+    
+    # Global canonical enforcement
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
 
 # Add trailing slash to directories and files (except for files with extensions)
 RewriteCond %{REQUEST_FILENAME} !-f
