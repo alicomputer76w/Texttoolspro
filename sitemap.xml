@@ -192,4 +192,11 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://texttoolspro.fun/blog-post-6.html</loc>
+        <lastmod>2024-12-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
