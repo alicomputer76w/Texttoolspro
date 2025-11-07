@@ -199,4 +199,18 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Trust & E‑E‑A‑T Pages -->
+    <url>
+        <loc>https://texttoolspro.fun/authors.html</loc>
+        <lastmod>2025-11-07</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://texttoolspro.fun/editorial-policy.html</loc>
+        <lastmod>2025-11-07</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
 </urlset>

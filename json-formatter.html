@@ -50,33 +50,7 @@
     }
     </script>
     
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://texttoolspro.fun/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Text Tools",
-                "item": "https://texttoolspro.fun/index.html#tools"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "JSON Formatter & Validator",
-                "item": "https://texttoolspro.fun/json-formatter"
-            }
-        ]
-    }
-    </script>
+    
     
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
@@ -150,11 +124,6 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Yes, all JSON processing happens locally in your browser. Your data is never sent to any server, ensuring complete privacy and security of your JSON content."
-                }
-            }
-        ]
-    }
-    </script>
                 }
             }
         ]
@@ -295,9 +264,57 @@
                 <div class="related-grid">
                     <a href="xml-to-json.html" class="related-tool">XML to JSON</a>
                     <a href="html-minifier.html" class="related-tool">HTML Minifier</a>
-                    <a href="css-minifier.html" class="related-tool">CSS Minifier</a>
+                    <a href="js-beautifier.html" class="related-tool">JS Beautifier</a>
                 </div>
             </div>
+
+            <section class="helpful-content">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Validate JSON before formatting to catch syntax errors early</li>
+                    <li>Use tabs or 2 spaces for consistent indentation across projects</li>
+                    <li>Avoid trailing commas—they are invalid in JSON</li>
+                    <li>Prefer double quotes for keys and string values per JSON spec</li>
+                </ul>
+
+                <h2>Limitations</h2>
+                <ul>
+                    <li>Comments are not supported in JSON; remove them before formatting</li>
+                    <li>Circular references cannot be represented in JSON</li>
+                    <li>Large payloads may be slower on older devices—split files if needed</li>
+                </ul>
+
+                <h2>Common Error Messages and Fixes</h2>
+                <ul>
+                    <li><strong>Unexpected token</strong>: Check for missing commas or unmatched brackets</li>
+                    <li><strong>Invalid string</strong>: Ensure all strings use double quotes and escape special characters</li>
+                    <li><strong>Duplicate keys</strong>: Ensure unique keys in objects to avoid overwriting</li>
+                </ul>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Can I format large JSON files?</summary>
+                        <p>Yes, but performance depends on your device. Consider splitting very large files into chunks.</p>
+                    </details>
+                    <details>
+                        <summary>Do you support JSON5 or comments?</summary>
+                        <p>No. This tool adheres to strict JSON. Remove comments or convert JSON5 to JSON first.</p>
+                    </details>
+                    <details>
+                        <summary>Is my data sent anywhere?</summary>
+                        <p>No. All formatting happens in your browser; your data stays local.</p>
+                    </details>
+                </div>
+
+                <h2>Related Guides & Blog Posts</h2>
+                <ul>
+                    <li><a href="blog-post-4.html">Formatting and Validating JSON: Best Practices</a></li>
+                    <li><a href="blog-post-2.html">Improving SEO with Clean Structured Data</a></li>
+                    <li><a href="blog-post-5.html">Regex Techniques for Data Cleaning</a></li>
+                </ul>
+            </section>
+            <p class="last-updated">Last updated: 2025-11-07</p>
         </div>
     </main>
 

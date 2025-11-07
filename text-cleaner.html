@@ -127,13 +127,7 @@
         ]
     }
     </script>
-                    "@type": "Answer",
-                    "text": "Yes, the tool can handle large text documents. You can paste thousands of words at once, and the cleaning process happens instantly in your browser without any server limitations."
-                }
-            }
-        ]
-    }
-    </script>
+    
 </head>
 <body>
     <header>
@@ -215,10 +209,55 @@
                 <h3>Related Tools</h3>
                 <div class="related-grid">
                     <a href="smart-formatter.html" class="related-tool">Smart Formatter</a>
-                    <a href="text-statistics.html" class="related-tool">Text Statistics</a>
-                    <a href="find-replace.html" class="related-tool">Find & Replace</a>
+                    <a href="word-frequency.html" class="related-tool">Word Frequency Analyzer</a>
+                    <a href="readability-score.html" class="related-tool">Readability Score</a>
                 </div>
             </div>
+
+            <section class="helpful-content">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Enable both <em>Normalize whitespace</em> and <em>Trim</em> for clean, consistent output</li>
+                    <li>Use <em>Remove line breaks</em> for single-line inputs like CSV fields or meta tags</li>
+                    <li>Keep punctuation by disabling <em>Remove special characters</em> when cleaning prose</li>
+                    <li>Validate results with the <a href="readability-score.html">Readability Score</a> tool for long texts</li>
+                </ul>
+
+                <h2>Limitations</h2>
+                <ul>
+                    <li>Over-aggressive special character removal may strip necessary symbols (e.g., hyphens in phone numbers)</li>
+                    <li>PDF copy artifacts vary; consider manual review for edge cases</li>
+                    <li>Does not auto-correct grammar—use <a href="grammar-helper.html">Grammar Helper</a> for that</li>
+                </ul>
+
+                <h2>Related Guides & Blog Posts</h2>
+                <ul>
+                    <li><a href="blog-post-1.html">Advanced Text Manipulation Techniques</a></li>
+                    <li><a href="blog-post-3.html">10 Time-Saving Text Processing Hacks</a></li>
+                    <li><a href="blog-post-6.html">Content Optimization Using Text Analysis</a></li>
+                </ul>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Can the tool handle very large text?</summary>
+                        <p>Yes. Processing is client-side and fast; for extremely large inputs, use modern browsers and avoid unnecessary options.</p>
+                    </details>
+                    <details>
+                        <summary>How do I keep punctuation while removing symbols?</summary>
+                        <p>Uncheck <em>Remove special characters</em> or use Smart Formatter to preserve punctuation and normalize spacing.</p>
+                    </details>
+                    <details>
+                        <summary>Why is my text one long line after cleaning?</summary>
+                        <p>You enabled <em>Remove line breaks</em>. Disable it to keep paragraph structure.</p>
+                    </details>
+                    <details>
+                        <summary>Is my content private?</summary>
+                        <p>Yes. All operations run in your browser; no data is sent to servers.</p>
+                    </details>
+                </div>
+            </section>
+            <p class="last-updated">Last updated: 2025-11-07</p>
         </div>
     </main>
 

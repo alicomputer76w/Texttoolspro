@@ -317,6 +317,7 @@ Another example: abc@example.com"></textarea>
                     <a href="character-frequency.html" class="related-tool">Character Analysis</a>
                 </div>
             </div>
+            <p class="last-updated">Last updated: 2025-11-07</p>
         </div>
     </main>
 
@@ -392,5 +393,84 @@ Another example: abc@example.com"></textarea>
             }, 2000);
         }
     </script>
+            <section class="helpful-content">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Anchor your patterns with ^ and $ to avoid unintended matches</li>
+                    <li>Prefer non-greedy quantifiers (e.g., .*?) when parsing text with delimiters</li>
+                    <li>Use character classes (\d, \w, \s) for readability and portability</li>
+                    <li>Test with multiple sample inputs to catch edge cases</li>
+                </ul>
+
+                <h2>Performance Tips</h2>
+                <ul>
+                    <li>Avoid nested quantifiers that can cause catastrophic backtracking</li>
+                    <li>Use atomic groups or possessive quantifiers if your engine supports them</li>
+                    <li>Simplify patterns by splitting into multiple passes when necessary</li>
+                </ul>
+
+                <h2>Limitations</h2>
+                <ul>
+                    <li>Regex is not suitable for full JSON or HTML parsing—use dedicated parsers</li>
+                    <li>Some advanced features vary across regex engines; this tester follows JavaScript/PCRE basics</li>
+                </ul>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Why does my pattern match too much?</summary>
+                        <p>Use non-greedy quantifiers like .*? and anchor patterns to start/end of string.</p>
+                    </details>
+                    <details>
+                        <summary>How can I test multiline inputs?</summary>
+                        <p>Enable the m flag and use ^/$ to match line starts/ends.</p>
+                    </details>
+                    <details>
+                        <summary>What regex flavor is supported?</summary>
+                        <p>This tool uses JavaScript-style regular expressions, similar to PCRE basics.</p>
+                    </details>
+                </div>
+
+                <h2>Related Guides & Blog Posts</h2>
+                <ul>
+                    <li><a href="blog-post-5.html">Regex Patterns: A Practical Guide</a></li>
+                    <li><a href="blog-post-1.html">Advanced Text Manipulation Techniques</a></li>
+                    <li><a href="blog-post-3.html">10 Time-Saving Text Processing Hacks</a></li>
+                </ul>
+            </section>
+
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Why does my pattern match too much?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prefer non-greedy quantifiers (.*?) and anchor your pattern with ^ and $ to control scope."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I test multiline inputs?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enable the m flag and use ^ / $ to match line starts and ends across lines."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What regex flavor is supported?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The tester uses JavaScript-compatible regular expressions, aligned with common PCRE basics."
+                  }
+                }
+              ]
+            }
+            </script>
+
 </body>
 </html>
