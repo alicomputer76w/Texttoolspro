@@ -79,62 +79,63 @@
     </script>
     
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How does XML to JSON conversion work?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The converter parses XML structure and transforms it into equivalent JSON format. XML elements become JSON objects, attributes are converted to properties, and text content is preserved. The tool maintains data hierarchy and relationships during conversion."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What happens to XML attributes during conversion?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "XML attributes are converted to JSON properties with a configurable prefix (default: '@'). For example, <element attr='value'>text</element> becomes {'@attr': 'value', '#text': 'text'}. You can customize this behavior in the conversion options."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can the tool handle large XML files?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the converter can process large XML files efficiently. However, very large files (>50MB) may take longer to process and could impact browser performance. For optimal results, consider breaking down extremely large files into smaller chunks."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does the converter validate XML syntax?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! The tool includes built-in XML validation that checks for syntax errors, malformed tags, and structural issues before conversion. If errors are found, detailed error messages help you identify and fix the problems."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What output formats are available?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The converter provides multiple output options: pretty-formatted JSON for readability, minified JSON for smaller file sizes, and raw JSON. You can copy the result to clipboard or download it as a .json file."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is my XML data secure during conversion?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all conversion happens locally in your browser. Your XML files and data are never uploaded to external servers, ensuring complete privacy and security of your sensitive information and documents."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How does XML to JSON conversion work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The converter parses XML structure and transforms it into equivalent JSON format. XML elements become JSON objects, attributes are converted to properties, and text content is preserved. The tool maintains data hierarchy and relationships during conversion."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "What happens to XML attributes during conversion?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "XML attributes are converted to JSON properties with a configurable prefix (default: '@'). For example, <element attr='value'>text</element> becomes {'@attr': 'value', '#text': 'text'}. You can customize this behavior in the conversion options."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can the tool handle large XML files?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the converter can process large XML files efficiently. However, very large files (>50MB) may take longer to process and could impact browser performance. For optimal results, consider breaking down extremely large files into smaller chunks."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does the converter validate XML syntax?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! The tool includes built-in XML validation that checks for syntax errors, malformed tags, and structural issues before conversion. If errors are found, detailed error messages help you identify and fix the problems."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What output formats are available?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The converter provides multiple output options: pretty-formatted JSON for readability, minified JSON for smaller file sizes, and raw JSON. You can copy the result to clipboard or download it as a .json file."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is my XML data secure during conversion?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all conversion happens locally in your browser. Your XML files and data are never uploaded to external servers, ensuring complete privacy and security of your sensitive information and documents."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -156,6 +157,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -584,7 +590,6 @@
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -705,5 +710,4 @@
     </script>
 </body>
 </html>
-
 

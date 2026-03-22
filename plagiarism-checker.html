@@ -79,62 +79,63 @@
     </script>
     
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How does the Plagiarism Checker work?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The Plagiarism Checker analyzes your text for potential duplicate content by comparing it against various sources and databases. It identifies similar phrases, sentences, and paragraphs that may indicate plagiarism or require proper citation."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What percentage of similarity indicates plagiarism?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Generally, similarity scores above 15-20% may indicate potential plagiarism, but context matters. Academic papers often have higher acceptable thresholds due to citations and references. Always review flagged content manually to determine if proper attribution is needed."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can the tool detect paraphrased content?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the Plagiarism Checker uses advanced algorithms to detect paraphrased content and similar sentence structures. It can identify content that has been reworded but maintains the same meaning and structure as original sources."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is the Plagiarism Checker suitable for academic papers?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! The tool is designed to help students, researchers, and academics ensure their work maintains academic integrity. It's particularly useful for checking essays, research papers, theses, and dissertations before submission."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does the checker store or share my documents?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No, your documents are processed locally and securely. The Plagiarism Checker does not store, share, or transmit your content to external servers, ensuring complete confidentiality of your work and ideas."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What file formats does the Plagiarism Checker support?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The tool supports various text formats including plain text, Word documents (.doc, .docx), PDF files, and direct text input. You can also copy and paste content directly into the checker for immediate analysis."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How does the Plagiarism Checker work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Plagiarism Checker analyzes your text for potential duplicate content by comparing it against various sources and databases. It identifies similar phrases, sentences, and paragraphs that may indicate plagiarism or require proper citation."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "What percentage of similarity indicates plagiarism?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Generally, similarity scores above 15-20% may indicate potential plagiarism, but context matters. Academic papers often have higher acceptable thresholds due to citations and references. Always review flagged content manually to determine if proper attribution is needed."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can the tool detect paraphrased content?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the Plagiarism Checker uses advanced algorithms to detect paraphrased content and similar sentence structures. It can identify content that has been reworded but maintains the same meaning and structure as original sources."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is the Plagiarism Checker suitable for academic papers?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! The tool is designed to help students, researchers, and academics ensure their work maintains academic integrity. It's particularly useful for checking essays, research papers, theses, and dissertations before submission."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does the checker store or share my documents?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, your documents are processed locally and securely. The Plagiarism Checker does not store, share, or transmit your content to external servers, ensuring complete confidentiality of your work and ideas."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What file formats does the Plagiarism Checker support?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The tool supports various text formats including plain text, Word documents (.doc, .docx), PDF files, and direct text input. You can also copy and paste content directly into the checker for immediate analysis."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -156,6 +157,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -462,7 +468,6 @@
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -553,5 +558,4 @@
     </script>
 </body>
 </html>
-
 

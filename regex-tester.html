@@ -79,62 +79,63 @@
     </script>
     
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is a regular expression (regex)?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A regular expression is a sequence of characters that defines a search pattern. It's used for pattern matching, text validation, and string manipulation in programming and text processing."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do I test if my regex pattern works?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Enter your regex pattern in the pattern field and your test text in the text area. The tool will highlight matches in real-time and show you exactly what your pattern matches or if there are any errors."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What are regex flags and how do I use them?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Regex flags modify how the pattern matching works. Common flags include 'g' (global - find all matches), 'i' (case-insensitive), and 'm' (multiline). You can select these options in the tool interface."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I get help with common regex patterns?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the tool includes a library of common regex patterns for emails, phone numbers, URLs, dates, and more. You can select these examples to learn and modify them for your needs."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Why isn't my regex pattern matching anything?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Common issues include incorrect escaping of special characters, case sensitivity, or overly specific patterns. Check if you need the case-insensitive flag, verify special characters are properly escaped, and test with simpler patterns first."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How can I learn regex syntax?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Start with the common examples provided in the tool, then gradually modify them. Key concepts include character classes [a-z], quantifiers (+, *, ?), anchors (^, $), and groups (). Practice with real text examples to build understanding."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is a regular expression (regex)?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A regular expression is a sequence of characters that defines a search pattern. It's used for pattern matching, text validation, and string manipulation in programming and text processing."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "How do I test if my regex pattern works?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enter your regex pattern in the pattern field and your test text in the text area. The tool will highlight matches in real-time and show you exactly what your pattern matches or if there are any errors."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are regex flags and how do I use them?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Regex flags modify how the pattern matching works. Common flags include 'g' (global - find all matches), 'i' (case-insensitive), and 'm' (multiline). You can select these options in the tool interface."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I get help with common regex patterns?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the tool includes a library of common regex patterns for emails, phone numbers, URLs, dates, and more. You can select these examples to learn and modify them for your needs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why isn't my regex pattern matching anything?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Common issues include incorrect escaping of special characters, case sensitivity, or overly specific patterns. Check if you need the case-insensitive flag, verify special characters are properly escaped, and test with simpler patterns first."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can I learn regex syntax?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Start with the common examples provided in the tool, then gradually modify them. Key concepts include character classes [a-z], quantifiers (+, *, ?), anchors (^, $), and groups (). Practice with real text examples to build understanding."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -156,6 +157,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -328,7 +334,6 @@ Another example: abc@example.com"></textarea>
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -429,5 +434,4 @@ Another example: abc@example.com"></textarea>
     </script>
 </body>
 </html>
-
 

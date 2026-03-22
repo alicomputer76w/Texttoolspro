@@ -107,59 +107,60 @@
     </script>
     
     <!-- FAQ Schema -->
+    
+                }
+            }
+        ]
+    }
+    </script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I use the JSON Formatter & Validator tool?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "To use the JSON Formatter & Validator: 1) Paste your JSON data in the input area, 2) The tool automatically validates syntax and shows errors if any, 3) Choose format options (beautify, minify, or validate), 4) Click the desired action button, 5) Copy the formatted JSON from the output area. The tool works instantly and shows validation results."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do I validate JSON syntax?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Paste your JSON data into the JSON Formatter & Validator tool. It will automatically check for syntax errors, missing brackets, incorrect commas, and other JSON formatting issues, highlighting any problems found."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I format minified JSON to make it readable?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the JSON Formatter can take compressed or minified JSON and format it with proper indentation, line breaks, and spacing to make it human-readable and easier to debug."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What JSON errors can the validator detect?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The validator can detect various JSON errors including missing quotes around keys, trailing commas, unclosed brackets or braces, invalid escape sequences, and incorrect data types."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is my JSON data secure when using this tool?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all JSON processing happens locally in your browser. Your data is never sent to any server, ensuring complete privacy and security of your JSON content."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How do I use the JSON Formatter & Validator tool?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To use the JSON Formatter & Validator: 1) Paste your JSON data in the input area, 2) The tool automatically validates syntax and shows errors if any, 3) Choose format options (beautify, minify, or validate), 4) Click the desired action button, 5) Copy the formatted JSON from the output area. The tool works instantly and shows validation results."
             }
-        ]
-    }
-    </script>
-                }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I validate JSON syntax?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Paste your JSON data into the JSON Formatter & Validator tool. It will automatically check for syntax errors, missing brackets, incorrect commas, and other JSON formatting issues, highlighting any problems found."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "Can I format minified JSON to make it readable?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the JSON Formatter can take compressed or minified JSON and format it with proper indentation, line breaks, and spacing to make it human-readable and easier to debug."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What JSON errors can the validator detect?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The validator can detect various JSON errors including missing quotes around keys, trailing commas, unclosed brackets or braces, invalid escape sequences, and incorrect data types."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is my JSON data secure when using this tool?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all JSON processing happens locally in your browser. Your data is never sent to any server, ensuring complete privacy and security of your JSON content."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -181,6 +182,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -273,7 +279,6 @@
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -331,5 +336,4 @@
     </script>
 </body>
 </html>
-
 

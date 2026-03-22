@@ -80,111 +80,97 @@
     </script>
     
     <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What hash algorithms are supported?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The Hash Generator supports MD5, SHA1, SHA224, SHA256, SHA384, SHA512, SHA3-256, SHA3-512, BLAKE2b, BLAKE2s, RIPEMD-160, and Whirlpool algorithms. Each algorithm offers different security levels and hash lengths."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Which hash algorithm should I use for security?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "For security purposes, use SHA256 or higher (SHA384, SHA512, SHA3-256, SHA3-512, BLAKE2b). Avoid MD5 and SHA1 for security-critical applications as they have known vulnerabilities. Use them only for non-security purposes like checksums."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is salt and why should I use it?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Salt is random data added to input before hashing to prevent rainbow table attacks and ensure unique hashes for identical inputs. Always use salt when hashing passwords or sensitive data for enhanced security."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I hash files and not just text?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! The tool supports file hashing for any file type. Upload files to generate hashes for integrity verification, digital signatures, or detecting file changes. It handles both small and large files efficiently."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How can I verify file integrity using hashes?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Generate a hash of the original file, then hash the file again later. If both hashes match exactly, the file hasn't been modified. This is commonly used for software downloads, backups, and data verification."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is it safe to hash sensitive data with this tool?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all hashing happens locally in your browser. No data is transmitted to external servers, ensuring complete privacy. However, remember that hashing is one-way - you cannot recover original data from hashes."
-                }
-            }
-        ]
-    }
-    </script>
+    
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I use the Hash Generator tool?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "To use the Hash Generator: 1) Enter your text or data in the input field, 2) Select the hash algorithm (MD5, SHA-1, SHA-256, SHA-512), 3) Click 'Generate Hash' button, 4) Copy the generated hash value. The tool creates secure hash values for data integrity verification and security purposes."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What hash algorithms are supported?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The Hash Generator supports MD5, SHA-1, SHA-256, SHA-512, and other popular cryptographic hash functions for various security needs."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What are hash values used for?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Hash values are used for data integrity verification, password storage, digital signatures, file checksums, and blockchain applications."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Are the generated hashes secure?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the tool uses standard cryptographic algorithms. SHA-256 and SHA-512 are recommended for security-critical applications."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is the hash generator free to use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the Hash Generator is completely free with unlimited hash generation and supports all major hash algorithms."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What hash algorithms are supported?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Hash Generator supports MD5, SHA1, SHA224, SHA256, SHA384, SHA512, SHA3-256, SHA3-512, BLAKE2b, BLAKE2s, RIPEMD-160, and Whirlpool algorithms. Each algorithm offers different security levels and hash lengths."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "Which hash algorithm should I use for security?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For security purposes, use SHA256 or higher (SHA384, SHA512, SHA3-256, SHA3-512, BLAKE2b). Avoid MD5 and SHA1 for security-critical applications as they have known vulnerabilities. Use them only for non-security purposes like checksums."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is salt and why should I use it?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Salt is random data added to input before hashing to prevent rainbow table attacks and ensure unique hashes for identical inputs. Always use salt when hashing passwords or sensitive data for enhanced security."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I hash files and not just text?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! The tool supports file hashing for any file type. Upload files to generate hashes for integrity verification, digital signatures, or detecting file changes. It handles both small and large files efficiently."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can I verify file integrity using hashes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Generate a hash of the original file, then hash the file again later. If both hashes match exactly, the file hasn't been modified. This is commonly used for software downloads, backups, and data verification."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is it safe to hash sensitive data with this tool?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all hashing happens locally in your browser. No data is transmitted to external servers, ensuring complete privacy. However, remember that hashing is one-way - you cannot recover original data from hashes."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I use the Hash Generator tool?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To use the Hash Generator: 1) Enter your text or data in the input field, 2) Select the hash algorithm (MD5, SHA-1, SHA-256, SHA-512), 3) Click 'Generate Hash' button, 4) Copy the generated hash value. The tool creates secure hash values for data integrity verification and security purposes."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are hash values used for?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hash values are used for data integrity verification, password storage, digital signatures, file checksums, and blockchain applications."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are the generated hashes secure?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the tool uses standard cryptographic algorithms. SHA-256 and SHA-512 are recommended for security-critical applications."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is the hash generator free to use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the Hash Generator is completely free with unlimited hash generation and supports all major hash algorithms."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -206,6 +192,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -995,7 +986,6 @@ public class HashGenerator
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -1296,6 +1286,4 @@ public class HashGenerator
     </script>
 </body>
 </html>
-
-
 

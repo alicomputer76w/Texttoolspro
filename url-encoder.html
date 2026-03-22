@@ -79,62 +79,63 @@
     </script>
     
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is URL encoding and why is it needed?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "URL encoding converts special characters in URLs to percent-encoded format (%XX) to ensure they're transmitted correctly over the internet. Characters like spaces, ampersands, and non-ASCII characters must be encoded to prevent URL parsing errors."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What's the difference between URL encoding and HTML encoding?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "URL encoding uses percent notation (%20 for space) for web addresses, while HTML encoding uses entity references (&amp; for &). URL encoding is for URLs and query parameters, HTML encoding is for displaying special characters in web pages."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I encode multiple URLs at once?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! The tool supports batch processing. Simply enter multiple URLs (one per line) and the encoder will process them all simultaneously, providing encoded or decoded results for each URL in the same order."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does the tool validate URL format?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! The URL Encoder includes built-in validation that checks URL structure, identifies malformed URLs, and provides suggestions for common formatting issues. It also analyzes URL components like protocol, domain, and parameters."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What encoding standards does the tool support?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The tool supports RFC 3986 standard URL encoding, application/x-www-form-urlencoded format, and custom encoding options. You can choose different encoding levels from basic ASCII to full Unicode character support."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is it safe to use this tool with sensitive URLs?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all URL processing happens locally in your browser. No URLs or data are sent to external servers, ensuring complete privacy and security of your sensitive links, API endpoints, or confidential parameters."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is URL encoding and why is it needed?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "URL encoding converts special characters in URLs to percent-encoded format (%XX) to ensure they're transmitted correctly over the internet. Characters like spaces, ampersands, and non-ASCII characters must be encoded to prevent URL parsing errors."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "What's the difference between URL encoding and HTML encoding?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "URL encoding uses percent notation (%20 for space) for web addresses, while HTML encoding uses entity references (&amp; for &). URL encoding is for URLs and query parameters, HTML encoding is for displaying special characters in web pages."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I encode multiple URLs at once?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! The tool supports batch processing. Simply enter multiple URLs (one per line) and the encoder will process them all simultaneously, providing encoded or decoded results for each URL in the same order."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does the tool validate URL format?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! The URL Encoder includes built-in validation that checks URL structure, identifies malformed URLs, and provides suggestions for common formatting issues. It also analyzes URL components like protocol, domain, and parameters."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What encoding standards does the tool support?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The tool supports RFC 3986 standard URL encoding, application/x-www-form-urlencoded format, and custom encoding options. You can choose different encoding levels from basic ASCII to full Unicode character support."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is it safe to use this tool with sensitive URLs?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all URL processing happens locally in your browser. No URLs or data are sent to external servers, ensuring complete privacy and security of your sensitive links, API endpoints, or confidential parameters."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -156,6 +157,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -573,7 +579,6 @@
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -760,5 +765,4 @@
     </script>
 </body>
 </html>
-
 

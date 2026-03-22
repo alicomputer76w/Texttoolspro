@@ -79,62 +79,63 @@
     </script>
     
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is JavaScript beautification and why use it?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "JavaScript beautification formats minified or poorly formatted code to make it readable and maintainable. It adds proper indentation, line breaks, and spacing while preserving functionality, making code easier to debug and understand."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What style presets are available?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The beautifier includes popular style presets: Google Style Guide, Airbnb Style Guide, JavaScript Standard Style, and Prettier formatting. Each preset applies different rules for indentation, spacing, and code structure."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I customize the formatting options?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! You can customize indentation size (2-8 spaces or tabs), maximum line length, brace style (Allman, K&R, GNU), and advanced options like operator positioning, array wrapping, and object formatting to match your coding standards."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does the tool work with modern JavaScript features?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! The beautifier supports ES6+, including arrow functions, template literals, destructuring, async/await, classes, modules, and other modern JavaScript syntax while maintaining proper formatting."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I beautify minified JavaScript files?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the tool excels at formatting minified JavaScript. It can take compressed, single-line code and transform it into properly formatted, readable code with appropriate indentation and line breaks."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is my JavaScript code secure during formatting?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Completely secure! All JavaScript formatting happens locally in your browser. Your code is never uploaded to external servers, ensuring complete privacy and security of your source code and intellectual property."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is JavaScript beautification and why use it?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "JavaScript beautification formats minified or poorly formatted code to make it readable and maintainable. It adds proper indentation, line breaks, and spacing while preserving functionality, making code easier to debug and understand."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "What style presets are available?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The beautifier includes popular style presets: Google Style Guide, Airbnb Style Guide, JavaScript Standard Style, and Prettier formatting. Each preset applies different rules for indentation, spacing, and code structure."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I customize the formatting options?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! You can customize indentation size (2-8 spaces or tabs), maximum line length, brace style (Allman, K&R, GNU), and advanced options like operator positioning, array wrapping, and object formatting to match your coding standards."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does the tool work with modern JavaScript features?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! The beautifier supports ES6+, including arrow functions, template literals, destructuring, async/await, classes, modules, and other modern JavaScript syntax while maintaining proper formatting."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I beautify minified JavaScript files?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the tool excels at formatting minified JavaScript. It can take compressed, single-line code and transform it into properly formatted, readable code with appropriate indentation and line breaks."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is my JavaScript code secure during formatting?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Completely secure! All JavaScript formatting happens locally in your browser. Your code is never uploaded to external servers, ensuring complete privacy and security of your source code and intellectual property."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -156,6 +157,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -683,7 +689,6 @@ git add -A</code></pre>
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -878,5 +883,4 @@ git add -A</code></pre>
     </script>
 </body>
 </html>
-
 

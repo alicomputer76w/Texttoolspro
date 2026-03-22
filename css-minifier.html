@@ -79,54 +79,7 @@
     </script>
     
     <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I use the CSS Minifier & Compressor tool?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "To use the CSS Minifier: 1) Paste your CSS code in the input area, 2) Click the 'Minify CSS' button, 3) The tool will remove whitespace, comments, and unnecessary characters, 4) Copy the minified CSS from the output area. The minified CSS will be significantly smaller while maintaining the same functionality."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is CSS minification and why is it important?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "CSS minification removes unnecessary characters like whitespace, comments, and redundant code from CSS files without changing functionality. This reduces file size by 20-40%, leading to faster page load times and improved website performance."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does minification affect CSS functionality?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No, CSS minification only removes unnecessary formatting and comments while preserving all functional code. Your styles will work exactly the same, but the file will be smaller and load faster for better user experience."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I minify CSS files with media queries and animations?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! The CSS Minifier handles all CSS features including media queries, keyframe animations, flexbox, grid, custom properties (CSS variables), and modern CSS syntax while preserving their functionality."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is the CSS minification tool free to use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, the CSS Minifier & Compressor is completely free to use with no limitations on file size or number of uses. All processing happens in your browser for privacy and security."
-                }
-            }
-        ]
-    }
-    </script>
+    
                 "name": "How much file size reduction can I expect?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -144,6 +97,54 @@
         ]
     }
     </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How do I use the CSS Minifier & Compressor tool?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To use the CSS Minifier: 1) Paste your CSS code in the input area, 2) Click the 'Minify CSS' button, 3) The tool will remove whitespace, comments, and unnecessary characters, 4) Copy the minified CSS from the output area. The minified CSS will be significantly smaller while maintaining the same functionality."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is CSS minification and why is it important?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CSS minification removes unnecessary characters like whitespace, comments, and redundant code from CSS files without changing functionality. This reduces file size by 20-40%, leading to faster page load times and improved website performance."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does minification affect CSS functionality?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, CSS minification only removes unnecessary formatting and comments while preserving all functional code. Your styles will work exactly the same, but the file will be smaller and load faster for better user experience."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I minify CSS files with media queries and animations?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! The CSS Minifier handles all CSS features including media queries, keyframe animations, flexbox, grid, custom properties (CSS variables), and modern CSS syntax while preserving their functionality."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is the CSS minification tool free to use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the CSS Minifier & Compressor is completely free to use with no limitations on file size or number of uses. All processing happens in your browser for privacy and security."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -165,6 +166,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -605,7 +611,6 @@ postcss([cssnano])
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -792,5 +797,4 @@ postcss([cssnano])
     </script>
 </body>
 </html>
-
 

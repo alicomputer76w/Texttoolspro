@@ -79,62 +79,63 @@
     </script>
     
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is a readability score?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A readability score measures how easy or difficult a text is to read and understand. It typically considers factors like sentence length, word complexity, and syllable count to determine the reading level required."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Which readability formulas does the tool use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The tool calculates multiple readability scores including Flesch-Kincaid Grade Level, Flesch Reading Ease, Gunning Fog Index, SMOG Index, Coleman-Liau Index, and Automated Readability Index for comprehensive analysis."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What do the different readability scores mean?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Each score indicates the education level needed to understand the text. For example, a Flesch-Kincaid score of 8.0 means the text is suitable for an 8th-grade reading level. Lower scores indicate easier text."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How can I improve my text's readability?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "To improve readability, use shorter sentences, choose simpler words, break up long paragraphs, use active voice, and avoid jargon. The tool provides specific suggestions based on your text analysis."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is a good readability score for web content?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "For web content, aim for a Flesch Reading Ease score of 60-70 (8th-9th grade level) or higher. This ensures your content is accessible to the widest audience while remaining engaging and informative."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can readability scores help with SEO?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, readable content tends to have lower bounce rates, higher engagement, and better user experience signals, which can positively impact SEO rankings. Search engines favor content that users find easy to read and understand."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is a readability score?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A readability score measures how easy or difficult a text is to read and understand. It typically considers factors like sentence length, word complexity, and syllable count to determine the reading level required."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "Which readability formulas does the tool use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The tool calculates multiple readability scores including Flesch-Kincaid Grade Level, Flesch Reading Ease, Gunning Fog Index, SMOG Index, Coleman-Liau Index, and Automated Readability Index for comprehensive analysis."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What do the different readability scores mean?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each score indicates the education level needed to understand the text. For example, a Flesch-Kincaid score of 8.0 means the text is suitable for an 8th-grade reading level. Lower scores indicate easier text."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can I improve my text's readability?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To improve readability, use shorter sentences, choose simpler words, break up long paragraphs, use active voice, and avoid jargon. The tool provides specific suggestions based on your text analysis."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is a good readability score for web content?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For web content, aim for a Flesch Reading Ease score of 60-70 (8th-9th grade level) or higher. This ensures your content is accessible to the widest audience while remaining engaging and informative."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can readability scores help with SEO?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, readable content tends to have lower bounce rates, higher engagement, and better user experience signals, which can positively impact SEO rankings. Search engines favor content that users find easy to read and understand."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -156,6 +157,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -244,7 +250,6 @@
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -302,5 +307,4 @@
     </script>
 </body>
 </html>
-
 

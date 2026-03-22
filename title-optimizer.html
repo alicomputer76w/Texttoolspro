@@ -79,62 +79,63 @@
     </script>
     
     <!-- FAQ Schema -->
+    
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I write effective page titles for SEO?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Effective page titles should be 50-60 characters, include your primary keyword near the beginning, be descriptive and compelling, match search intent, and be unique for each page. Avoid keyword stuffing and focus on user appeal."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What makes a good meta description?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Good meta descriptions are 150-160 characters, include relevant keywords naturally, provide a clear value proposition, include a call-to-action, accurately describe the page content, and entice users to click through."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do title tags affect search engine rankings?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Title tags are a strong ranking factor. They help search engines understand your page topic, influence click-through rates from search results, and should include your target keywords while remaining natural and user-focused."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Should I include my brand name in every title tag?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Include your brand name in title tags when you have strong brand recognition or for homepage/important pages. For content pages, prioritize keywords and user value, adding the brand at the end if space allows."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How can I improve click-through rates from search results?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Improve CTR by writing compelling titles that match search intent, using power words and emotional triggers, including numbers or brackets, creating urgency, and ensuring your meta description complements your title effectively."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What happens if my title or description is too long?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Search engines will truncate titles longer than ~60 characters and descriptions longer than ~160 characters with ellipses (...). This can hurt click-through rates as users may not see your complete message."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How do I write effective page titles for SEO?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Effective page titles should be 50-60 characters, include your primary keyword near the beginning, be descriptive and compelling, match search intent, and be unique for each page. Avoid keyword stuffing and focus on user appeal."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "What makes a good meta description?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Good meta descriptions are 150-160 characters, include relevant keywords naturally, provide a clear value proposition, include a call-to-action, accurately describe the page content, and entice users to click through."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do title tags affect search engine rankings?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Title tags are a strong ranking factor. They help search engines understand your page topic, influence click-through rates from search results, and should include your target keywords while remaining natural and user-focused."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Should I include my brand name in every title tag?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Include your brand name in title tags when you have strong brand recognition or for homepage/important pages. For content pages, prioritize keywords and user value, adding the brand at the end if space allows."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can I improve click-through rates from search results?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Improve CTR by writing compelling titles that match search intent, using power words and emotional triggers, including numbers or brackets, creating urgency, and ensuring your meta description complements your title effectively."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens if my title or description is too long?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Search engines will truncate titles longer than ~60 characters and descriptions longer than ~160 characters with ellipses (...). This can hurt click-through rates as users may not see your complete message."
+            }
+        }
+    ]
+}
+</script>
 </head>
 <body>
     
@@ -156,6 +157,11 @@
                 <a href="index.html#faq">FAQ</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -379,7 +385,6 @@
         </div>
     </main>
 
-    
     <footer class="footer" style="background: rgba(255, 255, 255, 0.95); padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
@@ -502,5 +507,4 @@
     </script>
 </body>
 </html>
-
 
