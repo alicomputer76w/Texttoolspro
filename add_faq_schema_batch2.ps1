@@ -222,7 +222,7 @@ $toolPages = @{
             }
         )
     }
-    "age_calculator.html" = @{
+    "age-calculator.html" = @{
         "toolName" = "Age Calculator"
         "usage" = "To use the Age Calculator: 1) Enter your birth date using the date picker or manual input, 2) Click 'Calculate Age' button, 3) View your exact age in years, months, and days, 4) See additional information like days until next birthday and total days lived. The tool provides precise age calculations."
         "questions" = @(

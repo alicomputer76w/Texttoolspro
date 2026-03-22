@@ -1,3 +1,5 @@
+console.log("Script loaded");
+
 // Global variables
 let currentTool = null;
 let inputText = '';
@@ -21,9 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeEventListeners() {
     // Tool card clicks
     document.querySelectorAll('.tool-card').forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
             const toolType = this.getAttribute('data-tool');
-            openTool(toolType);
+            if (toolType) {
+                // If it's an internal tool, prevent navigation and open it
+                const href = this.getAttribute('href');
+                if (href === '#tool-interface' || !href || href.startsWith('#')) {
+                    e.preventDefault();
+                    openTool(toolType);
+                }
+                // Otherwise, let the browser navigate to the separate HTML file
+            }
         });
     });
 
@@ -2401,4 +2411,10 @@ function initializeFAQ() {
             }
         });
     }
+}
+console.log("Trying to register service worker...");
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker registered'))
+    .catch((err) => console.log('Service Worker failed:', err));
 }

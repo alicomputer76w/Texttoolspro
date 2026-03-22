@@ -170,6 +170,9 @@ body {
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .tool-card::before {
