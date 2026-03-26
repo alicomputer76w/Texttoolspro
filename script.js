@@ -516,16 +516,18 @@ function addControlEventListeners() {
 }
 
 // Process text based on current tool
-function processText() {
-    if (!currentTool || !inputTextArea.value) {
-        outputTextArea.value = '';
-        return;
+function processText(textParam, toolTypeParam) {
+    const text = textParam || inputTextArea.value;
+    const tool = toolTypeParam || currentTool;
+
+    if (!tool || !text) {
+        if (outputTextArea) outputTextArea.value = '';
+        return '';
     }
     
-    const text = inputTextArea.value;
     let result = '';
     
-    switch (currentTool) {
+    switch (tool) {
         case 'uppercase':
             result = text.toUpperCase();
             break;
@@ -603,6 +605,7 @@ function processText() {
             break;
             
         case 'smartformatter':
+        case 'smartformat':
             result = smartFormat(text);
             break;
             
@@ -615,14 +618,17 @@ function processText() {
             break;
             
         case 'jsonformatter':
+        case 'jsonformat':
             result = formatJSON(text);
             break;
             
         case 'htmlminifier':
+        case 'htmlminify':
             result = minifyHTML(text);
             break;
             
         case 'regextester':
+        case 'regextest':
             result = testRegex(text);
             break;
             
@@ -651,26 +657,32 @@ function processText() {
             break;
             
         case 'xmltojson':
+        case 'xmljson':
             result = convertXmlToJson(text);
             break;
             
         case 'urlencoder':
+        case 'urlencode':
             result = advancedUrlEncodeDecode(text);
             break;
             
         case 'cssminifier':
+        case 'cssminify':
             result = minifyCSS(text);
             break;
             
         case 'jsbeautifier':
+        case 'jsbeautify':
             result = beautifyJavaScript(text);
             break;
             
         case 'colorconverter':
+        case 'colorconvert':
             result = convertColorCodes(text);
             break;
             
         case 'hashgenerator':
+        case 'hash':
             result = generateHashes(text);
             break;
             
@@ -678,7 +690,10 @@ function processText() {
             result = text;
     }
     
-    outputTextArea.value = result;
+    if (outputTextArea) {
+        outputTextArea.value = result;
+    }
+    return result;
 }
 
 // Tool-specific functions

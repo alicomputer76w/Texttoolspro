@@ -457,6 +457,11 @@ body {
 }
 
 /* Responsive Design */
+.tool-page {
+    padding-top: 120px;
+    min-height: 80vh;
+}
+
 @media (max-width: 1024px) {
     .nav {
         gap: 1rem;
