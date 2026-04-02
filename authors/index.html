@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Sadaqat Ali | Text Tools Pro</title>
+    <meta name="description" content="Sadaqat Ali - Business-focused Content Engineer and SEO Specialist bridging the gap between technology and digital success.">
+    <link rel="canonical" href="https://texttoolspro.fun/authors/">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar Customization for Author Page */
+        .header {
+            background: rgba(15, 23, 42, 0.9) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav a { color: var(--text-muted) !important; }
+        .nav a:hover, .nav a.active { color: var(--primary-color) !important; }
+        .logo h1 { background: var(--accent-gradient) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+
+        /* Hero Section - Sanjewa Style */
+        .hero-section {
+            padding: 180px 0 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h2 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--card-bg);
+            padding: 40px 0;
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-item { text-align: center; }
+        .stat-item h3 { font-size: 2.5rem; font-weight: 800; margin-bottom: 5px; color: var(--primary-color); }
+        .stat-item p { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; }
+
+        /* Services Section */
+        .section-title {
+            text-align: center;
+            margin: 100px 0 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 700; }
+        .service-card p { color: var(--text-muted); line-height: 1.6; }
+
+        /* Tech Icons */
+        .tech-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 40px;
+            margin-bottom: 100px;
+        }
+
+        .tech-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tech-badge {
+            background: var(--card-bg);
+            padding: 12px 24px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tech-badge i { color: var(--primary-color); }
+
+        /* Social Links Section */
+        .social-section {
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            background: var(--card-bg);
+            color: var(--text-main);
+            padding: 12px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .social-btn:hover {
+            background: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 900px) {
+            .hero-section { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { margin: 0 auto 2rem; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 20px; flex-wrap: wrap; }
+            .hero-image { order: -1; max-width: 400px; margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <i class="fas fa-tools"></i>
+                    <h1>Text Tools Pro</h1>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/#tools">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/authors/" class="active">Authors</a>
+                <a href="/editorial-policy/">Editorial Policy</a>
+                <a href="/#about">About</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>About Me</h2>
+                <h1>Transforming Ideas Into <span>Revenue-Generating</span> Digital Solutions</h1>
+                <p>Hi, I’m Sadaqat Ali, a business-focused Content Engineer and SEO Specialist bridging the gap between technology and commercial success.</p>
+                <div class="social-buttons" style="justify-content: flex-start;">
+                    <a href="mailto:we9191711@gmail.com" class="social-btn" style="background: var(--primary-color);">Hire Me <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/image.png" alt="Sadaqat Ali">
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat-item">
+                <h3>21+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3>5+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>16+</h3>
+                <p>Technologies Mastered</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-title">
+            <p>Services</p>
+            <h2>Exclusive Service For Your Business</h2>
+        </section>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <h4>SEO Optimization</h4>
+                <p>Driving organic traffic through advanced keyword analysis and technical SEO strategies tailored for tool-based websites.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h4>Full-Stack Development</h4>
+                <p>Building high-performance, secure, and responsive web applications with a focus on user experience and speed.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h4>Content Engineering</h4>
+                <p>Creating structured, data-driven content that search engines love and users find genuinely helpful.</p>
+            </div>
+        </div>
+
+        <!-- Tech Section -->
+        <section class="section-title">
+            <p>Expertise</p>
+            <h2>Technologies Mastered</h2>
+        </section>
+
+        <section class="tech-section">
+            <div class="tech-flex">
+                <div class="tech-badge"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="tech-badge"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="tech-badge"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="tech-badge"><i class="fas fa-terminal"></i> C Language</div>
+                <div class="tech-badge"><i class="fab fa-microsoft"></i> MS Office</div>
+                <div class="tech-badge"><i class="fas fa-search"></i> SEO</div>
+                <div class="tech-badge"><i class="fas fa-chart-line"></i> Google Console</div>
+                <div class="tech-badge"><i class="fab fa-git"></i> Git</div>
+                <div class="tech-badge"><i class="fas fa-server"></i> Web Hosting</div>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section class="section-title">
+            <p>Blogs</p>
+            <h2>Latest Updates & Insights</h2>
+        </section>
+
+        <div class="services-grid" style="margin-bottom: 100px;">
+            <div class="service-card" onclick="window.location.href='blog-post-1.html'" style="cursor: pointer;">
+                <h4>Advanced Text Techniques</h4>
+                <p>Learn how to master text manipulation for content creation success.</p>
+            </div>
+            <div class="service-card" onclick="window.location.href='blog-post-2.html'" style="cursor: pointer;">
+                <h4>SEO Rankings 2024</h4>
+                <p>How our text tools can boost your search visibility in the AI era.</p>
+            </div>
+            <div class="service-card" onclick="window.location.href='blog-post-3.html'" style="cursor: pointer;">
+                <h4>Productivity Hacks</h4>
+                <p>10 time-saving text processing hacks for busy professionals.</p>
+            </div>
+        </div>
+
+        <!-- Connect Section -->
+        <section class="social-section">
+            <div class="section-title">
+                <p>Contact</p>
+                <h2>Let's Connect</h2>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.youtube.com/channel/UCygB-VyfypzJJTEF6grsvfw" class="social-btn"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://web.facebook.com/sadaqat.ali.14058" class="social-btn"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.linkedin.com/in/sadaqat-ali-391b3a38a/" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/sir_sadaqat/" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/923081517640" class="social-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="background: rgba(15, 23, 42, 0.98); padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 60px;">
+        <div class="container">
+            <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+                <div class="footer-section">
+                    <h4 style="color: var(--primary-color);">Text Tools Pro</h4>
+                    <p style="color: var(--text-muted);">Your go-to destination for free online text utilities. Simple, fast, and secure text manipulation tools for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: var(--primary-color);">Quick Links</h4>
+                    <ul>
+                        <li><a href="/#tools">All Tools</a></li>
+                        <li><a href="/#about">About Us</a></li>
+                        <li><a href="/#contact">Contact Us</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: var(--primary-color);">Legal & Support</h4>
+                    <ul>
+                        <li><a href="/authors/">Our Authors</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service/">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; margin-top: 20px; text-align: center; color: var(--text-muted);">
+                <p>&copy; 2026 Text Tools Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
