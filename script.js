@@ -14,10 +14,11 @@ const toolControls = document.getElementById('tool-controls');
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded");
+    initializeMobileMenu();
     initializeEventListeners();
     createScrollToTopButton();
     initializeAnimations();
-    initializeMobileMenu();
 });
 
 // Mobile menu functionality
@@ -52,7 +53,9 @@ function initializeEventListeners() {
                 const href = this.getAttribute('href');
                 if (href === '#tool-interface' || !href || href.startsWith('#')) {
                     e.preventDefault();
-                    openTool(toolType);
+                    if (toolInterface) {
+                        openTool(toolType);
+                    }
                 }
                 // Otherwise, let the browser navigate to the separate HTML file
             }
@@ -60,17 +63,22 @@ function initializeEventListeners() {
     });
 
     // Input text change
-    inputTextArea.addEventListener('input', function() {
-        inputText = this.value;
-        processText();
-    });
+    if (inputTextArea) {
+        inputTextArea.addEventListener('input', function() {
+            inputText = this.value;
+            processText();
+        });
+    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const target = document.querySelector(targetId);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -84,7 +92,7 @@ function initializeEventListeners() {
         homeLink.addEventListener('click', function(e) {
             e.preventDefault();
             // Close any open tool interface
-            if (currentTool) {
+            if (currentTool && typeof closeTool === 'function') {
                 closeTool();
             }
             // Scroll to top/home section
@@ -107,6 +115,8 @@ function initializeEventListeners() {
 
 // Open tool interface
 function openTool(toolType) {
+    if (!toolInterface || !toolTitle || !inputTextArea || !outputTextArea || !toolControls) return;
+    
     currentTool = toolType;
     const toolData = getToolData(toolType);
     
@@ -133,7 +143,9 @@ function openTool(toolType) {
 
 // Close tool interface
 function closeTool() {
-    toolInterface.style.display = 'none';
+    if (toolInterface) {
+        toolInterface.style.display = 'none';
+    }
     currentTool = null;
     inputText = '';
     outputText = '';
@@ -2404,10 +2416,12 @@ function debounce(func, wait) {
 const debouncedProcessText = debounce(processText, 300);
 
 // Update the input event listener to use debounced function
-inputTextArea.addEventListener('input', function() {
-    inputText = this.value;
-    debouncedProcessText();
-});
+if (inputTextArea) {
+    inputTextArea.addEventListener('input', function() {
+        inputText = this.value;
+        debouncedProcessText();
+    });
+}
 
 // FAQ Functionality
 document.addEventListener('DOMContentLoaded', function() {

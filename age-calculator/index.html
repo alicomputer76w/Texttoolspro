@@ -61,24 +61,41 @@
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
     <!-- Header -->
-    <header class="bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg">
-        <div class="container mx-auto px-6 py-6">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <a href="/" class="text-purple-200 hover:text-white mr-4">
-                        <i class="fas fa-arrow-left text-xl"></i>
-                    </a>
-                    <h1 class="text-3xl font-bold">
-                        <i class="fas fa-birthday-cake mr-3"></i>Age Calculator & Birthday Tools
-                    </h1>
-                </div>
-                <a href="/" class="bg-purple-500 hover:bg-purple-400 px-4 py-2 rounded-lg transition-colors duration-300">
-                    <i class="fas fa-home mr-2"></i>Home
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <i class="fas fa-tools"></i>
+                    <h1>Text Tools Pro</h1>
                 </a>
             </div>
-            <p class="text-purple-100 mt-2">Calculate age, find birthday details, and discover amazing age-related facts</p>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/#tools">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/authors/">Authors</a>
+                <a href="/editorial-policy/">Editorial Policy</a>
+                <a href="/#about">About</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
+
+    <!-- Page Title Section (instead of the old header) -->
+    <div style="padding-top: 100px; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding-bottom: 40px; margin-bottom: 40px;">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold">
+                <i class="fas fa-birthday-cake mr-3"></i>Age Calculator & Birthday Tools
+            </h1>
+            <p class="text-purple-100 mt-2">Calculate age, find birthday details, and discover amazing age-related facts</p>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-8">
@@ -827,6 +844,7 @@
             }, 3000);
         }
     </script>
+    <script src="/script.js"></script>
 </body>
 </html>
 
