@@ -51,6 +51,7 @@
     
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
     
     <style>
         * {
@@ -70,62 +71,6 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
-        }
-        
-        .header {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #667eea;
-        }
-        
-        .logo i {
-            font-size: 2rem;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .nav {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav a {
-            color: #444;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        
-        .nav a:hover {
-            color: #667eea;
         }
         
         .blog-post {
@@ -308,7 +253,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="/" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                <a href="/" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
                     <i class="fas fa-tools"></i>
                     <h1>Text Tools Pro</h1>
                 </a>
@@ -318,7 +263,16 @@
                 <a href="/#tools">Tools</a>
                 <a href="/blog/">Blog</a>
                 <a href="/authors/">Authors</a>
+                <a href="/editorial-policy/">Editorial Policy</a>
+                <a href="/#about">About</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/#contact">Contact</a>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
