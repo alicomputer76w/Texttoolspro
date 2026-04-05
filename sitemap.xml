@@ -3,217 +3,229 @@
 
     <url>
         <loc>https://texttoolspro.fun/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>1.00</priority>
     </url>
 
     <!-- Main Tools -->
     <url>
         <loc>https://texttoolspro.fun/text-cleaner/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.90</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/smart-formatter/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.90</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/json-formatter/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.90</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/word-frequency/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.90</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/readability-score/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.90</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/html-minifier/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/regex-tester/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/character-frequency/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <!-- SEO & Content Tools -->
     <url>
         <loc>https://texttoolspro.fun/keyword-density/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/meta-tag-generator/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://texttoolspro.fun/meta-tag-generator/</loc>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/title-optimizer/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/grammar-helper/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/plagiarism-checker/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.85</priority>
     </url>
 
     <!-- Developer Tools -->
     <url>
         <loc>https://texttoolspro.fun/xml-to-json/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/url-encoder/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/css-minifier/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/js-beautifier/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/color-converter/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/hash-generator/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.80</priority>
     </url>
 
     <!-- Utility Tools -->
     <url>
         <loc>https://texttoolspro.fun/age-calculator/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.75</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/uppercase-converter/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.75</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/word-counter/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.75</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/text-reverser/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.75</priority>
     </url>
 
     <!-- Blog & Content -->
     <url>
         <loc>https://texttoolspro.fun/blog/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/blog-post-1/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.70</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/blog-post-2/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.70</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/blog-post-3/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.70</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/blog-post-4/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.70</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/blog-post-5/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.70</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/blog-post-6/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://texttoolspro.fun/blog-post-7/</loc>
+        <lastmod>2026-04-05</lastmod>
+        <priority>0.75</priority>
     </url>
 
     <!-- Legal & Information -->
     <url>
         <loc>https://texttoolspro.fun/privacy-policy/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.50</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/terms-of-service/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.50</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/authors/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.50</priority>
     </url>
 
     <url>
         <loc>https://texttoolspro.fun/editorial-policy/</loc>
-        <lastmod>2026-03-22</lastmod>
+        <lastmod>2026-04-05</lastmod>
         <priority>0.50</priority>
     </url>
 
