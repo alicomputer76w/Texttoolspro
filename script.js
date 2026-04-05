@@ -14,10 +14,11 @@ const toolControls = document.getElementById('tool-controls');
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded");
+    initializeMobileMenu();
     initializeEventListeners();
     createScrollToTopButton();
     initializeAnimations();
-    initializeMobileMenu();
 });
 
 // Mobile menu functionality
